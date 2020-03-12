@@ -1,0 +1,22 @@
+html, body {
+  font-size: $fontSize;
+  font-family: $fonts;
+
+  @media (min-width: 500px) {
+    font-size: $fontSizeMedium;
+  }
+
+  @media (min-width: 750px) {
+    font-size: $fontSize;
+  }
+}
+
+#root {
+  background-color: $background-color;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  float: left;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
