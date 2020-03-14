@@ -26,7 +26,7 @@ function Header() {
   };
   
   return (
-    <header>
+    <header className={'header'}>
       <NavLink to={'/'}>
         < Image image={logoState.image}
                 class={logoState.logoClass}
