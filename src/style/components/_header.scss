@@ -1,0 +1,20 @@
+.header {
+  &__logo {
+
+  }
+
+  .active {
+    color: $active-color;
+  }
+
+  &__nav {
+
+    &:hover{
+      color: $active-color;
+    }
+  }
+
+  &__search {
+
+  }
+}
