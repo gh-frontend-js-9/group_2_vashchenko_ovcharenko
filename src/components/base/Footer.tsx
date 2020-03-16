@@ -17,17 +17,19 @@ function Footer() {
     ariaLabel: 'Blog logo in footer',
   };
   return(
-    <footer>
+    <footer className={'footer'}>
       <NavLink to={'/'}>
         < Image image={logoState.image}
                 class={logoState.logoClass}
                 altText={logoState.altText}
                 ariaLabel={logoState.ariaLabel}/>
       </NavLink>
-    
-      < NavLinksFooter />
-    
-      <div>
+      
+      <nav className={'footer__social'}>
+        < NavLinksFooter />
+      </nav>
+  
+      <div className={'footer__copywrite'}>
         <p>All Rights Reserved 2018 BehindMars</p>
       </div>
     </footer>
