@@ -1,20 +1,46 @@
 .header {
-  &__logo {
+  @include flex($jc: space-between, $ai: center);
+  max-width: rem(2500, $fontSize);
+  height: rem(120, $fontSize);
+  margin: 0 auto;
+  padding: 0 rem(70, $fontSize);
 
-  }
+  &__navigation {
+    @include flex($jc: space-between, $ai: center);
+    width: rem(800, $fontSize);
+    color: $title-color;
 
-  .active {
-    color: $active-color;
-  }
+    &--logo {
+      width: 100%;
+      max-width: rem(95, $fontSize);
+      height: 100%;
+      max-height: rem(29, $fontSize);
+    }
 
-  &__nav {
+    &--link {
+      display: inline-block;
+      font-family: $fonts;
+      font-size: $fontSize;
+      font-weight: 600;
+      padding: 7px 15px;
 
-    &:hover{
-      color: $active-color;
+      &:hover {
+        color: $white;
+        border-radius: 10px;
+        background-color: $active-color;
+      }
     }
   }
 
   &__search {
 
   }
+
+  .active {
+    color: $white;
+    border-radius: 10px;
+    background-color: $active-color;
+  }
 }
+
+

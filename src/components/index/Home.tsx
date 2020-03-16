@@ -2,14 +2,14 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 // Component
-import HeaderSlider from "./HeaderSlider";
+import MainSlider from "./MainSlider";
 
 // Images and style
 
 function Home() {
   return (
     <main className={'main'}>
-      <HeaderSlider />
+      <MainSlider />
     </main>
   );
 }

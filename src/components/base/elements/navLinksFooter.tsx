@@ -18,35 +18,35 @@ export const NavLinksFooter = () => {
       image: vk,
       name: 'Go to our vk',
       ariaLabel: 'Find us on vk.com',
-      class: 'footer__nav'
+      class: 'footer__social--img'
     },
     {
       link: '/',
       image: printeres,
       name: 'Go to our printers',
       ariaLabel: 'Find us on printers',
-      class: 'footer__nav'
+      class: ' footer__social--img'
     },
     {
       link: '/',
       image: instagram,
       name: 'Go to our instagram',
       ariaLabel: 'Find us on instagram',
-      class: 'footer__nav'
+      class: ' footer__social--img'
     },
     {
       link: '/',
       image: twitter,
       name: 'Go to our twitter',
       ariaLabel: 'Find us on twitter',
-      class: 'footer__nav'
+      class: ' footer__social--img'
     },
     {
       link: '/',
       image: facebook,
       name: 'Go to our facebook',
       ariaLabel: 'Find us on facebook',
-      class: 'footer__nav'
+      class: ' footer__social--img'
     }
   ];
   
@@ -61,8 +61,8 @@ export const NavLinksFooter = () => {
   });
   
   return (
-  <nav>
+  <>
     {renderNav}
-  </nav>
+  </>
   );
 };

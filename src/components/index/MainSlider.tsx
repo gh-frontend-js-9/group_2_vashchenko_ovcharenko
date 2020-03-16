@@ -9,10 +9,9 @@ import {Image} from "../base/elements/images";
 import slide1 from '../../assets/images/slider1.jpg'
 import slide2 from '../../assets/images/slider2.jpg'
 import slide3 from '../../assets/images/slider3.jpg'
+import './main-slider.scss'
 
-import './header-slider.scss'
-
-export default class HeaderSlider extends Component {
+export default class MainSlider extends Component {
   render() {
     const settings = {
       dots: true,
@@ -53,15 +52,17 @@ export default class HeaderSlider extends Component {
   
     let renderSlider = props.map((props, n: number) => {
       return (
-      <div className={'header-slider__block'}>
+      <div className={'header-slider'}>
         <NavLink key={n} exac to={props.link}>
           < Image image={props.image}
                   altText={props.title}
                   ariaLabel={props.ariaLabel}
                   className={'header-slider__image'} />
-          <p className={'header-slider__author'}>{props.author}</p>
-          <h2 className={'header-slider__title'}>{props.title}</h2>
-          <p  className={'header-slider__content'}>{props.content}</p>
+          <div className={'header-slider__text'}>
+            <p className={'header-slider__text--author'}>{props.author}</p>
+            <h2 className={'header-slider__text--title'}>{props.title}</h2>
+            <p  className={'header-slider__text--content'}>{props.content}</p>
+          </div>
         </NavLink>
       </div>
       );

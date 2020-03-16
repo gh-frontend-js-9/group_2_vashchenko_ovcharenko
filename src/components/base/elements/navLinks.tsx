@@ -4,34 +4,29 @@ import {NavLink} from "react-router-dom";
 export const NavLinks = () => {
   const props = [
     {
-      link: '/',
-      name: 'Home',
-      class: 'header__nav'
-    },
-    {
       link: '/popular',
       name: 'Popular',
-      class: 'header__nav'
+      class: 'header__navigation--link'
     },
     {
       link: '/new',
       name: 'New',
-      class: 'header__nav'
+      class: 'header__navigation--link'
     },
     {
       link: '/read',
       name: 'Reading list',
-      class: 'header__nav'
+      class: 'header__navigation--link'
     },
     {
       link: '/topics',
       name: 'Topics',
-      class: 'header__nav'
+      class: 'header__navigation--link'
     },
     {
       link: '/subscribe',
       name: 'Subscribe',
-      class: 'header__nav'
+      class: 'header__navigation--link'
     }
   ];
   
@@ -42,8 +37,8 @@ export const NavLinks = () => {
   });
   
   return (
-  <nav>
+  <>
     {renderNav}
-  </nav>
+  </>
   );
 };
