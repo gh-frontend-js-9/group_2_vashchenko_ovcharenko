@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 // Component
@@ -7,6 +8,8 @@ import Footer from './components/base/Footer'
 import Home from './components/index/Home'
 import MainBlogCard from "./components/MainBlogCard/MainBlogCard";
 import BlogsSection from "./components/BlogsSection/BlogsSection";
+import BlogsWithImage from "./components/BlogsWithImage/BlogsWithImage";
+
 
 function App() {
   return (
@@ -18,8 +21,10 @@ function App() {
             
             <Home />
             <BlogsSection />
+            <BlogsWithImage/>
 
-            
+             {/*<BlogsSection/>*/}
+    
           </Route>
           
         </Switch>
