@@ -1,0 +1,31 @@
+.card-wrapper {
+  width: 485px;
+  height: 307px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #1b0042;
+  padding: 25px 50px;
+  margin: 10px;
+}
+
+.second-card-wrapper {
+  width: 236px;
+  height: 149px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: scroll;
+  padding: 20px 20px 0px 20px;
+  margin: 10px 10px 10px 10px;
+}
+
+
+
+
+::-webkit-scrollbar
+{
+  display: none;
+}
