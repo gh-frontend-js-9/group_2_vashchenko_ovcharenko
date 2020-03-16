@@ -5,6 +5,8 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Header from './components/base/Header'
 import Footer from './components/base/Footer'
 import Home from './components/index/Home'
+import MainBlogCard from "./components/MainBlogCard/MainBlogCard";
+import BlogsSection from "./components/BlogsSection/BlogsSection";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route exact path={'/'}>
             
             <Home />
+            <BlogsSection />
+
             
           </Route>
           
