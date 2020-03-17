@@ -12,6 +12,7 @@ import BlogsWithImage from "./components/BlogsWithImage/BlogsWithImage";
 
 import UnderConstruction from './components/base/UnderConstruction';
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
+import SimpleSlider from "./components/SliderImg/SliderImg";
 
 
 function App() {
@@ -50,7 +51,8 @@ function App() {
             <BlogsWrapper
                 className='blogs-main-wrapper'
             >
-            <BlogsSection />
+            <BlogsSection/>
+            <SimpleSlider/>
             <BlogsWithImage/>
             </BlogsWrapper>
           </Route>
