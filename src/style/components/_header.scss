@@ -23,6 +23,10 @@
       max-width: rem(95, $fontSize);
       height: 100%;
       max-height: rem(29, $fontSize);
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
     }
 
     &--link {
