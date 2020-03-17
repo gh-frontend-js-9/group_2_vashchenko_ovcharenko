@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import './MainBlogCard.scss'
-import CardContent from "../СardContent/CardContent";
+import CardContent from "../CardBox/parts/СardContent/CardContent";
 import CardBox from "../CardBox/CardBox";
-import CardTitle from "../CardTitle/CardTitle";
-import CardAuthor from "../CardAuthor/CardAuthor";
-import CardDescription from "../CardDescription/CardDescription";
+import CardTitle from "../CardBox/parts/CardTitle/CardTitle";
+import CardAuthor from "../CardBox/parts/CardAuthor/CardAuthor";
+import CardDescription from "../CardBox/parts/CardDescription/CardDescription";
 
 class MainBlogCard extends Component {
     render() {
