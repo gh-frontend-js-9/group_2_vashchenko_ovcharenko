@@ -56,9 +56,7 @@ function Header() {
         < Image image={searchState.image}
                 class={searchState.class}
                 altText={searchState.altText}
-                ariaLabel={searchState.ariaLabel}
-                onClick={()=>console.log('Open search modal window')}
-        />
+                ariaLabel={searchState.ariaLabel}/>
       </div>
     </header>
   );
