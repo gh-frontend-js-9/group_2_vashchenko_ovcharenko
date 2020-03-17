@@ -18,7 +18,7 @@ function Footer() {
   };
   return(
     <footer className={'footer'}>
-      <NavLink to={'/'}>
+      <NavLink key={'100'} to={'/'}>
         < Image image={logoState.image}
                 class={logoState.logoClass}
                 altText={logoState.altText}

@@ -52,7 +52,7 @@ export const NavLinksFooter = () => {
   
   let renderNav = props.map((props, n: number) => {
     return (
-      <NavLink key={n} exac to={props.link} className={props.class}>
+      <NavLink key={n} to={props.link} className={props.class}>
         < Image image={props.image}
                 altText={props.name}
                 ariaLabel={props.ariaLabel}/>

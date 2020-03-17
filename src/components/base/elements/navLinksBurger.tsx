@@ -4,6 +4,11 @@ import {NavLink} from "react-router-dom";
 export const NavLinksBurger = () => {
   const props = [
     {
+      link: '/home',
+      name: 'Home',
+      class: 'menu__item'
+    },
+    {
       link: '/popular',
       name: 'Popular',
       class: 'menu__item'
@@ -32,8 +37,8 @@ export const NavLinksBurger = () => {
   
   let renderNav = props.map((props, n: number) => {
     return (
-    <li>
-      <NavLink key={n} exac to={props.link} className={props.class}>{props.name}</NavLink>
+    <li  key={n}>
+      <NavLink to={props.link} className={props.class}>{props.name}</NavLink>
     </li>
     );
   });

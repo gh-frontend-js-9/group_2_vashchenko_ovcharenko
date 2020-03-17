@@ -32,7 +32,7 @@ export const NavLinks = () => {
   
   let renderNav = props.map((props, n: number) => {
     return (
-      <NavLink key={n} exac to={props.link} className={props.class}>{props.name}</NavLink>
+      <NavLink key={n} to={props.link} className={props.class}>{props.name}</NavLink>
     );
   });
   

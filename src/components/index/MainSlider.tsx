@@ -53,8 +53,8 @@ export default class MainSlider extends Component {
   
     let renderSlider = props.map((props, n: number) => {
       return (
-      <div className={'header-slider'}>
-        <NavLink key={n} exac to={props.link}>
+      <div key={n} className={'header-slider'}>
+        <NavLink to={props.link}>
           < Image image={props.image}
                   altText={props.title}
                   ariaLabel={props.ariaLabel}

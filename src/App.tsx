@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
 // Component
 import Header from './components/base/Header'
@@ -26,31 +26,32 @@ function App() {
           <Route path={'/new'}>
             < UnderConstruction />
           </Route>
-          
+  
           <Route path={'/read'}>
             < UnderConstruction />
           </Route>
-          
+  
           <Route path={'/read'}>
             < UnderConstruction />
           </Route>
-          
+  
           <Route path={'/topics'}>
             < UnderConstruction />
           </Route>
-          
+  
           <Route path={'/subscribe'}>
             < UnderConstruction />
           </Route>
-          
-          <Route exact path={'/'}>
+  
+          <Redirect exact from={'/'} to={'/home'} />
+          <Route exact path={'/home'}>
             <Home />
             <BlogsSection />
             <BlogsWithImage/>
-             {/*<BlogsSection/>*/}
+            {/*<BlogsSection/>*/}
           </Route>
         </Switch>
-        
+  
         <Footer/>
       </BrowserRouter>
     </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 
 // Component
 import {Image} from "./elements/images";
@@ -29,6 +28,7 @@ function Header() {
   return (
     <header className={'header'}>
   
+      {/*Mobile Navigation*/}
       <div className="header-hamburger-menu">
         <input id="menu__toggle" type="checkbox"/>
         <label className="menu__btn" htmlFor="menu__toggle">
@@ -36,14 +36,11 @@ function Header() {
         </label>
     
         <ul className="menu__box">
-          <li>
-            <NavLink className="menu__item" to={'/'}>Home</NavLink>
-          </li>
-          
           < NavLinksBurger />
         </ul>
       </div>
       
+        {/*Navigation and logo*/}
         <nav className={'header__navigation'}>
           <a href='/'>
             < Image image={logoState.image}
@@ -54,12 +51,14 @@ function Header() {
           < NavLinks />
         </nav>
       
-      
+      {/**/}
       <div>
         < Image image={searchState.image}
                 class={searchState.class}
                 altText={searchState.altText}
-                ariaLabel={searchState.ariaLabel}/>
+                ariaLabel={searchState.ariaLabel}
+                onClick={()=>console.log('Open search modal window')}
+        />
       </div>
     </header>
   );
