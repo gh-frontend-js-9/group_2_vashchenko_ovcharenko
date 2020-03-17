@@ -17,16 +17,36 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
+          <Route path={'/popular'}>
+            <p>Popular page</p>
+          </Route>
+          
+          <Route path={'/new'}>
+            <p>New blog page</p>
+          </Route>
+          
+          <Route path={'/read'}>
+            <p>Read blog page</p>
+          </Route>
+          
+          <Route path={'/read'}>
+            <p>Reading list blog page</p>
+          </Route>
+          
+          <Route path={'/topics'}>
+            <p>Topics blog page</p>
+          </Route>
+          
+          <Route path={'/subscribe'}>
+            <p>Subscribe blog page</p>
+          </Route>
+          
           <Route exact path={'/'}>
-            
             <Home />
             <BlogsSection />
             <BlogsWithImage/>
-
              {/*<BlogsSection/>*/}
-    
           </Route>
-          
         </Switch>
         
         <Footer/>

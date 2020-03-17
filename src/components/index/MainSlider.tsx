@@ -13,6 +13,7 @@ import './main-slider.scss'
 
 export default class MainSlider extends Component {
   render() {
+    
     const settings = {
       dots: true,
       infinite: true,

@@ -6,38 +6,65 @@
 
 
 /* CUSTOM */
-.header-slider {;
+.header-slider {
   &__text {
+    max-width: rem(780, $fontSize);
     text-align: left;
     position: absolute;
     bottom: 40%;
     margin-left: rem(70, $fontSize);
     color: $light-color;
     font-weight: 600;
+    text-shadow: 1px 1px 1px $light-color;
+    transition: color 0.5s ease-out 0.5s;
 
-    &--author {
-      text-transform: uppercase;
-      max-width: rem(450, $fontSize);
-      font-size: $fontSize;
-      font-weight: 300;
-      letter-spacing: -0.1px;
-      line-height: rem(46, $fontSize);
+    &:hover {
+      color: $active-color;
+      transition: color 0.5s ease-out 0.5s;
+    }
+
+    @media only screen and (max-width: $tableWidth) {
+      max-width: rem(350, $fontSize);
+      margin-left: rem(20, $fontSize);
+    }
+
+    @media only screen and (max-width: $phoneWidth) {
+      max-width: rem(250, $fontSize);
+      margin: rem(10, $fontSize);
+    }
+
+      &--author {
+        text-transform: uppercase;
+        font-size: $fontSize;
+        font-weight: 300;
+        line-height: rem(46, $fontSize);
+
+
+        @media only screen and (max-width: $phoneWidth) {
+          font-size: rem(10, $fontSize);
+        }
     }
 
     &--title {
-      max-width: rem(780, $fontSize);
       font-size: rem(36, $fontSize);
-      letter-spacing: -0.22px;
       line-height: rem(46, $fontSize);
+
+      @media only screen and (max-width: $phoneWidth) {
+        text-transform: uppercase;
+        font-size: rem(20, $fontSize);
+      }
     }
 
     &--content {
       margin-top: rem(25,$fontSize);
-      max-width: rem(780, $fontSize);
       font-size: rem(18, $fontSize);
       line-height: rem(32, $fontSize);
       letter-spacing: -0.11px;
       font-weight: 400;
+
+      @media only screen and (max-width: $phoneWidth) {
+        display: none;
+      }
     }
 
   }

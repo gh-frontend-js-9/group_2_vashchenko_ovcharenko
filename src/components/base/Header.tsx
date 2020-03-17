@@ -4,6 +4,7 @@ import {NavLink} from 'react-router-dom';
 // Component
 import {Image} from "./elements/images";
 import {NavLinks} from "./elements/navLinks";
+import {NavLinksBurger} from "./elements/navLinksBurger";
 
 // Images and style
 import logo from '../../assets/images/logo.webp';
@@ -21,11 +22,28 @@ function Header() {
   const searchState = {
     image: search,
     altText: 'Search',
+    class: 'header__search',
     ariaLabel: 'Search on blog'
   };
   
   return (
     <header className={'header'}>
+  
+      <div className="header-hamburger-menu">
+        <input id="menu__toggle" type="checkbox"/>
+        <label className="menu__btn" htmlFor="menu__toggle">
+          <span></span>
+        </label>
+    
+        <ul className="menu__box">
+          <li>
+            <NavLink className="menu__item" to={'/'}>Home</NavLink>
+          </li>
+          
+          < NavLinksBurger />
+        </ul>
+      </div>
+      
         <nav className={'header__navigation'}>
           <a href='/'>
             < Image image={logoState.image}
@@ -39,6 +57,7 @@ function Header() {
       
       <div>
         < Image image={searchState.image}
+                class={searchState.class}
                 altText={searchState.altText}
                 ariaLabel={searchState.ariaLabel}/>
       </div>
