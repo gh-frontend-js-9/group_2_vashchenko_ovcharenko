@@ -20,7 +20,6 @@
 
 
 .second-card-wrapper {
-
   width: 266px;
   height: 177px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
@@ -29,6 +28,11 @@
   overflow: scroll;
   padding: 20px 15px 0px 15px;
   margin: 10px 15px 10px 15px;
+  @media screen and (max-width: 680px) {
+    & {
+      width: 389px;
+    }
+  }
 }
 
 
