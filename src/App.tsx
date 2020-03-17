@@ -11,6 +11,7 @@ import BlogsSection from "./components/BlogsSection/BlogsSection";
 import BlogsWithImage from "./components/BlogsWithImage/BlogsWithImage";
 
 import UnderConstruction from './components/base/UnderConstruction';
+import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 
 
 function App() {
@@ -46,9 +47,12 @@ function App() {
           <Redirect exact from={'/'} to={'/home'} />
           <Route exact path={'/home'}>
             <Home />
+            <BlogsWrapper
+                className='blogs-main-wrapper'
+            >
             <BlogsSection />
             <BlogsWithImage/>
-            {/*<BlogsSection/>*/}
+            </BlogsWrapper>
           </Route>
         </Switch>
   
