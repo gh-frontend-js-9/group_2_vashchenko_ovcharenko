@@ -10,6 +10,8 @@ import MainBlogCard from "./components/MainBlogCard/MainBlogCard";
 import BlogsSection from "./components/BlogsSection/BlogsSection";
 import BlogsWithImage from "./components/BlogsWithImage/BlogsWithImage";
 
+import UnderConstruction from './components/base/UnderConstruction';
+
 
 function App() {
   return (
@@ -18,27 +20,27 @@ function App() {
         <Header />
         <Switch>
           <Route path={'/popular'}>
-            <p>Popular page</p>
+            < UnderConstruction />
           </Route>
           
           <Route path={'/new'}>
-            <p>New blog page</p>
+            < UnderConstruction />
           </Route>
           
           <Route path={'/read'}>
-            <p>Read blog page</p>
+            < UnderConstruction />
           </Route>
           
           <Route path={'/read'}>
-            <p>Reading list blog page</p>
+            < UnderConstruction />
           </Route>
           
           <Route path={'/topics'}>
-            <p>Topics blog page</p>
+            < UnderConstruction />
           </Route>
           
           <Route path={'/subscribe'}>
-            <p>Subscribe blog page</p>
+            < UnderConstruction />
           </Route>
           
           <Route exact path={'/'}>
