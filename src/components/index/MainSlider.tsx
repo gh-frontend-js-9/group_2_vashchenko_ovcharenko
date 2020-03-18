@@ -60,9 +60,9 @@ export default class MainSlider extends Component {
                   ariaLabel={props.ariaLabel}
                   className={'header-slider__image'} />
           <div className={'header-slider__text'}>
-            <p className={'header-slider__text--author'}>{props.author}</p>
-            <h2 className={'header-slider__text--title'}>{props.title}</h2>
-            <p  className={'header-slider__text--content'}>{props.content}</p>
+            <p className={'content__subtitle'}>{props.author}</p>
+            <h2 className={'content__title'}>{props.title}</h2>
+            <p  className={'content__text--slider'}>{props.content}</p>
           </div>
         </NavLink>
       </div>
