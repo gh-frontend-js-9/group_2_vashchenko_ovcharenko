@@ -173,6 +173,7 @@ function Home() {
         <Card items={cardItemsPopular}/>
       </div>
       
+      
       <div className={'card__header'}>
         <h2 className={'card__header--title'}>Essentials</h2>
         <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
@@ -180,6 +181,7 @@ function Home() {
       <div className="card__home-wrapper">
         <Card items={cardItemsEssentials}/>
       </div>
+      
       
       <div className={'card__header'}>
         <h2 className={'card__header--title'}>Freelance</h2>
