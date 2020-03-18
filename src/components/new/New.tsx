@@ -2,7 +2,8 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 // Component
-import MainSlider from "../index/MainSlider";
+import MainSlider from "./MainSlider";
+import BottomSlider from "./BottomSlider";
 import {Card} from '../base/Card';
 
 // Images and style
@@ -214,6 +215,13 @@ function New() {
       <div className="card__home-wrapper--main">
         <Card items={cardItemsFreelance}/>
       </div>
+  
+      <div className={'card__header'}>
+        <h2 className={'card__header--title'}>Reading lists</h2>
+        <NavLink to={'/new'} className={'card__header--view'}>View all</NavLink>
+      </div>
+      
+      <BottomSlider />
       
       <div className="card__home-wrapper--main-bottom">
         <Card items={cardItemsBottom}/>

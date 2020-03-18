@@ -2,17 +2,17 @@
   padding: 0 rem(70, $fontSize);
   background-color: $white;
 
-  @media only screen and (max-width: $tableWidth) {
-    flex-direction: column;
-    margin: rem(20, $fontSize);
-    padding: unset;
-  }
-
   &__wrapper {
     @include flex($jc: space-between, $ai: center);
     height: rem(100, $fontSize);
     margin: 0 auto;
     max-width: rem(1135, $fontSize);
+
+    @media only screen and (max-width: $tableWidth) {
+      flex-direction: column;
+      margin: rem(20, $fontSize);
+      padding: unset;
+    }
   }
 
   &__logo {

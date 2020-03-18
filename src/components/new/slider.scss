@@ -1,0 +1,61 @@
+@import '../../style/utilities/rem-function';
+@import '../../style/utilities/variable';
+
+//Slider CUSTOM Style*/
+.slider__wrapper {
+  width: 100%;
+  max-width: rem(1170, $fontSize);
+  margin: 0 auto;
+  & .slick-prev:before {
+    display: none;
+  }
+}
+.slick-next:before {
+  margin-left: -70px;
+}
+
+.header-slider {
+  &__text {
+    max-width: rem(780, $fontSize);
+    text-align: left;
+    position: absolute;
+    bottom: 40%;
+    margin-left: rem(70, $fontSize);
+    color: $light-color;
+    font-weight: 600;
+    text-shadow: 0.5px 0.5px 0.5px $light-color;
+    transition: color 0.5s ease-out 0.5s;
+
+    &:hover {
+      color: $active-color;
+      transition: color 0.5s ease-out 0.5s;
+    }
+
+    @media only screen and (max-width: $desktopWidth) {
+      max-width: rem(350, $fontSize);
+      margin-left: rem(20, $fontSize);
+    }
+
+    @media only screen and (max-width: $phoneWidth) {
+      max-width: rem(250, $fontSize);
+      margin: rem(10, $fontSize);
+    }
+  }
+}
+
+.bottom-slider {
+  text-align: center;
+  &:hover, &__image {
+    color: $active-color;
+  }
+  &__image {
+    max-height: rem(225, $fontSize);
+  }
+
+  &__title {
+    font-size: rem(24, $fontSize);
+    font-weight: 600;
+    letter-spacing: -0.15px;
+    margin-top: 20px;
+  }
+}
