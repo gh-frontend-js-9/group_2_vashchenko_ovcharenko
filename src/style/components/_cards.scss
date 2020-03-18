@@ -1,7 +1,3 @@
-@import '../../style/utilities/variable';
-@import '../../style/utilities/rem-function';
-@import '../../style/utilities/mixins';
-
 .card {
   &__header {
     @include flex($jc:space-between, $ai: center);
@@ -27,17 +23,34 @@
 
   &__home-wrapper {
     display: grid;
-    grid-gap: rem(21, $fontSize);
-    grid-template-columns: repeat(4, rem(276, $fontSize));
-    grid-template-rows: repeat(2, rem(170, $fontSize));
     justify-content: center;
     align-content: center;
+    &--main {
+      @extend .card__home-wrapper;
+      grid-gap: rem(21, $fontSize);
+      grid-template-columns: repeat(4, rem(276, $fontSize));
+      grid-template-rows: repeat(2, rem(170, $fontSize));
+      &-bottom {
+        @extend .card__home-wrapper;
+        margin-top: rem(160, $fontSize);
+        margin-bottom: rem(140, $fontSize);
+        grid-gap: rem(23, $fontSize);
+        grid-template-columns: repeat(2, rem(575, $fontSize));
+        grid-template-rows: repeat(1, rem(615, $fontSize));
+      }
+    }
   }
 
   &__box {
+    background-repeat: no-repeat;
     border-radius: 5px;
     padding: 36px 20px;
     font-size: 150%;
+    &--main-bottom {
+      @extend .card__box;
+      padding: unset;
+      padding-top: rem(380, $fontSize);
+    }
   }
 
   &__main {

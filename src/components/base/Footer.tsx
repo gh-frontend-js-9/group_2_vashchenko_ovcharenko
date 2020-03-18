@@ -18,19 +18,21 @@ function Footer() {
   };
   return(
     <footer className={'footer'}>
-      <NavLink key={'100'} to={'/'}>
-        < Image image={logoState.image}
-                class={logoState.logoClass}
-                altText={logoState.altText}
-                ariaLabel={logoState.ariaLabel}/>
-      </NavLink>
-      
-      <nav className={'footer__social'}>
-        < NavLinksFooter />
-      </nav>
-  
-      <div className={'footer__copywrite'}>
-        <p>All Rights Reserved 2018 BehindMars</p>
+      <div className={'footer__wrapper'}>
+        <NavLink key={'100'} to={'/'}>
+          < Image image={logoState.image}
+                  class={logoState.logoClass}
+                  altText={logoState.altText}
+                  ariaLabel={logoState.ariaLabel}/>
+        </NavLink>
+        
+        <nav className={'footer__social'}>
+          < NavLinksFooter />
+        </nav>
+    
+        <div className={'footer__copywrite'}>
+          <p>All Rights Reserved 2018 BehindMars</p>
+        </div>
       </div>
     </footer>
   );

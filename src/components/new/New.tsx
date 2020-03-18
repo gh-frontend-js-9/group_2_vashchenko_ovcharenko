@@ -2,14 +2,15 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 // Component
-import MainSlider from "./MainSlider";
+import MainSlider from "../index/MainSlider";
 import {Card} from '../base/Card';
 
 // Images and style
 import PrimaryCard from '../../assets/images/PrimaryCard.png'
 import SecondaryCard from '../../assets/images/SecondaryCard.png'
+import BottomCard from '../../assets/images/BottomCard.png'
 
-function Home() {
+function New() {
   
   const cardItemsPopular = [
     {
@@ -159,26 +160,26 @@ function Home() {
     }
   ];
   
-  const cardItemsBoottom = [
+  const cardItemsBottom = [
     {
-      class: 'card__box',
-      bgImage: SecondaryCard,
+      class: 'card__box--main-bottom',
+      bgImage: BottomCard,
       link: '/new',
       subTitleClass: 'content__subtitle--card-small',
-      subTitle: 'BY   TOMAS LAURINAVICIUS   IN   DESIGN PROCESS',
+      subTitle: 'BY TOMAS LAURINAVICIUS IN RESOURCE',
       titleClass: 'content__title--card',
-      title: '10 Best WordPress Event Management Plugins (Calendars, Ticketing, RSVPs)',
+      title: 'Website Downtime: Applicable Tips on How to Prevent It',
       contentClass: 'content__text--card',
       content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
     },
     {
-      class: 'card__box',
-      bgImage: SecondaryCard,
+      class: 'card__box--main-bottom',
+      bgImage: BottomCard,
       link: '/new',
       subTitleClass: 'content__subtitle--card-small',
-      subTitle: 'BY   TOMAS LAURINAVICIUS   IN   DESIGN PROCESS',
+      subTitle: 'BY TOMAS LAURINAVICIUS IN ANNOUNCEMENTS',
       titleClass: 'content__title--card',
-      title: '10 Best WordPress Event Management Plugins (Calendars, Ticketing, RSVPs)',
+      title: 'How to Fix Error 404 Not Found on Your WordPress Site',
       contentClass: 'content__text--card',
       content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
     }
@@ -188,8 +189,37 @@ function Home() {
   return (
     <main className={'main'}>
       <MainSlider />
+      
+      <div className={'card__header'}>
+        <h2 className={'card__header--title'}>Popular</h2>
+        <NavLink to={'/popular'} className={'card__header--view'}>View all</NavLink>
+      </div>
+      <div className="card__home-wrapper--main">
+        <Card items={cardItemsPopular}/>
+      </div>
+      
+      
+      <div className={'card__header'}>
+        <h2 className={'card__header--title'}>Essentials</h2>
+        <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
+      </div>
+      <div className="card__home-wrapper--main">
+        <Card items={cardItemsEssentials}/>
+      </div>
+      
+      <div className={'card__header'}>
+        <h2 className={'card__header--title'}>Freelance</h2>
+        <NavLink to={'/new'} className={'card__header--view'}>View all</NavLink>
+      </div>
+      <div className="card__home-wrapper--main">
+        <Card items={cardItemsFreelance}/>
+      </div>
+      
+      <div className="card__home-wrapper--main-bottom">
+        <Card items={cardItemsBottom}/>
+      </div>
     </main>
   );
 }
 
-export default Home;
+export default New;

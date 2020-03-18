@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import Header from './components/base/Header'
 import Footer from './components/base/Footer'
 import Home from './components/index/Home'
+import New from './components/new/New'
 import MainBlogCard from "./components/MainBlogCard/MainBlogCard";
 import BlogsSection from "./components/BlogsSection/BlogsSection";
 import BlogsWithImage from "./components/BlogsWithImage/BlogsWithImage";
@@ -26,7 +27,7 @@ function App() {
           </Route>
           
           <Route path={'/new'}>
-            < UnderConstruction />
+            < New />
           </Route>
   
           <Route path={'/read'}>
