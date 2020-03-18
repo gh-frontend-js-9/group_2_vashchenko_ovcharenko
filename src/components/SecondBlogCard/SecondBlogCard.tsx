@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import CardBox from "../CardBox/CardBox";
-import CardContent from "../СardContent/CardContent";
-import CardAuthor from "../CardAuthor/CardAuthor";
-import CardTitle from "../CardTitle/CardTitle";
-import CardDescription from "../CardDescription/CardDescription";
+import CardContent from "../CardBox/parts/СardContent/CardContent";
+import CardAuthor from "../CardBox/parts/CardAuthor/CardAuthor";
+import CardTitle from "../CardBox/parts/CardTitle/CardTitle";
+import CardDescription from "../CardBox/parts/CardDescription/CardDescription";
 
 class SecondBlogCard extends Component {
     render() {
