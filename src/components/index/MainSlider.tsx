@@ -17,6 +17,7 @@ export default class MainSlider extends Component {
     const settings = {
       dots: true,
       infinite: true,
+      arrows: false,
       autoplay: true,
       speed: 1000,
       slidesToShow: 1,
