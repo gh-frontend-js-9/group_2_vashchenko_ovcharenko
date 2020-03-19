@@ -9,15 +9,15 @@ import {Image} from "../base/elements/images";
 import slide1 from '../../assets/images/slider1.jpg'
 import slide2 from '../../assets/images/slider2.jpg'
 import slide3 from '../../assets/images/slider3.jpg'
-import './main-slider.scss'
+import './slider.scss'
 
 export default class MainSlider extends Component {
   render() {
     
     const settings = {
       dots: true,
-      infinite: true,
       arrows: false,
+      infinite: true,
       autoplay: true,
       speed: 1000,
       slidesToShow: 1,

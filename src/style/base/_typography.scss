@@ -18,6 +18,11 @@
     &--card {
       @extend .content__title;
       font-size: rem(28, $fontSize);
+
+
+      @media only screen and (max-width: $phoneWidth) {
+        font-size: rem(20, $fontSize);
+      }
     }
 
     &--card-small {
@@ -25,6 +30,11 @@
       font-size: rem(18, $fontSize);
       letter-spacing: -0.11px;
       line-height: rem(30, $fontSize);
+
+      @media only screen and (max-width: $phoneWidth) {
+        font-size: rem(12, $fontSize);
+        line-height: unset;
+      }
     }
   }
 
@@ -45,6 +55,10 @@
       font-weight: unset;
       line-height: unset;
       margin-bottom: 10px;
+
+      @media only screen and (max-width: $phoneWidth) {
+        display: none;
+      }
     }
   }
 
@@ -57,6 +71,10 @@
       font-size: 18px;
       font-weight: 600;
       line-height: 32px;
+
+      @media only screen and (max-width: $tableWidth) {
+        display: none;
+      }
     }
 
     &--card {
