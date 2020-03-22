@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import './BlogsWithImage.scss'
-import CardImg from "../CardBox/parts/CardImg/CardImg";
-import MainBlogCard from "../MainBlogCard/MainBlogCard";
-import CardContent from "../CardBox/parts/СardContent/CardContent";
-import CardAuthor from "../CardBox/parts/CardAuthor/CardAuthor";
-import CardTitle from "../CardBox/parts/CardTitle/CardTitle";
-import CardDescription from "../CardBox/parts/CardDescription/CardDescription";
-import CardBox from "../CardBox/CardBox";
+
+import CardImg from "../../Card/CardBox/parts/CardImg/CardImg";
+import CardContent from "../../Card/CardBox/parts/СardContent/CardContent";
+import CardAuthor from "../../Card/CardBox/parts/CardAuthor/CardAuthor";
+import CardTitle from "../../Card/CardBox/parts/CardTitle/CardTitle";
+import CardDescription from "../../Card/CardBox/parts/CardDescription/CardDescription";
+import CardBox from "../../Card/CardBox/CardBox";
 
 class BlogsWithImage extends Component {
     render() {

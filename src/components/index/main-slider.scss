@@ -30,3 +30,19 @@
     }
   }
 }
+
+.hedaer-slider__text {
+  max-width: 2100px;
+  margin: 0 auto;
+  padding: 0 calc((100% - 1180px)/2);
+  @media screen and (max-width: 1360px){
+    & {
+      padding: 0 calc((100% - 648px)/2);
+    }
+  }
+  @media screen and (max-width: 680px){
+    & {
+      padding: 0 calc((100% - 389px)/2);
+    }
+  }
+}
