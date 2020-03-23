@@ -13,7 +13,7 @@ import {getPosts} from "../../../redux/actions/getPosts";
 class MainBlogCard extends Component<any,any> {
 
     componentDidMount(): void {
-        this.props.getPosts('popular',1,10,'title')
+        this.props.getPosts('popular',1,10,'title,category,author')
     }
 
     render() {
