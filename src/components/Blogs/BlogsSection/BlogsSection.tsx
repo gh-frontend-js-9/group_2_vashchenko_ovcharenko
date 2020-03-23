@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import MainBlogCard from "../MainBlogCard/MainBlogCard";
-import SecondBlogCard from "../SecondBlogCard/SecondBlogCard";
+import MainBlogCard from "../../Card/MainBlogCard/MainBlogCard";
+import SecondBlogCard from "../../Card/SecondBlogCard/SecondBlogCard";
 import './BlogsSection.scss'
 
 class BlogsSection extends Component {

@@ -95,7 +95,7 @@
 
   .menu__btn {
     @include flex($ai: center);
-    position: fixed;
+    position: absolute;
     top: rem(45, $fontSize);
     left: rem(25, $fontSize);
     width: rem(25, $fontSize);
