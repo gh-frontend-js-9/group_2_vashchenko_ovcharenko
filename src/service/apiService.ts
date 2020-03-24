@@ -1,5 +1,5 @@
 import axios from "axios";
-import {BASE_URL, categories} from "../components/config/config";
+import {BASE_URL, categories} from "../config/config";
 
 class API {
     static getPosts(category,page = 1,limit = 10) {
