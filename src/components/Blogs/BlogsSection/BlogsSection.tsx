@@ -17,7 +17,7 @@ class BlogsSection extends Component {
                 </div>
             </div>
             <div className='blogs-section-wrapper'>
-                <MainBlogCard/>
+                <MainBlogCard />
                 <div className='second-blog-wrapper'>
                     <div className='flex-column'>
                     <SecondBlogCard/>

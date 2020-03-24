@@ -37,7 +37,6 @@ export default class Responsive extends Component {
                 <div className='title-responsive'>Responsive</div>
                 <div className={'view-all'}>View all</div>
                 </div>
-
                 <Slider {...settings}>
                     <div>
                         <SliderImgCard/>
