@@ -1,18 +1,26 @@
 .header {
-  @include flex($jc: space-between, $ai: center);
-  max-width: rem(2500, $fontSize);
-  height: rem(120, $fontSize);
-  margin: 0 auto;
   padding: 0 rem(70, $fontSize);
+  background-color: white;
+  position: fixed;
+  z-index: 200;
+  width: 100%;
 
   @media only screen and (max-width: $tableWidth) {
     padding: 0 rem(20, $fontSize);
   }
 
+  &__wrapper {
+    @include flex($jc: space-between, $ai: center);
+    margin: 0 auto;
+    max-width: rem(1170, $fontSize);
+    width: 100%;
+    height: rem(120, $fontSize);
+    color: $title-color;
+  }
+
   &__navigation {
     @include flex($jc: space-between, $ai: center);
     width: rem(800, $fontSize);
-    color: $title-color;
 
     @media only screen and (max-width: $tableWidth) {
       justify-content: center;

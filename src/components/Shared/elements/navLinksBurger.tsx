@@ -1,38 +1,45 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 
-export const NavLinks = () => {
+export const NavLinksBurger = () => {
   const props = [
+    {
+      link: '/home',
+      name: 'Home',
+      class: 'menu__item'
+    },
     {
       link: '/popular',
       name: 'Popular',
-      class: 'header__navigation--link'
+      class: 'menu__item'
     },
     {
-      link: '/new',
-      name: 'New',
-      class: 'header__navigation--link'
+      link: '/Post',
+      name: 'Post',
+      class: 'menu__item'
     },
     {
       link: '/read',
       name: 'Reading list',
-      class: 'header__navigation--link'
+      class: 'menu__item'
     },
     {
       link: '/topics',
       name: 'Topics',
-      class: 'header__navigation--link'
+      class: 'menu__item'
     },
     {
       link: '/subscribe',
       name: 'Subscribe',
-      class: 'header__navigation--link'
+      class: 'menu__item'
     }
   ];
   
   let renderNav = props.map((props, n: number) => {
     return (
-      <NavLink key={n} to={props.link} className={props.class}>{props.name}</NavLink>
+    <li  key={n}>
+      <NavLink to={props.link} className={props.class}>{props.name}</NavLink>
+    </li>
     );
   });
   

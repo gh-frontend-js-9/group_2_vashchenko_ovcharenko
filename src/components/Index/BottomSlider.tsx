@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import Slider from "react-slick";
 
 // Component
-import {Image} from "../base/elements/images";
+import {Image} from "../Shared/elements/images";
 
 // Image and style
 import sliderImg from '../../assets/images/BottomSlider.png';
@@ -23,75 +23,78 @@ export default class BottomSlider extends Component {
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
+            initialSlide: 1,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2
+            slidesToScroll: 1,
+            initialSlide: 1,
           }
         },
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 1
           }
         }
       ]
     };
     const props = [
       {
-        link: '/new',
+        link: '/Post',
         image: sliderImg,
         ariaLabel: 'UI design article',
         title: 'UI design',
       },
       {
-        link: '/new',
+        link: '/Post',
         image: sliderImg,
         ariaLabel: 'UI design category',
         title: 'UI design',
       },
       {
-        link: '/new',
+        link: '/Post',
         image: sliderImg,
         ariaLabel: 'SEO category',
         title: 'SEO',
       },
       {
-        link: '/new',
+        link: '/Post',
         image: sliderImg,
         ariaLabel: 'Popular article',
         title: 'Popular',
       },
       {
-        link: '/new',
+        link: '/Post',
         image: sliderImg,
         ariaLabel: 'Essentials',
         title: 'Essentials',
       },
       {
-        link: '/new',
+        link: '/Post',
         image: sliderImg,
         ariaLabel: 'GeekHub',
         title: 'GeekHub',
       },
       {
-        link: '/new',
+        link: '/Post',
         image: sliderImg,
         ariaLabel: 'Projects',
         title: 'Project',
       },
       {
-        link: '/new',
+        link: '/Post',
         image: sliderImg,
-        ariaLabel: 'Route on New page',
+        ariaLabel: 'Route on Post page',
         title: 'NEW page',
       },
       {
