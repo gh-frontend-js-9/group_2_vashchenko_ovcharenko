@@ -7,6 +7,9 @@ import API from "../../../service/apiService";
 import MainBlogCard from "../../Card/MainBlogCard/MainBlogCard";
 import BlogsSection from "../BlogsSection/BlogsSection";
 import './BlogsSectionList.scss'
+import SimpleSlider from "../../SliderImg/SliderImg";
+import BlogsWithImage from "../BlogsWithImage/BlogsWithImage";
+import BlogsWrapper from "../../BlogsWrapper/BlogsWrapper";
 
 interface Props {
 
@@ -31,6 +34,7 @@ class BlogsSectionList extends Component<any,State> {
 
     render() {
         return (
+            <div>
             <div className='project-list-wrapper'>
                 {
                     this.props.posts.map(post => {
@@ -39,6 +43,18 @@ class BlogsSectionList extends Component<any,State> {
                         )
                     })
                 }
+            </div>
+                <SimpleSlider/>
+                <div className='blog-with-image'>
+                {
+                    this.props.posts.map(post => {
+                        return(
+                            <BlogsWithImage img={post} key={post._id}/>
+                        )
+                    })
+                }
+                </div>
+
             </div>
         );
     }
