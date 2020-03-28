@@ -19,6 +19,7 @@ import thunk from "redux-thunk";
 import rootReducer from "./redux/reducers";
 import {applyMiddleware, createStore} from "redux";
 import { Provider } from "react-redux";
+import BlogsSectionList from "./components/Blogs/BlogsSectionList/BlogsSectionList";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -59,7 +60,7 @@ function App() {
             <BlogsWrapper
                 className='blogs-main-wrapper'
             >
-            <BlogsSection/>
+            <BlogsSectionList/>
             <SimpleSlider/>
             <BlogsWithImage/>
             </BlogsWrapper>
