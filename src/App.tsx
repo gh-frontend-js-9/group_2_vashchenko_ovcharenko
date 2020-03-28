@@ -61,8 +61,6 @@ function App() {
                 className='blogs-main-wrapper'
             >
             <BlogsSectionList/>
-            <SimpleSlider/>
-            <BlogsWithImage/>
             </BlogsWrapper>
           </Route>
         </Switch>
