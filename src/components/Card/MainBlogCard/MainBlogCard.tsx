@@ -12,39 +12,26 @@ import {getPosts} from "../../../redux/actions/getPosts";
 
 class MainBlogCard extends Component<any,any> {
 
-    componentDidMount(): void {
-        this.props.getPosts()
-    }
 
     render() {
+        let {post} = this.props;
         return (
-
             <CardBox className='card-wrapper'>
                 <CardContent className='entire-content'>
                     <CardAuthor className='card-author'>
-                        BY  TOMAS LAURINAVICIUS  IN  DESIGN PROCESS
+                        BY  TOMAS LAURINAVICIUS  IN   {post.tags}
                     </CardAuthor>
                     <CardTitle className='card-title'>
-                        How to Boost Conversions on Your WooCommerce Product Pages
+                        {post.title}
                     </CardTitle>
                     <CardDescription className='card-description'>
-                        User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.
+                        {post.description}
                     </CardDescription>
                 </CardContent>
             </CardBox>
         );
     }
 }
-const  mapStateToProps = (state) => {
-    return {
-        posts: state.getPostsReducer.posts
-    };
-};
 
-const  mapDispatchToProps = (dispatch) => {
-    return {
-        getPosts: bindActionCreators(getPosts, dispatch)
-    };
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainBlogCard);
+export default MainBlogCard;

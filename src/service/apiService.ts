@@ -9,14 +9,15 @@ class API {
                     posts: response.data.docs
                 }
             })
-            .catch(error => {
-                console.log('registr err', error);
-            })
     }
     static async getPostsForEveryCategories() {
-        return categories.map(async (category) => {
-            return await this.getPosts(category)
-        })
+        let data = [];
+        for (let i = 0; i < categories.length; i++) {
+            let post = (await this.getPosts(categories[i])).posts
+            data = [...data,...post]
+            console.log(data)
+        }
+        return data
     }
 }
 
