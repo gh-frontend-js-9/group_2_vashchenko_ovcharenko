@@ -1,0 +1,8 @@
+.reading-list-wrap {
+  height: 170px;
+  @media screen and (max-width: 768px) {
+    & {
+      text-align: center;
+    }
+  }
+}

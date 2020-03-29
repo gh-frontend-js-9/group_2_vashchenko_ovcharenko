@@ -1,0 +1,20 @@
+.reading-list-position {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width: 1362px){
+    & {
+      justify-content: center;
+    }
+  }
+}
+.reading-list-title-cards {
+  width: 211px;
+  height: 20px;
+  color: #9b9b9b;
+  font-family: "Open Sans";
+  font-size: 18px;
+  letter-spacing: -0.07px;
+  margin-bottom: 30px;
+}

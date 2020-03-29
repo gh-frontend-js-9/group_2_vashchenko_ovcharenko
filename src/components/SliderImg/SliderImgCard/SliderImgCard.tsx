@@ -10,4 +10,4 @@ class SliderImgCard extends Component {
     }
 }
 
-export default SliderImgCard;
+export default SliderImgCard;  
