@@ -9,6 +9,11 @@ export const NavLinks = () => {
       class: 'header__navigation--link'
     },
     {
+      link: '/new',
+      name: 'New',
+      class: 'header__navigation--link'
+    },
+    {
       link: '/post',
       name: 'Post',
       class: 'header__navigation--link'

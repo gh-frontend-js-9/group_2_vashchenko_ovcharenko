@@ -8,7 +8,7 @@ import {Content} from "../Shared/elements/content";
 // Images and style
 import BottomCard from '../../assets/images/BottomCard.png';
 
-const responseText = '     <p>People’s quest for creating websites has easily taken us to a new era of site development. Where, with the availability of robust page building tools, creating websites has become a lot more fun (especially for non-developers). The multitude of tools and plugins available to you is vast when you try building websites on WordPress. Today we’ll explore a new one, <a href="">WP Page Builder</a>. If you’re tired of the same old page builder plugins, this is one you should try out.</p>  <h2>What’s Special About WP Page Builder?</h2>  <p>Wondering what makes WP Page Builder so special? I would say, what doesn’t? It’s developed by the team over at Themeum, who has been creating <a href="">WordPress themes</a> since 2013. As mentioned above, the plugin is a full pack of essential site building elements with all modern the modern functionality you’ve come to expect from a page builder plugin. Let’s have a look below at all of the juicy features WP Page Builder includes.</p>  <img src="https://ghblogs.herokuapp.com/images/mountains.jpg" alt="Mountains"/>  <h2>Here are some of the amazing add-ons included:</h2>\n' +
+const responseText = '   <p>People’s quest for creating websites has easily taken us to a new era of site development. Where, with the availability of robust page building tools, creating websites has become a lot more fun (especially for non-developers). The multitude of tools and plugins available to you is vast when you try building websites on WordPress. Today we’ll explore a new one, <a href="">WP Page Builder</a>. If you’re tired of the same old page builder plugins, this is one you should try out.</p>  <h2>What’s Special About WP Page Builder?</h2>  <p>Wondering what makes WP Page Builder so special? I would say, what doesn’t? It’s developed by the team over at Themeum, who has been creating <a href="">WordPress themes</a> since 2013. As mentioned above, the plugin is a full pack of essential site building elements with all modern the modern functionality you’ve come to expect from a page builder plugin. Let’s have a look below at all of the juicy features WP Page Builder includes.</p>  <img src="https://ghblogs.herokuapp.com/images/mountains.jpg" alt="Mountains"/>  <h2>Here are some of the amazing add-ons included:</h2>\n' +
 '      <ul>\n' +
 '        <li><strong>Form:</strong> Create web forms effortlessly. It gives you a convenient way to style your forms as you desire. The Form add-on itself is capable of setting up any kind of form without needing to install any plugin. Moreover, you can manage form plugins and enable reCAPTCHA with just a simple click. There is also an add-on for Contact Form 7 if you prefer.</li>\n' +
 '        <li><strong>Carousel:</strong> It’s hard to find an advanced add-on like a carousel in a free page builder plugin, but WP Page Builder lets you create stunning hero sliders without having to pay for it.</li>\n' +
@@ -21,6 +21,9 @@ const responseText = '     <p>People’s quest for creating websites has easily 
 '        <figcaption>“WP Page Builder offers a lot of ready-to-use design blocks to make your site development process a lot faster and easier“</figcaption>\n' +
 '      </figure>';
 
+function createMarkup() {
+  return {__html: responseText};
+}
 
 const cardItemsBottom = [
   {

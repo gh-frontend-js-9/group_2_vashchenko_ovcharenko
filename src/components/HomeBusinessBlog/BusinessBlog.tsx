@@ -2,16 +2,16 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 // Component
-import MainSlider from "./MainSlider";
-import BottomSlider from "./BottomSlider";
+import SliderBusinessBlog from "./SliderBusinessBlog";
 import {Card} from '../Card/Card';
 
 // Images and style
 import PrimaryCard from '../../assets/images/PrimaryCard.png';
 import SecondaryCard from '../../assets/images/SecondaryCard.png';
 import BottomCard from '../../assets/images/BottomCard.png';
+import RandomCard from '../../assets/images/RandomCard.png';
 
-function Home() {
+function BusinessBlog() {
   
   const cardItemsPopular = [
     {
@@ -62,9 +62,10 @@ function Home() {
       title: 'Working Remotely – Everything You Need'
     }
   ];
+  
   const cardItemsEssentials = [
     {
-      class: 'card__main',
+      class: 'card__main--reverse',
       bgImage: PrimaryCard,
       link: '/read',
       subTitleClass: 'content__subtitle',
@@ -111,54 +112,18 @@ function Home() {
       title: 'How to Set up Sucuri Firewall (WAF)'
     }
   ];
-  const cardItemsFreelance = [
+  const cardItemsRandom = [
     {
-      class: 'card__main',
-      bgImage: PrimaryCard,
-      link: '/Post',
-      subTitleClass: 'content__subtitle',
-      subTitle: 'BY   TOMAS LAURINAVICIUS   IN   DESIGN PROCESS',
+      class: 'card__random',
+      bgImage: RandomCard,
+      link: '/read',
+      subTitleClass: 'content__subtitle--card-small',
+      subTitle: 'BY TOMAS LAURINAVICIUS IN TUTORIALS',
       titleClass: 'content__title--card',
-      title: '10 Best WordPress Event Management Plugins (Calendars, Ticketing, RSVPs)',
+      title: 'Mind-Blowing Twitter Stats and Facts on Our Favorite Network (2018)',
       contentClass: 'content__text--card',
       content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
     },
-    {
-      class: 'card__box',
-      bgImage: SecondaryCard,
-      link: '/Post',
-      subTitleClass: 'content__subtitle--card-small',
-      subTitle: 'FREELANCING',
-      titleClass: 'content__title--card-small',
-      title: 'The 53 Best Tools for Freelancers'
-    },
-    {
-      class: 'card__box',
-      bgImage: SecondaryCard,
-      link: '/Post',
-      subTitleClass: 'content__subtitle--card-small',
-      subTitle: 'FREELANCING',
-      titleClass: 'content__title--card-small',
-      title: 'Why and How to Use Lossy Compression'
-    },
-    {
-      class: 'card__box',
-      bgImage: SecondaryCard,
-      link: '/Post',
-      subTitleClass: 'content__subtitle--card-small',
-      subTitle: 'DESIGN PROCESS',
-      titleClass: 'content__title--card-small',
-      title: '11 WordPress Instagram Plugins for Displaying'
-    },
-    {
-      class: 'card__box',
-      bgImage: SecondaryCard,
-      link: '/Post',
-      subTitleClass: 'content__subtitle--card-small',
-      subTitle: 'INSPIRATION',
-      titleClass: 'content__title--card-small',
-      title: 'Kinsta Kingpin: Interview with James Laws'
-    }
   ];
   
   const cardItemsBottom = [
@@ -189,8 +154,14 @@ function Home() {
   
   return (
   <main className={'main'}>
-    <MainSlider />
     
+    <div className={'card__header'}>
+      <h2 className={'card__header--title'}>Reading lists</h2>
+      <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
+    </div>
+    <SliderBusinessBlog />
+  
+  
     <div className={'card__header'}>
       <h2 className={'card__header--title'}>Popular</h2>
       <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
@@ -198,7 +169,13 @@ function Home() {
     <div className="card__home-wrapper--main">
       <Card items={cardItemsPopular}/>
     </div>
-    
+  
+    <div className={'card__header'}>
+      <h2 className={'card__header--title'}>Random</h2>
+    </div>
+    <div className="card__home-wrapper--random">
+      <Card items={cardItemsRandom}/>
+    </div>
     
     <div className={'card__header'}>
       <h2 className={'card__header--title'}>Essentials</h2>
@@ -208,21 +185,6 @@ function Home() {
       <Card items={cardItemsEssentials}/>
     </div>
     
-    <div className={'card__header'}>
-      <h2 className={'card__header--title'}>Freelance</h2>
-      <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
-    </div>
-    <div className="card__home-wrapper--main">
-      <Card items={cardItemsFreelance}/>
-    </div>
-    
-    <div className={'card__header'}>
-      <h2 className={'card__header--title'}>Reading lists</h2>
-      <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
-    </div>
-    
-    <BottomSlider />
-    
     <div className="card__home-wrapper--main-bottom">
       <Card items={cardItemsBottom}/>
     </div>
@@ -230,4 +192,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default BusinessBlog;

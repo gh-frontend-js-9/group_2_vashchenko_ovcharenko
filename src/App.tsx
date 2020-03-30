@@ -1,26 +1,24 @@
 import React from 'react';
-
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+import {applyMiddleware, createStore} from "redux";
+import { Provider } from "react-redux";
+import rootReducer from "./redux/reducers";
+import thunk from "redux-thunk";
 
 // Component
 import Header from './components/Shared/Header'
 import Footer from './components/Shared/Footer'
 import Home from './components/Index/Home'
 import Post from './components/Post/Post'
+import UnderConstruction from './components/Shared/UnderConstruction';
+import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
+import ReadingLists from "./components/ReadingLists/ReadingLists";
+import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
+
 import MainBlogCard from "./components/Card/MainBlogCard/MainBlogCard";
 import BlogsSection from "./components/Blogs/BlogsSection/BlogsSection";
 import BlogsWithImage from "./components/Blogs/BlogsWithImage/BlogsWithImage";
-
-
-import UnderConstruction from './components/Shared/UnderConstruction';
-import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
-
-import thunk from "redux-thunk";
-import rootReducer from "./redux/reducers";
-import {applyMiddleware, createStore} from "redux";
-import { Provider } from "react-redux";
 import BlogsSectionList from "./components/Blogs/BlogsSectionList/BlogsSectionList";
-import ReadingLists from "./components/ReadingLists/ReadingLists";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -33,6 +31,10 @@ function App() {
         <Switch>
           <Route path={'/popular'}>
             <UnderConstruction/>
+          </Route>
+          
+          <Route path={'/new'}>
+            < BusinessBlog />
           </Route>
           
           <Route path={'/post'}>
