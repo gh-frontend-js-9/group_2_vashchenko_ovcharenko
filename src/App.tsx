@@ -11,14 +11,16 @@ import MainBlogCard from "./components/Card/MainBlogCard/MainBlogCard";
 import BlogsSection from "./components/Blogs/BlogsSection/BlogsSection";
 import BlogsWithImage from "./components/Blogs/BlogsWithImage/BlogsWithImage";
 
+
 import UnderConstruction from './components/Shared/UnderConstruction';
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
-import SimpleSlider from "./components/SliderImg/SliderImg";
 
 import thunk from "redux-thunk";
 import rootReducer from "./redux/reducers";
 import {applyMiddleware, createStore} from "redux";
 import { Provider } from "react-redux";
+import BlogsSectionList from "./components/Blogs/BlogsSectionList/BlogsSectionList";
+import ReadingLists from "./components/ReadingLists/ReadingLists";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -27,38 +29,31 @@ function App() {
   <Provider store={store}>
     <div>
       <BrowserRouter>
-        <Header />
+        <Header/>
         <Switch>
           <Route path={'/popular'}>
-            < UnderConstruction />
+            <UnderConstruction/>
           </Route>
           
           <Route path={'/post'}>
             < Post />
           </Route>
-  
           <Route path={'/read'}>
-            < UnderConstruction />
+            <BlogsWrapper className='reading-list-wrapper'>
+            <ReadingLists/>
+            </BlogsWrapper>
           </Route>
-  
-          <Route path={'/read'}>
-            < UnderConstruction />
-          </Route>
-  
           <Route path={'/topics'}>
-            < UnderConstruction />
+            <UnderConstruction/>
           </Route>
-  
           <Route path={'/subscribe'}>
-            < UnderConstruction />
+            <UnderConstruction/>
           </Route>
-  
           <Redirect exact from={'/'} to={'/home'} />
           <Route exact path={'/home'}>
             <Home />
           </Route>
         </Switch>
-  
         <Footer/>
       </BrowserRouter>
     </div>

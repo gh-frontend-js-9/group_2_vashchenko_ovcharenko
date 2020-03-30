@@ -28,12 +28,12 @@ export const getPostsError: ActionCreator<Action> = () => {
     };
 };
 
-export const getPosts: (category,limit,page,fields)
+export const getPosts: ()
     => (dispatch: Dispatch)
-    => void = (category,limit,page,fields) => {
+    => void = () => {
     return (dispatch: Dispatch) => {
         dispatch(getPostsPending());
-        API.getPosts(category,limit,page,fields)
+        API.getPostsForEveryCategories()
             .then(success => {
                 console.log(success);
                 dispatch(getPostsSuccess(success));

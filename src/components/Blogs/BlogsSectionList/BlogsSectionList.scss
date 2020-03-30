@@ -1,0 +1,13 @@
+.project-list-wrapper {
+  max-height: 2100px;
+  overflow: scroll;
+}
+
+.blog-with-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 823px;
+  overflow: scroll;
+}
