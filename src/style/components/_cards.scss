@@ -95,8 +95,9 @@
   }
 
   &__box {
-    background-repeat: no-repeat;
-    border-radius: 5px;
+    background: no-repeat;
+    background-size: auto;
+    border-radius: 8px;
     padding: 36px 20px;
     font-size: 150%;
 
@@ -116,8 +117,11 @@
   }
 
   &__main {
+    background: $default-color no-repeat center center;
+    background-size: auto;
     color: $light-text;
     padding: rem(50, $fontSize);
+    border-radius: 8px;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
 

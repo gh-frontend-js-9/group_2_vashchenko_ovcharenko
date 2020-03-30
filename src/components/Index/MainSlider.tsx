@@ -2,22 +2,19 @@ import React, { Component } from "react";
 import {NavLink} from "react-router-dom";
 import Slider from "react-slick";
 
-// Component
-import {Image} from "../base/elements/images";
-
 // Image and style
 import slide1 from '../../assets/images/slider1.jpg'
 import slide2 from '../../assets/images/slider2.jpg'
 import slide3 from '../../assets/images/slider3.jpg'
-import './main-slider.scss'
+import './slider.scss'
 
 export default class MainSlider extends Component {
   render() {
     
     const settings = {
       dots: true,
-      infinite: true,
       arrows: false,
+      infinite: true,
       autoplay: true,
       speed: 1000,
       slidesToShow: 1,
@@ -56,14 +53,12 @@ export default class MainSlider extends Component {
       return (
       <div key={n} className={'header-slider'}>
         <NavLink to={props.link}>
-          < Image image={props.image}
-                  altText={props.title}
-                  ariaLabel={props.ariaLabel}
-                  className={'header-slider__image'} />
-          <div className={'header-slider__text'}>
-            <p className={'content__subtitle'}>{props.author}</p>
-            <h2 className={'content__title'}>{props.title}</h2>
-            <p  className={'content__text--slider'}>{props.content}</p>
+          < div style={ {backgroundImage:`url(${props.image})`} } className={'header-slider__image'} >
+            <div className={'header-slider__text'}>
+              <p className={'content__subtitle'}>{props.author}</p>
+              <h2 className={'content__title'}>{props.title}</h2>
+              <p  className={'content__text--slider'}>{props.content}</p>
+            </div>
           </div>
         </NavLink>
       </div>

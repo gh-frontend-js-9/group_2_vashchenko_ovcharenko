@@ -4,14 +4,14 @@ import {NavLink} from 'react-router-dom';
 // Component
 import MainSlider from "./MainSlider";
 import BottomSlider from "./BottomSlider";
-import {Card} from '../base/Card';
+import {Card} from '../Card/Card';
 
 // Images and style
 import PrimaryCard from '../../assets/images/PrimaryCard.png'
 import SecondaryCard from '../../assets/images/SecondaryCard.png'
 import BottomCard from '../../assets/images/BottomCard.png'
 
-function New() {
+function Home() {
   
   const cardItemsPopular = [
     {
@@ -115,7 +115,7 @@ function New() {
     {
       class: 'box card__main',
       bgImage: PrimaryCard,
-      link: '/new',
+      link: '/Post',
       subTitleClass: 'content__subtitle',
       subTitle: 'BY   TOMAS LAURINAVICIUS   IN   DESIGN PROCESS',
       titleClass: 'content__title--card',
@@ -126,7 +126,7 @@ function New() {
     {
       class: 'card__box',
       bgImage: SecondaryCard,
-      link: '/new',
+      link: '/Post',
       subTitleClass: 'content__subtitle--card-small',
       subTitle: 'FREELANCING',
       titleClass: 'content__title--card-small',
@@ -135,7 +135,7 @@ function New() {
     {
       class: 'card__box',
       bgImage: SecondaryCard,
-      link: '/new',
+      link: '/Post',
       subTitleClass: 'content__subtitle--card-small',
       subTitle: 'FREELANCING',
       titleClass: 'content__title--card-small',
@@ -144,7 +144,7 @@ function New() {
     {
       class: 'card__box',
       bgImage: SecondaryCard,
-      link: '/new',
+      link: '/Post',
       subTitleClass: 'content__subtitle--card-small',
       subTitle: 'DESIGN PROCESS',
       titleClass: 'content__title--card-small',
@@ -153,7 +153,7 @@ function New() {
     {
       class: 'card__box',
       bgImage: SecondaryCard,
-      link: '/new',
+      link: '/Post',
       subTitleClass: 'content__subtitle--card-small',
       subTitle: 'INSPIRATION',
       titleClass: 'content__title--card-small',
@@ -165,7 +165,7 @@ function New() {
     {
       class: 'card__box--main-bottom',
       bgImage: BottomCard,
-      link: '/new',
+      link: '/Post',
       subTitleClass: 'content__subtitle--card-small',
       subTitle: 'BY TOMAS LAURINAVICIUS IN RESOURCE',
       titleClass: 'content__title--card',
@@ -176,7 +176,7 @@ function New() {
     {
       class: 'card__box--main-bottom',
       bgImage: BottomCard,
-      link: '/new',
+      link: '/Post',
       subTitleClass: 'content__subtitle--card-small',
       subTitle: 'BY TOMAS LAURINAVICIUS IN ANNOUNCEMENTS',
       titleClass: 'content__title--card',
@@ -188,46 +188,46 @@ function New() {
   
   
   return (
-    <main className={'main'}>
-      <MainSlider />
-      
-      <div className={'card__header'}>
-        <h2 className={'card__header--title'}>Popular</h2>
-        <NavLink to={'/popular'} className={'card__header--view'}>View all</NavLink>
-      </div>
-      <div className="card__home-wrapper--main">
-        <Card items={cardItemsPopular}/>
-      </div>
-      
-      
-      <div className={'card__header'}>
-        <h2 className={'card__header--title'}>Essentials</h2>
-        <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
-      </div>
-      <div className="card__home-wrapper--main">
-        <Card items={cardItemsEssentials}/>
-      </div>
-      
-      <div className={'card__header'}>
-        <h2 className={'card__header--title'}>Freelance</h2>
-        <NavLink to={'/new'} className={'card__header--view'}>View all</NavLink>
-      </div>
-      <div className="card__home-wrapper--main">
-        <Card items={cardItemsFreelance}/>
-      </div>
-  
-      <div className={'card__header'}>
-        <h2 className={'card__header--title'}>Reading lists</h2>
-        <NavLink to={'/new'} className={'card__header--view'}>View all</NavLink>
-      </div>
-      
-      <BottomSlider />
-      
-      <div className="card__home-wrapper--main-bottom">
-        <Card items={cardItemsBottom}/>
-      </div>
-    </main>
+  <main className={'main'}>
+    <MainSlider />
+    
+    <div className={'card__header'}>
+      <h2 className={'card__header--title'}>Popular</h2>
+      <NavLink to={'/popular'} className={'card__header--view'}>View all</NavLink>
+    </div>
+    <div className="card__home-wrapper--main">
+      <Card items={cardItemsPopular}/>
+    </div>
+    
+    
+    <div className={'card__header'}>
+      <h2 className={'card__header--title'}>Essentials</h2>
+      <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
+    </div>
+    <div className="card__home-wrapper--main">
+      <Card items={cardItemsEssentials}/>
+    </div>
+    
+    <div className={'card__header'}>
+      <h2 className={'card__header--title'}>Freelance</h2>
+      <NavLink to={'/Post'} className={'card__header--view'}>View all</NavLink>
+    </div>
+    <div className="card__home-wrapper--main">
+      <Card items={cardItemsFreelance}/>
+    </div>
+    
+    <div className={'card__header'}>
+      <h2 className={'card__header--title'}>Reading lists</h2>
+      <NavLink to={'/Post'} className={'card__header--view'}>View all</NavLink>
+    </div>
+    
+    <BottomSlider />
+    
+    <div className="card__home-wrapper--main-bottom">
+      <Card items={cardItemsBottom}/>
+    </div>
+  </main>
   );
 }
 
-export default New;
+export default Home;

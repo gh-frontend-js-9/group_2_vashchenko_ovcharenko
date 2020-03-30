@@ -2,12 +2,17 @@ import React from 'react';
 
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
-import Header from './components/base/Header'
-import Footer from './components/base/Footer'
-import Home from './components/index/Home'
-import New from './components/new/New'
+// Component
+import Header from './components/Shared/Header'
+import Footer from './components/Shared/Footer'
+import Home from './components/Index/Home'
+import Post from './components/Post/Post'
+import MainBlogCard from "./components/Card/MainBlogCard/MainBlogCard";
+import BlogsSection from "./components/Blogs/BlogsSection/BlogsSection";
+import BlogsWithImage from "./components/Blogs/BlogsWithImage/BlogsWithImage";
 
-import UnderConstruction from './components/base/UnderConstruction';
+
+import UnderConstruction from './components/Shared/UnderConstruction';
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 
 import thunk from "redux-thunk";
@@ -29,8 +34,9 @@ function App() {
           <Route path={'/popular'}>
             <UnderConstruction/>
           </Route>
-          <Route path={'/new'}>
-            <New/>
+          
+          <Route path={'/post'}>
+            < Post />
           </Route>
           <Route path={'/read'}>
             <BlogsWrapper className='reading-list-wrapper'>
@@ -46,9 +52,6 @@ function App() {
           <Redirect exact from={'/'} to={'/home'} />
           <Route exact path={'/home'}>
             <Home />
-            <BlogsWrapper className='blogs-main-wrapper'>
-            <BlogsSectionList/>
-            </BlogsWrapper>
           </Route>
         </Switch>
         <Footer/>
