@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+.card-description {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  line-height: 32px;
+  margin-top: 35px;
+}
+
+.second-card-description {
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.11px;
+  line-height: 30px;
+  &:hover {
+    color: #FF5480;
+    cursor: pointer;
+  }
+}
+
+.card-description-blur {
+  color: #9b9b9b;
+  font-family: "Open Sans";
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  line-height: 32px;
+  width: 530px;
+}
+.reading-lists-card-description {
+  width: 211px;
+  height: 93px;
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  line-height: 32px;
+}

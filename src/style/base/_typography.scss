@@ -1,0 +1,92 @@
+.content {
+  &__title{
+    font-size: rem(36, $fontSize);
+    font-weight: 600;
+    line-height: rem(46, $fontSize);
+    letter-spacing: -0.22px;
+    margin-bottom: 15px;
+
+    &:hover {
+      color: $active-color;
+    }
+
+    @media only screen and (max-width: $phoneWidth) {
+      text-transform: uppercase;
+      font-size: rem(20, $fontSize);
+    }
+
+    &--card {
+      @extend .content__title;
+      font-size: rem(28, $fontSize);
+
+
+      @media only screen and (max-width: $phoneWidth) {
+        font-size: rem(20, $fontSize);
+      }
+    }
+
+    &--card-small {
+      @extend .content__title;
+      font-size: rem(18, $fontSize);
+      letter-spacing: -0.11px;
+      line-height: rem(30, $fontSize);
+
+      @media only screen and (max-width: $phoneWidth) {
+        font-size: rem(12, $fontSize);
+        line-height: unset;
+      }
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: $fontSize;
+    font-weight: 300;
+    line-height: rem(46, $fontSize);
+    letter-spacing: -0.1px;
+
+    @media only screen and (max-width: $phoneWidth) {
+      font-size: rem(10, $fontSize);
+    }
+
+    &--card-small {
+      @extend .content__subtitle;
+      color: $subtitle-color;
+      font-weight: unset;
+      line-height: unset;
+      margin-bottom: 10px;
+
+      @media only screen and (max-width: $phoneWidth) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    line-height: rem(32, $fontSize);
+    letter-spacing: -0.15px;
+
+    &--slider {
+      @extend .content__text;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 32px;
+
+      @media only screen and (max-width: $tableWidth) {
+        display: none;
+      }
+    }
+
+    &--card {
+      @extend .content__text;
+      margin-top: rem(25,$fontSize);
+      font-size: rem(16, $fontSize);
+      font-weight: 300;
+      opacity: 0.7;
+
+      @media only screen and (max-width: $phoneWidth) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,20 +1,40 @@
 .header {
-  @include flex($jc: space-between, $ai: center);
-  max-width: rem(2500, $fontSize);
-  height: rem(120, $fontSize);
-  margin: 0 auto;
   padding: 0 rem(70, $fontSize);
+  background-color: white;
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+
+  @media only screen and (max-width: $tableWidth) {
+    padding: 0 rem(20, $fontSize);
+  }
+
+  &__wrapper {
+    @include flex($jc: space-between, $ai: center);
+    margin: 0 auto;
+    max-width: rem(1170, $fontSize);
+    width: 100%;
+    height: rem(120, $fontSize);
+    color: $title-color;
+  }
 
   &__navigation {
     @include flex($jc: space-between, $ai: center);
     width: rem(800, $fontSize);
-    color: $title-color;
+
+    @media only screen and (max-width: $tableWidth) {
+      justify-content: center;
+    }
 
     &--logo {
       width: 100%;
       max-width: rem(95, $fontSize);
       height: 100%;
       max-height: rem(29, $fontSize);
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
     }
 
     &--link {
@@ -29,11 +49,19 @@
         border-radius: 10px;
         background-color: $active-color;
       }
+
+      @media only screen and (max-width: $tableWidth) {
+        display: none;
+      }
     }
   }
 
   &__search {
+    opacity: 0.6;
 
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .active {
@@ -41,6 +69,92 @@
     border-radius: 10px;
     background-color: $active-color;
   }
+
+  &-hamburger-menu {
+    display: none;
+
+    @media only screen and (max-width: $tableWidth) {
+      display: block;
+    }
+  }
+
+
+  #menu__toggle {
+    opacity: 0;
+
+    &:checked {
+      & ~ .menu__btn > span {
+        transform: rotate(45deg);
+        &:before {
+          top: 0;
+          transform: rotate(0);
+        }
+        &:after {
+          top: 0;
+          transform: rotate(90deg);
+        }
+      }
+      & ~ .menu__box {
+        left: 0;
+        visibility: visible;
+      }
+    }
+  }
+
+  .menu__btn {
+    @include flex($ai: center);
+    position: absolute;
+    top: rem(45, $fontSize);
+    left: rem(25, $fontSize);
+    width: rem(25, $fontSize);
+    height: rem(25, $fontSize);
+    cursor: pointer;
+    z-index: 3;
+
+    & > span,
+    & > span:before,
+    & > span:after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: $title-color;
+      transition-duration: .5s;
+    }
+
+    & > span:before {
+      content: '';
+      top: -9px;
+    }
+    & > span:after  {
+      content: '';
+      top: 9px;
+    }
+  }
+
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    z-index: 2;
+    width: rem(150, $fontSize);
+    height: 100%;
+    margin: 0;
+    padding: rem(80, $fontSize) 0;
+    background-color: $background-color;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .5s;
+  }
+
+  .menu__item {
+    display: block;
+    padding: rem(10, $fontSize) rem(20, $fontSize);
+    font-size: $fontSize;
+    transition-duration: .25s;
+    &:hover {
+      background-color: $subtitle-color;
+    }
+  }
 }
-
-
