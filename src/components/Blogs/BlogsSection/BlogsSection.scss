@@ -15,6 +15,7 @@
   justify-content: center;
   width: 648px;
   display: flex;
+  flex-direction: column;
   @media screen and (max-width: 680px) {
     & {
       flex-direction: column;
@@ -23,9 +24,11 @@
   }
 }
 
-.flex-column {
+.flex-second {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .group-blogs{
