@@ -10,17 +10,18 @@ import {Post} from "../../../models/Post";
 
 class BlogsWithImage extends Component<any,Post> {
     render() {
-        let {img} = this.props;
+        let {img1} = this.props;
+        let img = img1.map(res => res )
         return (
                 <div className='blog-display-row'>
                     <div className='blogs-image-title'>
                         <CardImg>
-                            <img src={img.featuredImage} alt="" className='card-image'/>
+                            <img src={img[0].featuredImage} alt="" className='card-image'/>
                         </CardImg>
                         <CardBox className='blur-card-title '>
                             <CardContent className='blur-card-content'>
                                 <CardAuthor className='card-author-blur'>
-                                    BY  TOMAS LAURINAVICIUS  IN  DESIGN PROCESS
+                                    BY  TOMAS LAURINAVICIUS  IN  {img.title}
                                 </CardAuthor>
                                 <CardTitle className='card-title-blur'>
                                     How to Boost Conversions on Your WooCommerce Product Pages

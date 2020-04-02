@@ -48,8 +48,8 @@ class BlogsSectionList extends Component<any,State> {
                 <div className='blog-with-image'>
                 {
                     this.props.posts.map(post => {
-                        return(
-                            <BlogsWithImage img={post} key={post._id}/>
+                        return (
+                            <BlogsWithImage img1={post} key={post._id}/>
                         )
                     })
                 }
