@@ -7,7 +7,7 @@ import {Image} from "../Shared/elements/images";
 
 // Image and style
 import sliderImg from '../../assets/images/BottomSlider.png';
-import '../Index/slider.scss'
+import '../index/slider.scss'
 
 export default class SliderBusinessBlog extends Component {
   render() {

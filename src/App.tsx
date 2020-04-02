@@ -8,17 +8,14 @@ import thunk from "redux-thunk";
 // Component
 import Header from './components/Shared/Header'
 import Footer from './components/Shared/Footer'
-import Home from './components/Index/Home'
 import Post from './components/Post/Post'
 import UnderConstruction from './components/Shared/UnderConstruction';
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
 import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
 
-import MainBlogCard from "./components/Card/MainBlogCard/MainBlogCard";
-import BlogsSection from "./components/Blogs/BlogsSection/BlogsSection";
-import BlogsWithImage from "./components/Blogs/BlogsWithImage/BlogsWithImage";
 import BlogsSectionList from "./components/Blogs/BlogsSectionList/BlogsSectionList";
+import Home from "./components/index/Home";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -32,11 +29,9 @@ function App() {
           <Route path={'/popular'}>
             <UnderConstruction/>
           </Route>
-          
           <Route path={'/new'}>
             < BusinessBlog />
           </Route>
-          
           <Route path={'/post'}>
             < Post />
           </Route>
@@ -53,7 +48,10 @@ function App() {
           </Route>
           <Redirect exact from={'/'} to={'/home'} />
           <Route exact path={'/home'}>
-            <Home />
+            <Home/>
+            <BlogsWrapper className='blogs-main-wrapper'>
+            <BlogsSectionList/>
+            </BlogsWrapper>
           </Route>
         </Switch>
         <Footer/>

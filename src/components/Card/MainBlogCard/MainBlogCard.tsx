@@ -5,13 +5,9 @@ import CardBox from "../CardBox/CardBox";
 import CardTitle from "../CardBox/parts/CardTitle/CardTitle";
 import CardAuthor from "../CardBox/parts/CardAuthor/CardAuthor";
 import CardDescription from "../CardBox/parts/CardDescription/CardDescription";
-import API from "../../../service/apiService";
-import {bindActionCreators} from "redux";
-import {connect} from "react-redux";
-import {getPosts} from "../../../redux/actions/getPosts";
+import {Post} from "../../../models/Post";
 
-class MainBlogCard extends Component<any,any> {
-
+class MainBlogCard extends Component<any,Post> {
 
     render() {
         let {post} = this.props;
