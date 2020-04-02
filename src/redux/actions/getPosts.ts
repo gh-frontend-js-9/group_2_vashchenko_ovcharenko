@@ -35,7 +35,6 @@ export const getPosts: ()
         dispatch(getPostsPending());
         API.getPostsForEveryCategories()
             .then(success => {
-                console.log(success);
                 dispatch(getPostsSuccess(success));
             })
             .catch(err => {

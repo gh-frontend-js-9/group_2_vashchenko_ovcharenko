@@ -3,17 +3,10 @@ import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import {getPosts} from "../../../redux/actions/getPosts";
 import {Post} from "../../../models/Post";
-import API from "../../../service/apiService";
-import MainBlogCard from "../../Card/MainBlogCard/MainBlogCard";
 import BlogsSection from "../BlogsSection/BlogsSection";
 import './BlogsSectionList.scss'
 import SimpleSlider from "../../SliderImg/SliderImg";
 import BlogsWithImage from "../BlogsWithImage/BlogsWithImage";
-import BlogsWrapper from "../../BlogsWrapper/BlogsWrapper";
-
-interface Props {
-
-}
 
 interface State {
     posts: Post[]
@@ -49,7 +42,7 @@ class BlogsSectionList extends Component<any,State> {
                 {
                     this.props.posts.map(post => {
                         return (
-                            <BlogsWithImage img1={post} key={post._id}/>
+                            <BlogsWithImage postWm={post} key={post._id}/>
                         )
                     })
                 }

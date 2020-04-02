@@ -14,9 +14,6 @@ import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
 import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
 
-import MainBlogCard from "./components/Card/MainBlogCard/MainBlogCard";
-import BlogsSection from "./components/Blogs/BlogsSection/BlogsSection";
-import BlogsWithImage from "./components/Blogs/BlogsWithImage/BlogsWithImage";
 import BlogsSectionList from "./components/Blogs/BlogsSectionList/BlogsSectionList";
 import Home from "./components/index/Home";
 
@@ -51,8 +48,9 @@ function App() {
           </Route>
           <Redirect exact from={'/'} to={'/home'} />
           <Route exact path={'/home'}>
+            <Home/>
             <BlogsWrapper className='blogs-main-wrapper'>
-              <BlogsSectionList/>
+            <BlogsSectionList/>
             </BlogsWrapper>
           </Route>
         </Switch>

@@ -6,7 +6,7 @@ import './BlogsSection.scss'
 class BlogsSection extends Component<any,any> {
     render() {
         let {post} = this.props;
-        let post2 = post.slice(1)
+        let post2 = post.slice(1);
         return (
             <div>
                 <div className='blog-section-wrapper'>
