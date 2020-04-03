@@ -3,11 +3,11 @@ import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 
 // Component
-import {Title} from "../Shared/elements/title";
-import {Content} from "../Shared/elements/content";
+import {Title} from "../../Shared/elements/title";
+import {Content} from "../../Shared/elements/content";
 
-import API from "../../service/apiService";
-import {getPosts} from "../../redux/actions/getPosts";
+import API from "../../../service/apiService";
+import {getPosts} from "../../../redux/actions/getPosts";
 
 class MainCardReadyRedux extends Component<any,any> {
   

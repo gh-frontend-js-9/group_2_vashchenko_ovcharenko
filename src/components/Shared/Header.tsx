@@ -5,25 +5,14 @@ import {Image} from "./elements/images";
 import {NavLinks} from "./elements/navLinks";
 import {NavLinksBurger} from "./elements/navLinksBurger";
 
-// Images and style
-import logo from '../../assets/images/logo.webp';
-import search from '../../assets/images/search-icon.webp';
+
+// Import Temp Data from CONST
+import * as NavLinkItem from './NavLinkCONST';
+import * as ImagesItem from './ImageCONST';
+
 
 function Header() {
   
-  const logoState = {
-    image: logo,
-    logoClass: 'header__navigation--logo',
-    altText: 'Blog header logo',
-    ariaLabel: 'Blog logo by Vashchenko Ovcharenko',
-  };
-  
-  const searchState = {
-    image: search,
-    altText: 'Search',
-    class: 'header__search',
-    ariaLabel: 'Search on blog'
-  };
   
   return (
     <header className={'header'}>
@@ -36,27 +25,21 @@ function Header() {
           </label>
       
           <ul className="menu__box">
-            < NavLinksBurger />
+            < NavLinksBurger items={NavLinkItem.burger}/>
           </ul>
         </div>
         
           {/*Navigation and logo*/}
           <nav className={'header__navigation'}>
             <a href='/'>
-              < Image image={logoState.image}
-                      class={logoState.logoClass}
-                      altText={logoState.altText}
-                      ariaLabel={logoState.ariaLabel}/>
+              < Image items={ImagesItem.logoState}/>
             </a>
-            < NavLinks />
+            < NavLinks items={NavLinkItem.main}/>
           </nav>
         
         {/**/}
         <div>
-          < Image image={searchState.image}
-                  class={searchState.class}
-                  altText={searchState.altText}
-                  ariaLabel={searchState.ariaLabel}/>
+          < Image items={ImagesItem.searchState}/>
         </div>
       </div>
     </header>

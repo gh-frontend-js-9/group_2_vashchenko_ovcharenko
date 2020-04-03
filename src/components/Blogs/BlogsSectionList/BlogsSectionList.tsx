@@ -9,60 +9,62 @@ import SimpleSlider from "../../SliderImg/SliderImg";
 import BlogsWithImage from "../BlogsWithImage/BlogsWithImage";
 
 interface State {
-    posts: Post[]
+  posts: Post[]
 }
 
-class BlogsSectionList extends Component<any,State> {
-    constructor(props) {
-        super(props);
-        this.state = {
-            posts: []
+class BlogsSectionList extends Component<any, State> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: []
+    }
+  }
+  
+  
+  componentDidMount(): void {
+    this.props.getPosts()
+  }
+  
+  render() {
+    return (
+    <>
+      <div className='project-list-wrapper'>
+        {
+          this.props.posts.map(post => {
+            return (
+            <BlogsSection post={post} key={post._id}/>
+            )
+          })
         }
-    }
-
-
-    componentDidMount(): void {
-        this.props.getPosts()
-    }
-
-    render() {
-        return (
-            <div>
-            <div className='project-list-wrapper'>
-                {
-                    this.props.posts.map(post => {
-                        return(
-                            <BlogsSection post={post} key={post._id}/>
-                        )
-                    })
-                }
-            </div>
-                <SimpleSlider/>
-                <div className='blog-with-image'>
-                {
-                    this.props.posts.map(post => {
-                        return (
-                            <BlogsWithImage postWm={post} key={post._id}/>
-                        )
-                    })
-                }
-                </div>
-
-            </div>
-        );
-    }
+      </div>
+      
+      <SimpleSlider/>
+      
+      <div className='blog-with-image'>
+        {
+          this.props.posts.map(post => {
+            return (
+            <BlogsWithImage postWm={post} key={post._id}/>
+            )
+          })
+        }
+      </div>
+    </>
+    );
+  }
 }
+
 const mapStateToProps = (state) => {
-    return {
-        posts: state.getPostsReducer.posts,
-    };
+  return {
+    posts: state.getPostsReducer.posts,
+  };
 };
 
 
-const  mapDispatchToProps = (dispatch) => {
-    return {
-        getPosts: bindActionCreators(getPosts, dispatch)
-    };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getPosts: bindActionCreators(getPosts, dispatch)
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BlogsSectionList);

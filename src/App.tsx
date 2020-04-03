@@ -8,14 +8,17 @@ import thunk from "redux-thunk";
 // Component
 import Header from './components/Shared/Header'
 import Footer from './components/Shared/Footer'
+import Home from "./components/Index/Home";
 import Post from './components/Post/Post'
-import UnderConstruction from './components/Shared/UnderConstruction';
+
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
 import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
 
-import BlogsSectionList from "./components/Blogs/BlogsSectionList/BlogsSectionList";
-import Home from "./components/index/Home";
+
+// Hard Code Page and services Page
+import UnderConstruction from './components/Shared/UnderConstruction';
+import HomeGrid from './components/GridIndex/HomeGrid';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -37,7 +40,7 @@ function App() {
           </Route>
           <Route path={'/read'}>
             <BlogsWrapper className='reading-list-wrapper'>
-            <ReadingLists/>
+               <ReadingLists/>
             </BlogsWrapper>
           </Route>
           <Route path={'/topics'}>
@@ -49,9 +52,11 @@ function App() {
           <Redirect exact from={'/'} to={'/home'} />
           <Route exact path={'/home'}>
             <Home/>
-            <BlogsWrapper className='blogs-main-wrapper'>
-            <BlogsSectionList/>
-            </BlogsWrapper>
+          </Route>
+          
+          {/*Route to HardCodePage*/}
+          <Route path={'/grid-index'}>
+            <HomeGrid />
           </Route>
         </Switch>
         <Footer/>

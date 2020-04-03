@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Component
-import {Title} from "../Shared/elements/title";
-import {Content} from "../Shared/elements/content";
+import {Title} from "../../Shared/elements/title";
+import {Content} from "../../Shared/elements/content";
 
 export const Card = (props) => {
   

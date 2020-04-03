@@ -82,7 +82,10 @@
       margin-top: rem(25,$fontSize);
       font-size: rem(16, $fontSize);
       font-weight: 300;
-      opacity: 0.7;
+      opacity: 0.8;
+      height: rem(70, $fontSize);
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       @media only screen and (max-width: $phoneWidth) {
         display: none;

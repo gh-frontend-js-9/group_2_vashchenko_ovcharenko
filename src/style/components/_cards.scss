@@ -109,7 +109,7 @@
 
   &__box {
     background: no-repeat;
-    background-size: auto;
+    background-size: cover;
     border-radius: 8px;
     padding: 36px 20px;
     font-size: 150%;
@@ -120,8 +120,9 @@
 
     &--main-bottom {
       @extend .card__box;
-      padding: unset;
-      padding-top: rem(380, $fontSize);
+
+      background-size: contain;
+      padding: rem(380, $fontSize) 0 0;
 
       @media only screen and (max-width: $phoneWidth) {
         padding-top: rem(200, $fontSize);
@@ -131,7 +132,7 @@
 
   &__main {
     background: $default-color no-repeat center center;
-    background-size: auto;
+    background-size: cover;
     color: $light-text;
     padding: rem(50, $fontSize);
     border-radius: 8px;

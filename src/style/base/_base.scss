@@ -34,3 +34,8 @@ html, body {
 .main {
   padding-top: rem(120, $fontSize);
 }
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}

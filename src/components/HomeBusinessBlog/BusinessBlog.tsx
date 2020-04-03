@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 // Component
 import SliderBusinessBlog from "./SliderBusinessBlog";
-import {Card} from '../Card/Card';
+import {Card} from '../Card/CardOnGrid/Card';
 
 // Images and style
 import PrimaryCard from '../../assets/images/PrimaryCard.png';

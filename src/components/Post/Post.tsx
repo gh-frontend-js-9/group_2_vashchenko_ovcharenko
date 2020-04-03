@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component
-import {Card} from "../Card/Card";
+import {Card} from "../Card/CardOnGrid/Card";
 import {Title} from "../Shared/elements/title";
 import {Content} from "../Shared/elements/content";
 

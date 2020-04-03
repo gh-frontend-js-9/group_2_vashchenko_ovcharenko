@@ -1,11 +1,8 @@
 import React from 'react';
+
+// Style and image
 import './BlogsWrapper.scss'
-function BlogsWrapper(props) {
-    return (
-        <div className={props.className}>
-            {props.children}
-        </div>
-    );
-}
+
+const BlogsWrapper = (props) => <div className={props.className}>{props.children}</div>;
 
 export default BlogsWrapper;

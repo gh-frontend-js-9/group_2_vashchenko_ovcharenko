@@ -7,7 +7,7 @@ import {Image} from "../Shared/elements/images";
 
 // Image and style
 import sliderImg from '../../assets/images/BottomSlider.png';
-import '../index/slider.scss'
+import '../Index/slider.scss'
 
 export default class SliderBusinessBlog extends Component {
   render() {
@@ -102,7 +102,7 @@ export default class SliderBusinessBlog extends Component {
       {
         link: '/',
         image: sliderImg,
-        ariaLabel: 'Home page',
+        ariaLabel: 'HomeGrid page',
         title: 'Go home',
       },
     ];
