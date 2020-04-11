@@ -27,7 +27,6 @@ function HomeGrid() {
       <MainCard items={card.Popular}/>
     </div>
     
-    
     <div className={'card__header'}>
       <h2 className={'card__header--title'}>Essentials</h2>
       <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
