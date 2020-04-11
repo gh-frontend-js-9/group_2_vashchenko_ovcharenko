@@ -16,7 +16,7 @@ import * as SliderImg from './SliderCONST';
 function HomeGrid() {
   
   return (
-  <main className={'main'}>
+  <>
     <MainSlider items={SliderImg.Main}/>
     
     <div className={'card__header'}>
@@ -54,7 +54,7 @@ function HomeGrid() {
     <div className="card__home-wrapper--main-bottom">
       <Card items={card.Bottom}/>
     </div>
-  </main>
+  </>
   );
 }
 

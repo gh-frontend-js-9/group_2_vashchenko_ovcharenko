@@ -6,7 +6,6 @@ import Slider from "react-slick";
 import {Image} from "../Shared/elements/images";
 
 // Image and style
-import sliderImg from '../../assets/images/BottomSlider.png';
 import './slider.scss'
 
 

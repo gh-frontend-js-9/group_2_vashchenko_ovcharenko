@@ -4,24 +4,24 @@ import React from 'react';
 import {Title} from "../../Shared/elements/title";
 import {Content} from "../../Shared/elements/content";
 
-export const MainCard = (props) => {
+export const CardAdaptive = (props) => {
   
   let items = props.items;
   
   let renderCard = items.map((item, n: number) => {
+    
     return (
-      <div key={n}
-           className={(n === 0) ? 'card__main': 'card__box'}
+      <div key={n} className={props.blockClass}
            style={ { backgroundImage:`url(${item.featuredImage})` } }>
-        
-        <Content class={(n === 0) ? 'content__subtitle': 'content__subtitle--card-small'}
+  
+        <Content class={props.subTitleClass}
                  content={(n === 0) ? `BY `+item.author+` in `+item.tags : item.tags}/>
-        
-        <Title class={(n === 0) ? 'content__title--card' : 'content__title--card-small'}
+  
+        <Title class={props.titleClass}
                link={item._id}
                title={item.title}/>
-        
-        <Content class={(n === 0) ? 'content__text--card' : 'hidden'}
+  
+        <Content class={props.contentClass}
                  content={item.content}/>
       </div>
     );

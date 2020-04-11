@@ -28,37 +28,39 @@ function App() {
     <div>
       <BrowserRouter>
         <Header/>
-        <Switch>
-          <Route path={'/popular'}>
-            <UnderConstruction/>
-          </Route>
-          <Route path={'/new'}>
-            < BusinessBlog />
-          </Route>
-          <Route path={'/post'}>
-            < Post />
-          </Route>
-          <Route path={'/read'}>
-            <BlogsWrapper className='reading-list-wrapper'>
-               <ReadingLists/>
-            </BlogsWrapper>
-          </Route>
-          <Route path={'/topics'}>
-            <UnderConstruction/>
-          </Route>
-          <Route path={'/subscribe'}>
-            <UnderConstruction/>
-          </Route>
-          <Redirect exact from={'/'} to={'/home'} />
-          <Route exact path={'/home'}>
-            <Home/>
-          </Route>
-          
-          {/*Route to HardCodePage*/}
-          <Route path={'/grid-index'}>
-            <HomeGrid />
-          </Route>
-        </Switch>
+        <main className={'main'}>
+          <Switch>
+            <Route path={'/popular'}>
+              <UnderConstruction/>
+            </Route>
+            <Route path={'/new'}>
+              < BusinessBlog />
+            </Route>
+            <Route path={'/post'}>
+              < Post />
+            </Route>
+            <Route path={'/read'}>
+              <BlogsWrapper className='reading-list-wrapper'>
+                 <ReadingLists/>
+              </BlogsWrapper>
+            </Route>
+            <Route path={'/topics'}>
+              <UnderConstruction/>
+            </Route>
+            <Route path={'/subscribe'}>
+              <UnderConstruction/>
+            </Route>
+            <Redirect exact from={'/'} to={'/home'} />
+            <Route exact path={'/home'}>
+              <Home/>
+            </Route>
+            
+            {/*Route to HardCodePage*/}
+            <Route path={'/grid-index'}>
+              <HomeGrid />
+            </Route>
+          </Switch>
+        </main>
         <Footer/>
       </BrowserRouter>
     </div>
