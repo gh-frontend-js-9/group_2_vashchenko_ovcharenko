@@ -17,8 +17,6 @@
   }
 }
 
-
-
 .second-card-wrapper {
   width: 257px;
   height: 177px;
@@ -35,10 +33,17 @@
   }
 }
 
-
-
-
+.post-author-wrapper {
+  margin: 10px 0px;
+  width: 378px;
+  height: 519px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 0px 30px;
+}
 ::-webkit-scrollbar
 {
   display: none;
 }
+

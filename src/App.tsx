@@ -19,6 +19,7 @@ import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
 // Hard Code Page and services Page
 import UnderConstruction from './components/Shared/UnderConstruction';
 import HomeGrid from './components/GridIndex/HomeGrid';
+import Author from "./components/Author/Author";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -34,7 +35,8 @@ function App() {
               <UnderConstruction/>
             </Route>
             <Route path={'/new'}>
-              < BusinessBlog />
+            {/*  < BusinessBlog />*/}
+            <Author/>
             </Route>
             <Route path={'/post'}>
               < Post />
