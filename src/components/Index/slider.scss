@@ -11,8 +11,16 @@
     display: none;
   }
 }
-.slick-next:before {
-  margin-left: -70px;
+
+.slick-next{
+  &:before {
+    margin-left: -70px;
+    content: "›";
+  }
+  &:hover {
+    color: $active-color;
+    transition: color 0.5s ease-out 0.5s;
+  }
 }
 
 .header-slider {
@@ -51,5 +59,23 @@
       margin: rem(10, $fontSize);
       padding-right: unset;
     }
+  }
+}
+
+.bottom-slider {
+  text-align: center;
+  padding: 0 5px;
+  &:hover, &__image {
+    color: $active-color;
+  }
+  &__image {
+    max-height: rem(225, $fontSize);
+  }
+
+  &__title {
+    font-size: rem(24, $fontSize);
+    font-weight: 600;
+    letter-spacing: -0.15px;
+    margin-top: 20px;
   }
 }

@@ -35,6 +35,11 @@ html, body {
   padding-top: rem(120, $fontSize);
 }
 
+.wrapper {
+  max-width: rem(1170, $fontSize);
+  margin: 0 auto;
+}
+
 .hidden {
   visibility: hidden;
   display: none;

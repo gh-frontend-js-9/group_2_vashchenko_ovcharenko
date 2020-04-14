@@ -9,7 +9,7 @@ import thunk from "redux-thunk";
 import Header from './components/Shared/Header'
 import Footer from './components/Shared/Footer'
 import Home from "./components/Index/Home";
-import Post from './components/Post/Post'
+import PostPage from './components/Post/PostPage'
 
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
@@ -37,7 +37,7 @@ function App() {
               < BusinessBlog />
             </Route>
             <Route path={'/post'}>
-              < Post />
+              < PostPage />
             </Route>
             <Route path={'/read'}>
               <BlogsWrapper className='reading-list-wrapper'>
