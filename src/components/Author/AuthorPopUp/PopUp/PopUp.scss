@@ -1,0 +1,23 @@
+.pop-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 34px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #ffffff;
+  &:hover {
+    box-shadow: 0 5px 16px rgba(226, 230, 245, 0.8);
+    background-color: #9283e0;
+    color: white;
+    cursor: pointer;
+  }
+}
+.pop-up_title{
+  padding: 0px 10px;
+}
+
+.cancel-pop-up {
+  padding: 0 10px;
+}

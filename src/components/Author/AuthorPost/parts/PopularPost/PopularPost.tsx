@@ -3,8 +3,9 @@ import './PopularPost.scss'
 import CardTitle from "../../../../Card/CardBox/parts/CardTitle/CardTitle";
 import CardDescription from "../../../../Card/CardBox/parts/CardDescription/CardDescription";
 import CardImg from "../../../../Card/CardBox/parts/CardImg/CardImg";
+import {Post} from "../../../../../models/Post";
 
-class PopularPost extends Component<any,any> {
+class PopularPost extends Component<any,Post> {
     render() {
         let {post} = this.props;
         return (

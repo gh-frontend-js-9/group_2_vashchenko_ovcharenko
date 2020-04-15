@@ -6,8 +6,9 @@ import CardTitle from "../../Card/CardBox/parts/CardTitle/CardTitle";
 import CardDescription from "../../Card/CardBox/parts/CardDescription/CardDescription";
 import CardImg from "../../Card/CardBox/parts/CardImg/CardImg";
 import './AuthorBlogs.scss'
+import {Post} from "../../../models/Post";
 
-class AuthorBlogs extends Component<any,any> {
+class AuthorBlogs extends Component<any,Post> {
     render() {
         let {post} = this.props;
         return (
