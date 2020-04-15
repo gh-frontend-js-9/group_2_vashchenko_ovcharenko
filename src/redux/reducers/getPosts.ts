@@ -1,7 +1,8 @@
 import {
     GET_POSTS_ERROR,
     GET_POSTS_PENDING,
-    GET_POSTS_SUCCESS
+    GET_POSTS_SUCCESS,
+    GET_PAGES_SUCCESS
 } from "../actions/getPosts";
 
 import {getPostsState} from "./types/GetPosts";
@@ -29,6 +30,11 @@ export const getPostsReducer: Reducer<getPostsState> = (state = initialState, ac
             return {
                 ...state,
                 isPending: action.payload.isPending,
+            };
+        case GET_PAGES_SUCCESS:
+            return {
+                ...state,
+                pages: action.payload.pages,
             };
         default:
             return state;

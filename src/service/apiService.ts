@@ -6,17 +6,23 @@ class API {
         return  axios.get(`${BASE_URL}?category=${category}&page=${page}&limit=${limit}`)
             .then(response => {
                 return {
-                    posts: response.data.docs
+                    posts: response.data.docs,
+                    pages: response.data.pages
                 }
             })
     }
-    static async getPostsForEveryCategories() {
+    static async getPostsForEveryCategories(page,limit) {
         let data = [];
+        let pages = 0;
         for (let i = 0; i < categories.length; i++) {
-            let post = (await this.getPosts(categories[i])).posts
-            data.push(post)
+            let post = (await this.getPosts(categories[i],page,limit))
+            pages = post.pages;
+            data.push(post.posts)
         }
-        return data
+        return {
+            post: data,
+            pages: pages
+        }
     }
 }
 

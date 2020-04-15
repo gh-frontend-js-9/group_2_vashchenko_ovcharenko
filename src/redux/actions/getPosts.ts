@@ -4,6 +4,7 @@ import API from "../../service/apiService";
 export const GET_POSTS_PENDING = 'GET_POSTS_PENDING';
 export const GET_POSTS_SUCCESS = 'GET_POSTS_SUCCESS';
 export const GET_POSTS_ERROR = 'GET_POSTS_ERROR';
+export const GET_PAGES_SUCCESS = 'GET_PAGES_SUCCESS';
 
 export const getPostsPending: ActionCreator<Action> = () => {
     return {
@@ -27,15 +28,25 @@ export const getPostsError: ActionCreator<Action> = () => {
         payload: false,
     };
 };
+export const getPages: ActionCreator<Action> = (pages) => {
+    return {
+        type: GET_PAGES_SUCCESS,
+        payload:{
+            pages:pages
+        },
+    };
+};
 
-export const getPosts: ()
+export const getPosts: (page,limit)
     => (dispatch: Dispatch)
-    => void = () => {
+    => void = (page,limit) => {
     return (dispatch: Dispatch) => {
         dispatch(getPostsPending());
-        API.getPostsForEveryCategories()
+        API.getPostsForEveryCategories(page,limit)
             .then(success => {
-                dispatch(getPostsSuccess(success));
+                console.log(success)
+                dispatch(getPostsSuccess(success.post));
+                dispatch(getPages(success.pages))
             })
             .catch(err => {
                 dispatch(getPostsError(err));
