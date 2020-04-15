@@ -1,4 +1,3 @@
-import vk from '../../assets/images/vk.webp';
 import printeres from '../../assets/images/printeres.webp';
 import instagram from '../../assets/images/instagram.webp';
 import twitter from '../../assets/images/twitter.webp';

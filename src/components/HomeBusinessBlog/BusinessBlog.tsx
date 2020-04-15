@@ -159,9 +159,9 @@ function BusinessBlog() {
       <h2 className={'card__header--title'}>Reading lists</h2>
       <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
     </div>
+    
     <SliderBusinessBlog />
-  
-  
+    
     <div className={'card__header'}>
       <h2 className={'card__header--title'}>Popular</h2>
       <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>

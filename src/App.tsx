@@ -53,6 +53,9 @@ function App() {
             <Route path={'/subscribe'}>
               <UnderConstruction/>
             </Route>
+            <Route path={'/blog'}>
+              <BusinessBlog/>
+            </Route>
             <Redirect exact from={'/'} to={'/home'} />
             <Route exact path={'/home'}>
               <Home/>

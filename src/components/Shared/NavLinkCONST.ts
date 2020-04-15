@@ -35,6 +35,11 @@ export const main = [
     link: '/subscribe',
     name: 'Subscribe',
     class: 'header__navigation--link'
+  },
+  {
+    link: '/blog',
+    name: 'Business Blog',
+    class: 'header__navigation--link'
   }
 ];
 
@@ -72,6 +77,11 @@ export const burger = [
   {
     link: '/subscribe',
     name: 'Subscribe',
+    class: 'menu__item'
+  },
+  {
+    link: '/blog',
+    name: 'Business Blog',
     class: 'menu__item'
   }
 ];
