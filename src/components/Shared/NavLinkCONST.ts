@@ -7,11 +7,6 @@ import facebook from '../../assets/images/facebook.webp';
 
 export const main = [
   {
-    link: '/grid-index',
-    name: 'Index on Grid',
-    class: 'header__navigation--link'
-  },
-  {
     link: '/popular',
     name: 'Popular',
     class: 'header__navigation--link'
@@ -47,11 +42,6 @@ export const burger = [
   {
     link: '/home',
     name: 'Main',
-    class: 'menu__item'
-  },
-  {
-    link: '/grid-index',
-    name: 'Index on Grid',
     class: 'menu__item'
   },
   {

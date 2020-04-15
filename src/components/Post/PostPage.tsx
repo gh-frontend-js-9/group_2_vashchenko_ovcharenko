@@ -27,7 +27,7 @@ function PostPage() {
 
   return (
   
-  <section className={'wrapper'}>
+  <section>
     
     <PostTitle items={PostResponse[0]}/>
     

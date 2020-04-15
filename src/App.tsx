@@ -29,6 +29,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Header/>
+        
         <main className={'main'}>
           <Switch>
             <Route path={'/popular'}>
@@ -56,13 +57,9 @@ function App() {
             <Route exact path={'/home'}>
               <Home/>
             </Route>
-            
-            {/*Route to HardCodePage*/}
-            <Route path={'/grid-index'}>
-              <HomeGrid />
-            </Route>
           </Switch>
         </main>
+        
         <Footer/>
       </BrowserRouter>
     </div>
