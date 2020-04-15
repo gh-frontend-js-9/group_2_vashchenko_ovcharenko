@@ -3,10 +3,10 @@ import './AuthorBanner.scss'
 class AuthorBanner extends Component {
     render() {
         return (
-            <div className='ads-banner'>
+            <div className='banner-wrapper'>
                 ADS BANNER
             </div>
-        );
+        )
     }
 }
 

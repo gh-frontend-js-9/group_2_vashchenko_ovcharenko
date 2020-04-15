@@ -21,6 +21,7 @@ import AuthorBanner from "./AuthorBanner/AuthorBanner";
 import Paggination from "../Paggination/Paggination";
 import Anime from "react-anime";
 import AuthorGetFree from "./AuthorGetFree/AuthorGetFree";
+import AuthorPopUp from "./AuthorPopUp/AuthorPopUp";
 
 
 interface State {
@@ -67,10 +68,12 @@ class Author extends Component<any,State> {
                         <PopularPostSection post={this.props.posts}/>
                         <RecentPostSection post={this.props.posts}/>
                         <Subscribe/>
+
                        {/* <AuthorSlider/>*/}
                         <AuthorSocialMedia/>
                         <AuthorCalendar/>
                         <AuthorBanner/>
+                        <AuthorPopUp/>
                     </div>
                 </div>
             </BlogsWrapper>

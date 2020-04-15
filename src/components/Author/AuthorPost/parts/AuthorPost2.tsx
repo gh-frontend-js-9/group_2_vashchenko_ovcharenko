@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import PopularPost from "./PopularPost/PopularPost";
 import RecentPost from "./RecentPost/RecentPost";
+import {Post} from "../../../../models/Post";
 
-class AuthorPost2 extends Component<any,any> {
+class AuthorPost2 extends Component<any,Post> {
     render() {
         let {post} = this.props;
         return (

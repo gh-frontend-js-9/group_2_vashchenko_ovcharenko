@@ -3,8 +3,9 @@ import CardBox from "../../../../../../Card/CardBox/CardBox";
 import CardTitle from "../../../../../../Card/CardBox/parts/CardTitle/CardTitle";
 import AuthorPost from "../../../../AuthorPost";
 import AuthorPost2 from "../../../AuthorPost2";
+import {Post} from "../../../../../../../models/Post";
 
-class PopularPostSection extends Component<any,any> {
+class PopularPostSection extends Component<any,Post> {
     render() {
         let {post} = this.props;
         return (
@@ -16,7 +17,7 @@ class PopularPostSection extends Component<any,any> {
                     post.map((post,index) => {
                         return(
                             <>
-                                <AuthorPost post={post} key={index}/>
+                                <AuthorPost post={post} key={post._id}/>
                             </>
                         )
                     })
