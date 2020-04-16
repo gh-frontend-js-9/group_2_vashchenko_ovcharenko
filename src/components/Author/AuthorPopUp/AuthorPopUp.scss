@@ -3,6 +3,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  @media screen and (max-width: 1000px){
+    & {
+      display: none;
+    }
+  }
 }
 
 .pop-up-tag-block {

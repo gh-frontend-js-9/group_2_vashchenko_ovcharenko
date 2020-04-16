@@ -9,7 +9,14 @@
 }
 
 .author-wrapper {
-
+ @media screen and (max-width: 1000px) {
+   & {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+ }
 }
 
 .card-author-blog {

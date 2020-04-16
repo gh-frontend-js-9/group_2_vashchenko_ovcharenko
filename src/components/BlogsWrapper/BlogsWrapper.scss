@@ -13,6 +13,21 @@
         }
     }
 }
+.author-main-wrapper {
+    max-width: 2100px;
+    margin: 0 auto;
+    padding: 0 calc((100% - 1180px)/2);
+    @media screen and (max-width: 1367px){
+        & {
+            padding: 0 calc((100% - 1056px)/2);
+        }
+    }
+    @media screen and (max-width: 1148px){
+        & {
+            padding: 0 calc((100% - 906px)/2);
+        }
+    }
+}
 
 .reading-list-wrapper {
     max-width: 2100px;
