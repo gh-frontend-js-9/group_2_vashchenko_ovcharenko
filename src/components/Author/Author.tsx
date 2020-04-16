@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PureComponent} from 'react';
 import {bindActionCreators} from "redux";
 import {getPosts} from "../../redux/actions/getPosts";
 import {connect} from "react-redux";
@@ -42,12 +42,27 @@ class Author extends Component<any,State> {
         this.props.getPosts(`${this.state.currentPage}`,1)
     }
 
+    shouldComponentUpdate(prevProps: Readonly<any>):boolean {
+        let show = false;
+        console.log(prevProps)
+        console.log(this.props.posts)
+        prevProps.posts.forEach((el,index) =>{
+
+            if (el?._id === this.props.posts[index]?._id){
+                show = true
+            }
+            console.log(show,'loop')
+        });
+        return show
+    }
+
+
 
     render() {
         return (
-            <BlogsWrapper className='blogs-main-wrapper'>
-                <div className='author-main-wrapper'>
-                    <div className='flx-drc-clm mg-right-20'>
+            <BlogsWrapper className='author-main-wrapper'>
+                <div className='author-blogs-wrapper'>
+                    <div className='flx-drc-clm mg-right-20 align-center'>
                         <AuthorProfile/>
                         <Anime translateX={[-320,0]} duration={1000}>
                             <div className='project-list--author-wrapper'>
@@ -63,13 +78,11 @@ class Author extends Component<any,State> {
                         <Paggination/>
                         <AuthorGetFree/>
                     </div>
-                    <div className='flx-drc-clm'>
+                    <div className='wrapper-right-column'>
                         <AuthorSearch/>
                         <PopularPostSection post={this.props.posts}/>
                         <RecentPostSection post={this.props.posts}/>
                         <Subscribe/>
-
-                       {/* <AuthorSlider/>*/}
                         <AuthorSocialMedia/>
                         <AuthorCalendar/>
                         <AuthorBanner/>

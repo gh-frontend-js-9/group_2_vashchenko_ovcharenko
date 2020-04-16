@@ -10,6 +10,11 @@
   align-items: center;
   border: none;
   margin-bottom: 10px;
+  @media screen and (max-width: 1000px){
+    & {
+      display: none;
+    }
+  }
 }
 
 .input-search {
