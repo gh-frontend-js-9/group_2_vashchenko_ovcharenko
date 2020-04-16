@@ -8,6 +8,8 @@ import {NavLinksFooter} from "./elements/navLinksFooter";
 // Images and style
 import logo from '../../assets/images/logo.webp';
 
+import {footerSocialLink} from './NavLinkCONST';
+
 function Footer() {
   
   const logoState = {
@@ -27,7 +29,7 @@ function Footer() {
         </NavLink>
         
         <nav className={'footer__social'}>
-          < NavLinksFooter />
+          <NavLinksFooter items={footerSocialLink}/>
         </nav>
     
         <div className={'footer__copywrite'}>

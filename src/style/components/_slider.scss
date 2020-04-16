@@ -48,8 +48,9 @@
 
   &:before,
   &:after {
-    content: "";
+    content: ">";
     display: table;
+
   }
 
   &:after {
@@ -135,8 +136,8 @@
   font-size: 0px;
   cursor: pointer;
   background: transparent;
-  color: transparent;
-  top: 50%;
+  color: $black;
+  top: 40%;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -146,7 +147,7 @@
   &:hover, &:focus {
     outline: none;
     background: transparent;
-    color: transparent;
+    color: $active-color;
     &:before {
       opacity: $slick-opacity-on-hover;
     }
@@ -155,10 +156,10 @@
     opacity: $slick-opacity-not-active;
   }
   &:before {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: unset;
     font-family: $slick-font-family;
-    font-size: 20px;
-    line-height: 1;
-    color: $slick-arrow-color;
     opacity: $slick-opacity-default;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

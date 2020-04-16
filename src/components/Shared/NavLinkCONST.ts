@@ -1,9 +1,11 @@
+// Image
+import vk from '../../assets/images/vk.webp';
+import printeres from '../../assets/images/printeres.webp';
+import instagram from '../../assets/images/instagram.webp';
+import twitter from '../../assets/images/twitter.webp';
+import facebook from '../../assets/images/facebook.webp';
+
 export const main = [
-  {
-    link: '/grid-index',
-    name: 'Index on Grid',
-    class: 'header__navigation--link'
-  },
   {
     link: '/popular',
     name: 'Popular',
@@ -32,6 +34,11 @@ export const main = [
   {
     link: '/subscribe',
     name: 'Subscribe',
+    class: 'header__navigation--link'
+  },
+  {
+    link: '/blog',
+    name: 'Business Blog',
     class: 'header__navigation--link'
   }
 ];
@@ -43,11 +50,6 @@ export const burger = [
     class: 'menu__item'
   },
   {
-    link: '/grid-index',
-    name: 'Index on Grid',
-    class: 'menu__item'
-  },
-  {
     link: '/popular',
     name: 'Popular',
     class: 'menu__item'
@@ -76,5 +78,48 @@ export const burger = [
     link: '/subscribe',
     name: 'Subscribe',
     class: 'menu__item'
+  },
+  {
+    link: '/blog',
+    name: 'Business Blog',
+    class: 'menu__item'
+  }
+];
+
+export const footerSocialLink = [
+  {
+    link: '/',
+    image: vk,
+    name: 'Go to our vk',
+    ariaLabel: 'Find us on vk.com',
+    class: 'footer__social--img'
+  },
+  {
+    link: '/',
+    image: printeres,
+    name: 'Go to our printers',
+    ariaLabel: 'Find us on printers',
+    class: ' footer__social--img'
+  },
+  {
+    link: '/',
+    image: instagram,
+    name: 'Go to our instagram',
+    ariaLabel: 'Find us on instagram',
+    class: ' footer__social--img'
+  },
+  {
+    link: '/',
+    image: twitter,
+    name: 'Go to our twitter',
+    ariaLabel: 'Find us on twitter',
+    class: ' footer__social--img'
+  },
+  {
+    link: '/',
+    image: facebook,
+    name: 'Go to our facebook',
+    ariaLabel: 'Find us on facebook',
+    class: ' footer__social--img'
   }
 ];

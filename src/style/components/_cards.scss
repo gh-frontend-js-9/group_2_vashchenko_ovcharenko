@@ -93,6 +93,11 @@
       }
     }
 
+    &--post {
+      @extend .card__home-wrapper--main-bottom;
+      margin: 60px 0 200px;
+    }
+
     &--random {
       @extend .card__home-wrapper;
       margin: 0 auto;
@@ -121,6 +126,7 @@
     &--main-bottom {
       @extend .card__box;
 
+      background-color: transparent;
       background-size: contain;
       padding: rem(380, $fontSize) 0 0;
 
