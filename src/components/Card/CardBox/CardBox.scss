@@ -9,12 +9,12 @@
   background-color: #1b0042;
   padding: 25px 50px;
   margin: 10px;
-  @media screen and (max-width: 680px){
+  /*@media screen and (max-width: 680px){
     & {
       width: 389px;
       padding: 25px 15px;
     }
-  }
+  }*/
 }
 
 .second-card-wrapper {
@@ -26,17 +26,16 @@
   overflow: scroll;
   padding: 20px 15px 0px 15px;
   margin: 10px 15px 10px 15px;
-  @media screen and (max-width: 680px) {
+  /*@media screen and (max-width: 680px) {
     & {
       width: 389px;
     }
-  }
+  }*/
 }
 
 .post-author-wrapper {
   margin: 10px 0px;
-  width: 378px;
-  height: 519px;
+  min-height: 519px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   background-color: #ffffff;

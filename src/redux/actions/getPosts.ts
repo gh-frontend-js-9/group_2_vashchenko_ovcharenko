@@ -44,7 +44,6 @@ export const getPosts: (page,limit)
         dispatch(getPostsPending());
         API.getPostsForEveryCategories(page,limit)
             .then(success => {
-                console.log(success)
                 dispatch(getPostsSuccess(success.post));
                 dispatch(getPages(success.pages))
             })

@@ -13,10 +13,12 @@
   letter-spacing: -0.11px;
   line-height: 30px;
   &:hover {
-    width: 79px;
-    height: 79px;
     background-color: #ff5480;
     color: white;
     cursor: pointer;
+  }
+  @media screen and (max-width: 479px) {
+  width: 60px;
+  height: 60px;
   }
 }

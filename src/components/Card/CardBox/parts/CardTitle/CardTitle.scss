@@ -31,6 +31,9 @@
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 100px;
+  @media screen and (max-width: 786px) {
+    text-align: center;
+  }
 }
 
 .reading-lists-card-title {
