@@ -4,6 +4,7 @@ import 'react-day-picker/lib/style.css';
 import './AuthorCalendar.scss'
 
 
+
 class AuthorCalendar extends Component<any,any> {
     render() {
         // @ts-ignore
@@ -12,3 +13,4 @@ class AuthorCalendar extends Component<any,any> {
 }
 
 export default AuthorCalendar;
+

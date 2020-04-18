@@ -5,13 +5,15 @@ import {NavLink} from 'react-router-dom';
 
 import {getPosts} from "../../../redux/actions/getPosts";
 import {Post} from "../../../models/Post";
-import SimpleSlider from "../../SliderImg/SliderImg";
 import {CardAdaptive} from "../../Card/CardOnGrid/CardAdaptive";
 import {MainCard} from "../../Card/CardOnGrid/MainCard";
+import BottomSlider from "../../Index/BottomSlider";
+import * as SliderImg from "../../Index/SliderCONST";
+
 
 
 import './BlogsSectionList.scss'
-
+import SimpleSlider from "../../SliderImg/SliderImg";
 import BlogsSection from "../BlogsSection/BlogsSection";
 import BlogsWithImage from "../BlogsWithImage/BlogsWithImage";
 
@@ -61,8 +63,13 @@ class BlogsSectionList extends Component<any, State> {
           })
         }
       </div>
-      
-      <SimpleSlider/>
+  
+  
+      <div className={'card__header'}>
+        <h2 className={'card__header--title'}>Reading lists</h2>
+        <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
+      </div>
+      <BottomSlider items={SliderImg.Bottom}/>
       
       <div className='card__home-wrapper--main-bottom'>
         {

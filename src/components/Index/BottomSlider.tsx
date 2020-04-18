@@ -16,12 +16,23 @@ export default class BottomSlider extends Component<any> {
   
     const settings = {
       dots: false,
+      arrow: true,
       infinite: true,
       speed: 500,
       slidesToShow: 5.5,
       slidesToScroll: 2,
       initialSlide: -0.5,
       responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            initialSlide: 1,
+            infinite: true,
+            dots: false
+          }
+        },
         {
           breakpoint: 1024,
           settings: {
@@ -33,7 +44,7 @@ export default class BottomSlider extends Component<any> {
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 700,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,

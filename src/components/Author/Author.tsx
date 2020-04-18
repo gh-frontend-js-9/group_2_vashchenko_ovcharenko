@@ -1,7 +1,11 @@
 import React, {Component, PureComponent} from 'react';
 import {bindActionCreators} from "redux";
-import {getPosts} from "../../redux/actions/getPosts";
+import Anime from "react-anime";
 import {connect} from "react-redux";
+
+
+
+import {getPosts} from "../../redux/actions/getPosts";
 import {Post} from "../../models/Post";
 import BlogsWrapper from "../BlogsWrapper/BlogsWrapper";
 import AuthorBlogsList from "./AuthorBlogsList/AuthorBlogsList";
@@ -14,11 +18,10 @@ import AuthorSocialMedia from "./AuthorSocialMedia/AuthorSocialMedia";
 import AuthorCalendar from "./AuthorCalendar/AuthorCalendar";
 import AuthorBanner from "./AuthorBanner/AuthorBanner";
 import Paggination from "../Paggination/Paggination";
-import Anime from "react-anime";
 import AuthorGetFree from "./AuthorGetFree/AuthorGetFree";
 import AuthorPopUp from "./AuthorPopUp/AuthorPopUp";
-import './Author.scss'
 
+import './Author.scss'
 
 interface State {
     posts: Post[]

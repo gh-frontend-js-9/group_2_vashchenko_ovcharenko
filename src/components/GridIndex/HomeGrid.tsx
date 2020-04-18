@@ -2,8 +2,8 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 // Component
-import MainSlider from "./MainSlider";
-import BottomSlider from "./BottomSlider";
+import MainSlider from "../Index/MainSlider";
+import BottomSlider from "../Index/BottomSlider";
 import {Card} from '../Card/CardOnGrid/Card';
 import {MainCard} from "../Card/CardOnGrid/MainCard";
 
@@ -11,7 +11,7 @@ import {MainCard} from "../Card/CardOnGrid/MainCard";
 
 // Import Temp Data from CONST
 import * as card from './CardDataCONST';
-import * as SliderImg from './SliderCONST';
+import * as SliderImg from '../Index/SliderCONST';
 
 function HomeGrid() {
   

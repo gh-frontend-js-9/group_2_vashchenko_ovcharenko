@@ -9,7 +9,7 @@ import thunk from "redux-thunk";
 import Header from './components/Shared/Header'
 import Footer from './components/Shared/Footer'
 import Home from "./components/Index/Home";
-import Post from './components/Post/Post'
+import PostPage from './components/Post/PostPage'
 
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
@@ -29,6 +29,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Header/>
+        
         <main className={'main'}>
           <Switch>
             <Route path={'/popular'}>
@@ -39,7 +40,7 @@ function App() {
             <Author/>
             </Route>
             <Route path={'/post'}>
-              < Post />
+              < PostPage />
             </Route>
             <Route path={'/read'}>
               <BlogsWrapper className='reading-list-wrapper'>
@@ -52,17 +53,16 @@ function App() {
             <Route path={'/subscribe'}>
               <UnderConstruction/>
             </Route>
+            <Route path={'/blog'}>
+              <BusinessBlog/>
+            </Route>
             <Redirect exact from={'/'} to={'/home'} />
             <Route exact path={'/home'}>
               <Home/>
             </Route>
-            
-            {/*Route to HardCodePage*/}
-            <Route path={'/grid-index'}>
-              <HomeGrid />
-            </Route>
           </Switch>
         </main>
+        
         <Footer/>
       </BrowserRouter>
     </div>
