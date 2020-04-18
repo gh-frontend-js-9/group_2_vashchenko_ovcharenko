@@ -6,9 +6,7 @@
   border-radius: 40px;
   background-color: #ffffff;
   border: none;
-  &::placeholder{
-    padding-left: 15px;
-  }
+  padding-left: 15px;
 }
 
 .subscribe-input-free{
@@ -19,11 +17,11 @@
   background-color: #ffffff;
   border: none;
   padding-left: 33px;
-  @media screen and (max-width: 580px){
+  /*@media screen and (max-width: 580px){
     & {
       width: 360px;
     }
-  }
+  }*/
 }
 
 .button-free {
@@ -36,7 +34,7 @@
   font-size: 25px;
   position: absolute;
   margin: 77px 177px;
-  @media screen and (max-width: 540px){
+  /*@media screen and (max-width: 540px){
     & {
       width: 144px;
       height: 70px;
@@ -51,7 +49,7 @@
   }
   @media screen and (max-width: 580px) {
     margin: 92px 107px;
-  }
+  }*/
 }
 
 .free-title{
@@ -62,7 +60,12 @@
   letter-spacing: -0.3px;
   line-height: 60px;
   text-align: center;
-  @media screen and (max-width: 1367px){
+  @media screen and (max-width: 1227px){
+    & {
+      font-size: 32px;
+    }
+  }
+ /* @media screen and (max-width: 1367px){
     & {
       font-size: 35px;
     }
@@ -71,7 +74,7 @@
     & {
       font-size: 20px;
     }
-  }
+  }*/
 }
 
 .free-subtitle{
@@ -84,14 +87,9 @@
   text-align: center;
   margin-top: 15px;
   margin-bottom: 50px;
-  @media screen and (max-width: 1367px){
+  @media screen and (max-width: 1227px){
     & {
-      font-size: 15px;
-    }
-  }
-  @media screen and (max-width: 580px){
-    & {
-      width: 334px;
+      font-size: 14px;
     }
   }
 }
@@ -103,4 +101,14 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 150px;
+  @media screen and (max-width: 1000px){
+    & {
+      width: 100vw;
+    }
+  }
+  @media screen and (max-width: 720px){
+    & {
+      display: none;
+    }
+  }
 }

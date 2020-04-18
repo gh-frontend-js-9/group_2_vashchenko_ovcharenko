@@ -8,17 +8,6 @@
   text-transform: uppercase;
 }
 
-.author-wrapper {
- @media screen and (max-width: 1000px) {
-   & {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-   }
- }
-}
-
 .card-author-blog {
   width: 377px;
   height: 25px;
@@ -46,9 +35,11 @@
   font-family: "Open Sans";
   font-size: 16px;
   letter-spacing: -0.1px;
-  line-height: 46px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  @media screen and (max-width: 786px) {
+    text-align: center;
+  }
 }
 
 .by-in {

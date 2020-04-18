@@ -8,7 +8,7 @@ class Subscribe extends Component {
                 <div className='subscribe-title'>
                     SUBSCRIBE
                 </div>
-                <input type="text" className='subscribe-input' placeholder='Your email'/>
+                <input type="text" className='subscribe__input-block' placeholder='Your email'/>
                 <input type="submit" value='Subscribe' className='subscribe-button'/>
             </div>
         );

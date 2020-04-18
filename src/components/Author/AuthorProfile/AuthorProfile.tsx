@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './AuthorProfile.scss'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import avatar from '../../../assets/images/Mask.png'
 class AuthorProfile extends Component {
     render() {

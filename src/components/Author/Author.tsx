@@ -20,10 +20,6 @@ import AuthorBanner from "./AuthorBanner/AuthorBanner";
 import Paggination from "../Paggination/Paggination";
 import AuthorGetFree from "./AuthorGetFree/AuthorGetFree";
 import AuthorPopUp from "./AuthorPopUp/AuthorPopUp";
-import BottomSlider from "../Index/BottomSlider";
-import * as SliderImg from '../Index/SliderCONST'
-import SliderAuthor from "../SliderImg/SliderImg";
-import AuthorSlider from "./AuthorSlider/AuthorSlider";
 
 import './Author.scss'
 
@@ -47,14 +43,10 @@ class Author extends Component<any,State> {
 
     shouldComponentUpdate(prevProps: Readonly<any>):boolean {
         let show = false;
-        console.log(prevProps)
-        console.log(this.props.posts)
-        prevProps.posts.forEach((el,index) =>{
-
+        prevProps.posts.forEach((el,index) => {
             if (el?._id === this.props.posts[index]?._id){
                 show = true
             }
-            console.log(show,'loop')
         });
         return show
     }
@@ -65,7 +57,7 @@ class Author extends Component<any,State> {
         return (
             <BlogsWrapper className='author-main-wrapper'>
                 <div className='author-blogs-wrapper'>
-                    <div className='flx-drc-clm mg-right-20 align-center'>
+                    <div className='wrapper-left-column'>
                         <AuthorProfile/>
                         <Anime translateX={[-320,0]} duration={1000}>
                             <div className='project-list--author-wrapper'>

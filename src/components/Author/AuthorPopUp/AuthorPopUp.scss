@@ -3,9 +3,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  @media screen and (max-width: 1000px){
+  @media screen and (max-width: 786px) {
     & {
-      display: none;
+      justify-content: center;
     }
   }
 }

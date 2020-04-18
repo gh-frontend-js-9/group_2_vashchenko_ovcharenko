@@ -1,8 +1,7 @@
 .banner-wrapper{
   margin-top: 20px;
   margin-bottom: 12px;
-  width: 378px;
-  height: 305px;
+  min-height: 305px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   background-color: #ffffff;
@@ -13,9 +12,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 1000px){
+ /* @media screen and (max-width: 1000px){
     & {
       display: none;
     }
-  }
+  }*/
 }
