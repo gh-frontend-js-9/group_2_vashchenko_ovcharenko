@@ -17,11 +17,9 @@ import {PostReplyForm} from "./PostReplyForm/PostReplyForm";
 
 // Images and style
 import AvatarMask from '../../assets/images/AvatarMask.png';
-import {Post} from "../../models/Post";
 
 // Const Temp Data
-import {PostResponse} from './PostCONST';
-
+import {PostResponse, Comments} from './PostCONST';
 
 function PostPage() {
 
@@ -36,13 +34,13 @@ function PostPage() {
       
       <Content class={'post__content'} content={PostResponse[0].content} />
       
-      <PostAuthor image={AvatarMask} twLink={'/'} twitter={'@JohnAMWill.'} items={PostResponse[0]}/>
+      <PostAuthor image={AvatarMask} twLink={'?link_to_twitter'} twitter={'@JohnAMWill.'} items={PostResponse[0]}/>
     
       <div className={'card__header'}>
         <h2 className={'card__header--title'}>
           You might also like...
         </h2>
-        <NavLink to={'/read'} className={'card__header--view'}>More</NavLink>
+        <NavLink to={'/home'} className={'card__header--view'}>More</NavLink>
       </div>
     
       <div className='card__home-wrapper--post'>
@@ -53,57 +51,13 @@ function PostPage() {
                       contentClass={'content__text--card'}
         />
       </div>
-    
-     <PostComment />
+      
+      <PostComment items={Comments}/>
       
       <PostReplyForm />
-      
     </div>
   </section>
   );
 }
 
 export default PostPage;
-
-
-// Ready for Redux
-// interface State {
-//   posts: Post[]
-// }
-//
-// class PostPage extends Component<any, State> {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       posts: []
-//     }
-//   }
-//
-//
-//   componentDidMount(): void {
-//     this.props.getPosts()
-//   }
-//
-//   render() {
-//     console.log(this.props.posts[0]);
-//     return (
-//     <>
-//     </>
-//     );
-//   }
-// }
-//
-// const mapStateToProps = (state) => {
-//   return {
-//     posts: state.getPostsReducer.posts,
-//   };
-// };
-//
-//
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     getPosts: bindActionCreators(getPosts, dispatch)
-//   };
-// };
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(PostPage);

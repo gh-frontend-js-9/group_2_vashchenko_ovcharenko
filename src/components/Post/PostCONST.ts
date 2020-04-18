@@ -2,6 +2,7 @@ import printeres from '../../assets/images/printeres.webp';
 import instagram from '../../assets/images/instagram.webp';
 import twitter from '../../assets/images/twitter.webp';
 import facebook from '../../assets/images/facebook.webp';
+import AvatarMask from '../../assets/images/AvatarMask.png';
 
 export const PostResponse = [
 {
@@ -70,6 +71,56 @@ export const socialLink = [
     name: 'Go to our printers',
     ariaLabel: 'Find us on printers',
     class: ' footer__social--img'
+  }
+];
+
+
+export const Comments = [
+  {
+    'avatar': AvatarMask,
+    'name': 'Brian Jackson',
+    'date': 'December 14, 2017 at 5:13 pm',
+    'content': '<p>I think, you forgot to mention a very good one:<br /> Thrive architect from thrivethemes. That thing is pretty powerful.</p>',
+    'reply': [
+      {
+        'avatar': AvatarMask,
+        'name': 'Sean Scott',
+        'date': 'December 14, 2017 at 5:13 pm',
+        'content': 'Thanks Brian! We have updated the above post. You are correct, their page builder has both a free and a premium version.'
+      },
+      {
+        'avatar': AvatarMask,
+        'name': 'Sean Scott',
+        'date': 'December 14, 2017 at 5:13 pm',
+        'content': 'Thanks Brian! We have updated the above post. You are correct, their page builder has both a free and a premium version.'
+      },
+      {
+        'avatar': AvatarMask,
+        'name': 'Sean Scott',
+        'date': 'December 14, 2017 at 5:13 pm',
+        'content': 'Thanks Brian! We have updated the above post. You are correct, their page builder has both a free and a premium version.'
+      }
+    ]
+  },
+  {
+    'avatar': AvatarMask,
+    'name': 'Wiliam Hilton',
+    'date': 'December 14, 2017 at 5:13 pm',
+    'content': 'I think, you forgot to mention a very good one: Thrive architect from thrivethemes. That thing is pretty powerful.',
+    'reply': [
+      {
+        'avatar': AvatarMask,
+        'name': 'Sean Scott',
+        'date': 'December 14, 2017 at 5:13 pm',
+        'content': 'Thanks Brian! We have updated the above post. You are correct, their page builder has both a free and a premium version.'
+      },
+      {
+        'avatar': AvatarMask,
+        'name': 'Sean Scott',
+        'date': 'December 14, 2017 at 5:13 pm',
+        'content': 'Thanks Brian! We have updated the above post. You are correct, their page builder has both a free and a premium version.'
+      }
+    ]
   }
 ];
 

@@ -1,3 +1,28 @@
+.construction {
+  display: block;
+  width: 35%;
+  margin: 0 auto;
+}
+
+.main {
+  padding-top: rem(120, $fontSize);
+}
+
+.wrapper {
+  max-width: rem(1170, $fontSize);
+  margin: 0 auto;
+
+  @media only screen and (max-width: $desktopWidth) {
+    max-width: rem(1055, $fontSize);
+    padding: 0 20px;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
 .bg {
   &__white {
     background: $white no-repeat center center;

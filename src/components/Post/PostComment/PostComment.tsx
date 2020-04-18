@@ -11,6 +11,52 @@ export const PostComment = (props) => {
   
   let item = props.items;
   
+  const RenderComments = item.map((item, n: number) =>
+    <li key={n}>
+      <div className={'post__comment--message-block'}>
+        <Image image={item.avatar!==null ? item.avatar : AvatarMask}
+               class={'post__author--avatar'}
+               altText={'Avatar'+ item.name}
+               ariaLabel={'Avatar '+ item.name}/>
+      
+        <div>
+          <div className={'post__comment--message-header'}>
+            <h5>{item.name}</h5>
+            <span>{item.date}</span>
+            <button onClick={()=> console.log('Create new Reply')}>Reply</button>
+          </div>
+          <div>
+            <Content class={'post__comment--message-text'} content={item.content}/>
+          </div>
+        </div>
+      </div>
+      <ul>
+      
+      {item.reply.map((reply, n: number) =>
+        <li key={n}>
+          <div className={'post__comment--message-block'}>
+            <Image image={reply.avatar!==null ? reply.avatar : AvatarMask}
+                   class={'post__author--avatar'}
+                   altText={'Avatar '+ reply.name}
+                   ariaLabel={'Avatar '+ reply.name}/>
+      
+            <div>
+              <div className={'post__comment--message-header'}>
+                <h5>{reply.name}</h5>
+                <span>{reply.date}</span>
+              </div>
+              <div>
+                <Content class={'post__comment--message-text'} content={reply.content}/>
+              </div>
+            </div>
+          </div>
+        </li>
+      )}
+      
+      </ul>
+    </li>
+  );
+  
   return (
     <div className={'post__comment'}>
       <div className={'post__comment--info'}>
@@ -22,68 +68,7 @@ export const PostComment = (props) => {
       </div>
 
       <ul className={'post__comment--message'}>
-        <li>
-          <div className={'post__comment--message-block'}>
-            <Image image={AvatarMask}
-                   class={'post__author--avatar'}
-                   altText={'Opponent comments avatar'}
-                   ariaLabel={'Opponent comments avatar'}/>
-
-            <div>
-              <div className={'post__comment--message-header'}>
-                <h5>Brian Jackson</h5>
-                <span>December 14, 2017 at 5:13 pm</span>
-                <button onClick={()=> console.log('Create new Reply')}>Reply</button>
-              </div>
-              <div>
-                <Content class={'post__comment--message-text'} content={`I think, you forgot to mention a very good one:
-                Thrive architect from thrivethemes. That thing is pretty powerful.`}/>
-              </div>
-            </div>
-          </div>
-
-          <ul>
-            <li>
-              <div className={'post__comment--message-block'}>
-                <Image image={AvatarMask}
-                       class={'post__author--avatar'}
-                       altText={'Opponent comments avatar'}
-                       ariaLabel={'Opponent comments avatar'}/>
-
-                <div>
-                  <div className={'post__comment--message-header'}>
-                    <h5>Sean Scott</h5>
-                    <span>December 14, 2017 at 5:13 pm</span>
-                  </div>
-                  <div>
-                    <Content class={'post__comment--message-text'} content={'Thanks Brian! We have updated the above post. You are correct, their page builder has both a free and a premium version.'}/>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-
-
-        <li>
-          <div className={'post__comment--message-block'}>
-            <Image image={AvatarMask}
-                   class={'post__author--avatar'}
-                   altText={'Opponent comments avatar'}
-                   ariaLabel={'Opponent comments avatar'}/>
-            
-            <div>
-              <div className={'post__comment--message-header'}>
-                <h5>Wiliam Hilton</h5>
-                <span>December 14, 2017 at 5:13 pm</span>
-                <button onClick={()=> console.log('Create new Reply')}>Reply</button>
-              </div>
-              <div>
-                <Content class={'post__comment--message-text'} content={'I think, you forgot to mention a very good one: Thrive architect from thrivethemes. That thing is pretty powerful.'}/>
-              </div>
-            </div>
-          </div>
-        </li>
+        {RenderComments}
       </ul>
     </div>
   );

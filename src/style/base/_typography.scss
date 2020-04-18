@@ -21,6 +21,7 @@
 
       @media only screen and (max-width: $phoneWidth) {
         font-size: rem(20, $fontSize);
+        line-height: rem(30, $fontSize);
       }
     }
 
@@ -39,8 +40,8 @@
       line-height: rem(30, $fontSize);
 
       @media only screen and (max-width: $phoneWidth) {
-        font-size: rem(12, $fontSize);
-        line-height: unset;
+        font-size: rem(15, $fontSize);
+        line-height: rem(16, $fontSize);
       }
     }
   }
@@ -70,6 +71,7 @@
 
     &--post {
       @extend .content__subtitle;
+      font-size: $fontSize;
       margin: 27px 0 0;
     }
   }
