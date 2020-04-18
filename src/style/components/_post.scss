@@ -163,6 +163,12 @@
       height: 79px;
       border-radius: 200px;
       background-color: $dark-text;
+
+
+      @media only screen and (max-width: $tableWidth) {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &--name {
@@ -253,6 +259,10 @@
 
       & li ul li {
         margin: 60px 0 60px 100px;
+
+        @media only screen and (max-width: $tableWidth) {
+          margin: 15px 0 15px 30px;
+        }
       }
 
       &-block {
