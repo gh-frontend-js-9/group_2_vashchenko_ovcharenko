@@ -13,13 +13,13 @@ class AuthorBlogs extends Component<any,Post> {
         let {post} = this.props;
         return (
             <div className='author-wrapper'>
-                <CardImg className='card-image-wrap'>
-                    <img src={post.featuredImage} alt="" className='card-image'/>
+                <CardImg className='card-image-wrap' >
+                    <img src={post.featuredImage} alt="" className='card-image' />
                 </CardImg>
                 <CardBox className='blur-card-title '>
                     <CardContent className='author-card-content'>
                         <CardAuthor className='card-author-author-blur'>
-                            <span className='by-in'> BY </span>  TOMAS LAURINAVICIUS  <span className='by-in'> IN </span> {post.tags}
+                            <span className='by-in' > BY </span>  TOMAS LAURINAVICIUS  <span className='by-in'> IN </span> {post.tags}
                         </CardAuthor>
                     <CardTitle className='author-title-blur'>
                         {post.title}
