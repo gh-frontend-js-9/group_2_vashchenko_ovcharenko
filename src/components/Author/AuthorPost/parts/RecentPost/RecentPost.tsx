@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './RecentPost.scss'
-import CardBox from "../../../../Card/CardBox/CardBox";
 import CardTitle from "../../../../Card/CardBox/parts/CardTitle/CardTitle";
-import {CardAdaptive} from "../../../../Card/CardOnGrid/CardAdaptive";
 import CardDescription from "../../../../Card/CardBox/parts/CardDescription/CardDescription";
 import {Post} from "../../../../../models/Post";
 

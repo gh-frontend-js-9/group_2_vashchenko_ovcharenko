@@ -7,7 +7,7 @@ class API {
             .then(response => {
                 return {
                     posts: response.data.docs,
-                    pages: response.data.pages
+                    pages: response.data.totalPages
                 }
             })
     }

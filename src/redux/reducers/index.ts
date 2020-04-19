@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import {getPostsReducer} from "./getPosts";
 
 const rootReducer = combineReducers({
-    getPostsReducer
+    getPostsReducer,
 });
 
 export default rootReducer;

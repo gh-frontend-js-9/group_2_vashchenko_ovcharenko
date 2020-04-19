@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {NavLink} from 'react-router-dom';
+
+import {getPosts} from "../../redux/actions/getPosts";
+import {bindActionCreators} from "redux";
+
 // Component
 import {CardAdaptive} from "../Card/CardOnGrid/CardAdaptive";
 import {Content} from "../Shared/elements/content";

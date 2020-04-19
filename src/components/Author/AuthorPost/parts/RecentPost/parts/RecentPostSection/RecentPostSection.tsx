@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import CardBox from "../../../../../../Card/CardBox/CardBox";
 import CardTitle from "../../../../../../Card/CardBox/parts/CardTitle/CardTitle";
-import AuthorPost from "../../../../AuthorPost";
 import AuthorPost2 from "../../../AuthorPost2";
 import {Post} from "../../../../../../../models/Post";
 

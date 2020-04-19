@@ -2,7 +2,8 @@ import {
     GET_POSTS_ERROR,
     GET_POSTS_PENDING,
     GET_POSTS_SUCCESS,
-    GET_PAGES_SUCCESS
+    GET_PAGES_SUCCESS,
+    SET_CURRENT_POST
 } from "../actions/getPosts";
 
 import {getPostsState} from "./types/GetPosts";
@@ -11,6 +12,7 @@ import {Reducer} from "redux";
 const initialState: getPostsState = {
     isPending: false,
     posts : [],
+    currentPost: null
 };
 
 export const getPostsReducer: Reducer<getPostsState> = (state = initialState, action) => {
@@ -35,6 +37,11 @@ export const getPostsReducer: Reducer<getPostsState> = (state = initialState, ac
             return {
                 ...state,
                 pages: action.payload.pages,
+            };
+        case SET_CURRENT_POST:
+            return {
+                ...state,
+                currentPost: action.payload.post
             };
         default:
             return state;
