@@ -8,18 +8,16 @@ import {Content} from "../../Shared/elements/content";
 
 export const PostTitle = (props) => {
   
-  let item = props.items;
-  
   return (
     <div className={'post__header-box wrapper'}>
-      <Title link={item._id} class={'content__title--post'} title={item.title}/>
+      <Title link={'/post'}
+             class={'content__title--post'}
+             title={props.items.title}/>
 
-      <Content
-      class={'content__text--card'}
-      content={item.content} />
+      <Content class={'content__text--card'}
+               content={props.items.description} />
   
-      <Content
-      class={'content__subtitle--post'}
-      content={`By `+ item.author +` in `+ item.tags +`process`} />
+      <Content class={'content__subtitle--post'}
+               content={`By `+ props.items.author.firstName+ ` `+ props.items.author.secondName +` in `+ props.items.tags +`process`} />
     </div>);
 };

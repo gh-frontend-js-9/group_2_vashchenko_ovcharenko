@@ -34,12 +34,11 @@ function App() {
             <Route path={'/popular'}>
               <UnderConstruction/>
             </Route>
-            <Route path={'/new'}>
-            {/*  < BusinessBlog />*/}
+            <Route path={'/author'}>
             <Author/>
             </Route>
             <Route path={'/post'}>
-              < PostPage />
+              <PostPage />
             </Route>
             <Route path={'/read'}>
               <BlogsWrapper className='reading-list-wrapper'>

@@ -1,88 +1,31 @@
-// Image
-import vk from '../../assets/images/vk.webp';
-import printeres from '../../assets/images/printeres.webp';
-import instagram from '../../assets/images/instagram.webp';
-import twitter from '../../assets/images/twitter.webp';
-import facebook from '../../assets/images/facebook.webp';
-
 export const main = [
   {
-    link: '/popular',
-    name: 'Popular',
-    class: 'header__navigation--link'
-  },
-  {
-    link: '/new',
-    name: 'New',
-    class: 'header__navigation--link'
-  },
-  {
-    link: '/post',
-    name: 'Post',
-    class: 'header__navigation--link'
-  },
-  {
-    link: '/read',
-    name: 'Reading list',
-    class: 'header__navigation--link'
-  },
-  {
-    link: '/topics',
-    name: 'Topics',
-    class: 'header__navigation--link'
-  },
-  {
-    link: '/subscribe',
-    name: 'Subscribe',
-    class: 'header__navigation--link'
-  },
-  {
-    link: '/blog',
-    name: 'Business Blog',
-    class: 'header__navigation--link'
-  }
-];
-
-export const burger = [
-  {
     link: '/home',
-    name: 'Main',
-    class: 'menu__item'
+    name: 'Home',
+  },
+  {
+    link: '/author',
+    name: 'Articles',
   },
   {
     link: '/popular',
     name: 'Popular',
-    class: 'menu__item'
-  },
-  {
-    link: '/new',
-    name: 'New',
-    class: 'menu__item'
-  },
-  {
-    link: '/post',
-    name: 'Post',
-    class: 'menu__item'
   },
   {
     link: '/read',
     name: 'Reading list',
-    class: 'menu__item'
   },
   {
     link: '/topics',
     name: 'Topics',
-    class: 'menu__item'
   },
   {
     link: '/subscribe',
     name: 'Subscribe',
-    class: 'menu__item'
   },
   {
     link: '/blog',
     name: 'Business Blog',
-    class: 'menu__item'
   }
 ];
 

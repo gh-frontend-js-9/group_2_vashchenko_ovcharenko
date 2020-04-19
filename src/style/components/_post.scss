@@ -26,13 +26,8 @@
         align-self: center;
       }
 
-      & img {
-        height: 35px;
-        width: 35px;
-
-        @media only screen and (max-width: $largeDeviceWidth) {
-          margin: 5px;
-        }
+      & a {
+        margin: 5px;
       }
     }
 
@@ -40,7 +35,6 @@
       max-width: rem(972px, $fontSize);
       margin: 0 auto;
       border-radius: 10px;
-
 
       @media only screen and (max-width: $desktopWidth) {
         max-width: 95%;

@@ -25,7 +25,7 @@ function Header() {
           </label>
       
           <ul className="menu__box">
-            < NavLinksBurger items={NavLinkItem.burger}/>
+            < NavLinksBurger items={NavLinkItem.main} class={'menu__item'}/>
           </ul>
         </div>
         
@@ -35,7 +35,7 @@ function Header() {
               < Image items={ImagesItem.logoState}/>
             </a>
             
-            < NavLinks items={NavLinkItem.main}/>
+            < NavLinks items={NavLinkItem.main} class={'header__navigation--link'}/>
           </nav>
         
         {/**/}

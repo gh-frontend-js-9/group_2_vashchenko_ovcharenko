@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {MainCard} from "../../Card/CardOnGrid/MainCard";
+import MainCard from "../../Card/CardOnGrid/MainCard";
 
 //Це можна видалити якщо ти вирішиш використовувти мій код
 import './BlogsSection.scss'

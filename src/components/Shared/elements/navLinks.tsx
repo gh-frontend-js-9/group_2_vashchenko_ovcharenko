@@ -6,7 +6,7 @@ export const NavLinks = (props) => {
   let items = props.items;
   
   let renderNav = items.map((item, n: number) =>
-    <NavLink key={n} to={item.link} className={item.class}>{item.name}</NavLink>
+    <NavLink key={n} to={item.link} className={props.class}>{item.name}</NavLink>
   );
   
   return (

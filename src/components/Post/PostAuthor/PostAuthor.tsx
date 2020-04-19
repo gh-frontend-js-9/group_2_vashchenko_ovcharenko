@@ -5,6 +5,7 @@ import {Content} from "../../Shared/elements/content";
 import {Image} from "../../Shared/elements/images";
 
 // Images and style
+import AvatarMask from '../../../assets/images/AvatarMask.png';
 
 export const PostAuthor = (props) => {
   
@@ -12,16 +13,22 @@ export const PostAuthor = (props) => {
   
   return (
   <div className={'post__author'}>
-    <Image image={props.image}
+    <Image image={props.image!==null ? props.image : AvatarMask}
            class={'post__author--avatar'}
-           altText={item.author+' avatar image'}
-           ariaLabel={item.author+' avatar image'}/>
+           altText={item.author.firstName+' avatar image'}
+           ariaLabel={item.author.firstName+' avatar image'}/>
     
     <Content class={'post__author--name'}
-             content={item.author}/>
+             content={item.author.firstName +` `+ item.author.secondName}/>
     
     <Content class={'post__author--follow'}
-             content={<p>Follow me <a href={props.twLink} title={'Follow the my Twitter'+ props.twitter}>{props.twitter}</a></p>}/>
+             content={<p>Write me <a href={props.twLink!=='' ? props.twLink : `mailto:`+item.author.email}
+                                     title={'Write me to my'+ props.twitter}
+                                     target={'_blank'}>
+                                        {props.twitter!=='' ? props.twitter : item.author.email}
+                                     </a>
+             </p>}
+    />
   </div>
   );
 };

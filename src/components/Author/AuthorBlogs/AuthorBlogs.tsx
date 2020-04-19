@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
+import {connect} from "react-redux"
+import {Link} from "react-router-dom";
+import {bindActionCreators} from "redux";
+
 import CardBox from "../../Card/CardBox/CardBox";
 import CardContent from "../../Card/CardBox/parts/СardContent/CardContent";
 import CardAuthor from "../../Card/CardBox/parts/CardAuthor/CardAuthor";
 import CardTitle from "../../Card/CardBox/parts/CardTitle/CardTitle";
 import CardImg from "../../Card/CardBox/parts/CardImg/CardImg";
-import './AuthorBlogs.scss'
 import {Post} from "../../../models/Post";
-import {bindActionCreators} from "redux";
-import {connect} from "react-redux"
 import {setCurrentPost} from "../../../redux/actions/getPosts";
-import {Link} from "react-router-dom";
+
+import './AuthorBlogs.scss'
 
 class AuthorBlogs extends Component<any,Post> {
     render() {
@@ -17,7 +19,7 @@ class AuthorBlogs extends Component<any,Post> {
         return (
             <div className='author-wrapper' >
                 <CardImg className='card-image-wrap' >
-                    <img src={post.featuredImage} alt="" className='card-image' />
+                    <img src={post.featuredImage} alt={post.author.firstName} className='card-image' />
                 </CardImg>
                 <CardBox className='blur-card-title '>
                     <CardContent className='author-card-content'>
@@ -25,7 +27,7 @@ class AuthorBlogs extends Component<any,Post> {
                             <span className='by-in' > BY </span>  {post.author.firstName} {post.author.lastName}  <span className='by-in'> IN </span> {post.tags}
                         </CardAuthor>
                     <CardTitle className='author-title-blur'>
-                        <Link to={'/post'} onClick={() => setCurrentPost(post)}>
+                        <Link to={'/post?'+post.slug} onClick={() => setCurrentPost(post)}>
                             <div onClick={() => this.props.setCurrentPost(post)}>
                         {post.title}
                             </div>

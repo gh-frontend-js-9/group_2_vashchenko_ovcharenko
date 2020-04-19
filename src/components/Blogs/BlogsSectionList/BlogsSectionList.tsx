@@ -6,13 +6,13 @@ import {NavLink} from 'react-router-dom';
 import {getPosts} from "../../../redux/actions/getPosts";
 import {Post} from "../../../models/Post";
 import {CardAdaptive} from "../../Card/CardOnGrid/CardAdaptive";
-import {MainCard} from "../../Card/CardOnGrid/MainCard";
 import BottomSlider from "../../Index/BottomSlider";
 import * as SliderImg from "../../Index/SliderCONST";
-
+import MainCard from "../../Card/CardOnGrid/MainCard";
 
 
 import './BlogsSectionList.scss'
+
 import SimpleSlider from "../../SliderImg/SliderImg";
 import BlogsSection from "../BlogsSection/BlogsSection";
 import BlogsWithImage from "../BlogsWithImage/BlogsWithImage";
@@ -100,7 +100,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getPosts: bindActionCreators(getPosts, dispatch)
+    getPosts: bindActionCreators(getPosts, dispatch),
   };
 };
 

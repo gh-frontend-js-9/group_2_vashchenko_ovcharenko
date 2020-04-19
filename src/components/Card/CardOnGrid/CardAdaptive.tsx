@@ -4,6 +4,9 @@ import React from 'react';
 import {Title} from "../../Shared/elements/title";
 import {Content} from "../../Shared/elements/content";
 
+// Image and style
+import Blank from '../../../assets/images/BottomCard.png';
+
 export const CardAdaptive = (props) => {
 
   let items = props.items;
@@ -12,13 +15,13 @@ export const CardAdaptive = (props) => {
 
     return (
       <div key={n} className={props.blockClass}
-           style={ { backgroundImage:`url(${item.featuredImage})` } }>
+           style={ { backgroundImage:`url(${item.featuredImage!==null ? item.featuredImage : Blank})` } }>
   
         <Content class={props.subTitleClass}
                  content={`BY `+item.author.firstName +` `+ item.author.lastName  +` in `+item.tags}/>
   
         <Title class={props.titleClass}
-               link={item._id}
+               link={item.slug}
                title={item.title}/>
   
         <Content class={props.contentClass}

@@ -1,37 +1,43 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {NavLink} from 'react-router-dom';
+
 // Component
 import {CardAdaptive} from "../Card/CardOnGrid/CardAdaptive";
 import {Content} from "../Shared/elements/content";
-
 import {PostTitle} from "./PostTitle/PostTitle";
 import {PostPreview} from "./PostPreview/PostPreview";
 import {PostAuthor} from "./PostAuthor/PostAuthor";
 import {PostComment} from "./PostComment/PostComment";
 import {PostReplyForm} from "./PostReplyForm/PostReplyForm";
+import Author from "../Author/Author";
 
 // Images and style
-import AvatarMask from '../../assets/images/AvatarMask.png';
 
 // Const Temp Data
 import {PostResponse, Comments} from './PostCONST';
 
 class PostPage extends Component<any,any> {
     render() {
+      let serverResponse = this.props.currentPost;
+        
+        if (serverResponse === null) {
+            return (<Author />)
+        }
+        
         return (
             <section>
+              {console.log(serverResponse)}
                 <div className={'bg__white'}>
-                    <PostTitle items={PostResponse[0]}/>
+                    <PostTitle items={serverResponse}/>
                 </div>
-                {console.log(this.props.currentPost)}
                 <div className={'wrapper'}>
-                    <PostPreview items={PostResponse[0]}/>
+                    <PostPreview items={serverResponse}/>
 
-                    <Content class={'post__content'} content={PostResponse[0].content}/>
+                    <Content class={'post__content'} content={serverResponse.content}/>
 
-                    <PostAuthor image={AvatarMask} twLink={'?link_to_twitter'} twitter={'@JohnAMWill.'}
-                                items={PostResponse[0]}/>
+                    <PostAuthor image={serverResponse.author.imgUrl} twLink={'?link_to_twitter'} twitter={''}
+                                items={serverResponse}/>
 
                     <div className={'card__header'}>
                         <h2 className={'card__header--title'}>

@@ -7,7 +7,7 @@ export const NavLinksBurger = (props) => {
   
   let renderNav = items.map((item, n: number) =>
     <li  key={n}>
-      <NavLink to={item.link} className={item.class}>{item.name}</NavLink>
+      <NavLink to={item.link} className={props.class}>{item.name}</NavLink>
     </li>
   );
   
