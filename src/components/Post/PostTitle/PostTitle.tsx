@@ -10,7 +10,7 @@ export const PostTitle = (props) => {
   
   return (
     <div className={'post__header-box wrapper'}>
-      <Title link={'/post'}
+      <Title link={'/post?'+ props.items.slug}
              class={'content__title--post'}
              title={props.items.title}/>
 
