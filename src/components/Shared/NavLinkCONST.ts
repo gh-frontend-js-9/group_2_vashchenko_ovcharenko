@@ -8,12 +8,12 @@ export const main = [
     name: 'Articles',
   },
   {
-    link: '/popular',
-    name: 'Popular',
+    link: '/read',
+    name: 'Read list',
   },
   {
-    link: '/read',
-    name: 'Reading list',
+    link: '/blog',
+    name: 'BBlog',
   },
   {
     link: '/topics',
@@ -24,8 +24,8 @@ export const main = [
     name: 'Subscribe',
   },
   {
-    link: '/blog',
-    name: 'Business Blog',
+    link: '/popular',
+    name: 'Popular',
   }
 ];
 
