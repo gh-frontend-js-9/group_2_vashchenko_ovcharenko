@@ -2,14 +2,20 @@ import React, {Component} from 'react';
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import {NavLink} from 'react-router-dom';
+
 import {getPosts} from "../../../redux/actions/getPosts";
 import {Post} from "../../../models/Post";
 import {CardAdaptive} from "../../Card/CardOnGrid/CardAdaptive";
 import {MainCard} from "../../Card/CardOnGrid/MainCard";
 import BottomSlider from "../../Index/BottomSlider";
 import * as SliderImg from "../../Index/SliderCONST";
-import './BlogsSectionList.scss'
 
+
+
+import './BlogsSectionList.scss'
+import SimpleSlider from "../../SliderImg/SliderImg";
+import BlogsSection from "../BlogsSection/BlogsSection";
+import BlogsWithImage from "../BlogsWithImage/BlogsWithImage";
 
 interface State {
   posts: Post[]
@@ -45,7 +51,7 @@ class BlogsSectionList extends Component<any, State> {
                 </h2>
                 <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
               </div>
-
+              
               <div className="card__home-wrapper--main">
                 <MainCard items={post}/>
               </div>

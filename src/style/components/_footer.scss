@@ -22,19 +22,6 @@
     }
   }
 
-  &__social {
-    @include flex($jc: space-between, $ai: center);
-    width: 100%;
-    max-width: rem(140, $fontSize);
-
-    &--img{
-      opacity: 0.6;
-      &:hover{
-        opacity: 1;
-      }
-    }
-  }
-
   &__copywrite{
     color: $subtitle-color;
     font-size: $fontSizeSmall;

@@ -15,7 +15,7 @@ export const MainCard = (props) => {
            style={ { backgroundImage:`url(${item.featuredImage})` } }>
         
         <Content class={(n === 0) ? 'content__subtitle': 'content__subtitle--card-small'}
-                 content={(n === 0) ? `BY `+item.author+` in `+item.tags : item.tags}/>
+                 content={(n === 0) ? `BY `+item.author.firstName +` `+ item.author.lastName  +`in `+item.tags : item.tags}/>
         
         <Title class={(n === 0) ? 'content__title--card' : 'content__title--card-small'}
                link={item._id}

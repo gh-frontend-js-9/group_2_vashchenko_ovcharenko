@@ -34,6 +34,7 @@ function Header() {
             <a href='/'>
               < Image items={ImagesItem.logoState}/>
             </a>
+            
             < NavLinks items={NavLinkItem.main}/>
           </nav>
         
