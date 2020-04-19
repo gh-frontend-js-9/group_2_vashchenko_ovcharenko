@@ -3,11 +3,12 @@ import {NavLink} from 'react-router-dom';
 
 // Component
 import {Image} from "./elements/images";
-import {NavLinksFooter} from "./elements/navLinksFooter";
+import {FAIconsLinks} from "./elements/FAIconsLinks";
 
 // Images and style
 import logo from '../../assets/images/logo.webp';
 
+// Temp data
 import {footerSocialLink} from './NavLinkCONST';
 
 function Footer() {
@@ -28,8 +29,8 @@ function Footer() {
                   ariaLabel={logoState.ariaLabel}/>
         </NavLink>
         
-        <nav className={'footer__social'}>
-          <NavLinksFooter items={footerSocialLink}/>
+        <nav className={'social'}>
+          <FAIconsLinks items={footerSocialLink} class={'social__link--footer'}/>
         </nav>
     
         <div className={'footer__copywrite'}>

@@ -28,3 +28,37 @@
     background: $white no-repeat center center;
   }
 }
+
+.social {
+  @include flex($jc: space-between, $ai: center);
+  width: 100%;
+  max-width: rem(140, $fontSize);
+
+  &__link {
+    border-radius: 100px;
+    font-size: $fontSizeSmall;
+    text-align: center;
+    color: $light-color;
+    background-color: $subtitle-color;
+    cursor: pointer;
+    &:hover{
+      color: $light-color;
+      background-color: $active-color;
+    }
+
+    &--footer {
+      @extend .social__link;
+      min-width: 20px;
+      min-height: 20px;
+      line-height: 20px;
+    }
+
+    &--post {
+      @extend .social__link;
+      min-width: 40px;
+      min-height: 40px;
+      line-height: 40px;
+      font-size: $fontSize;
+    }
+  }
+}

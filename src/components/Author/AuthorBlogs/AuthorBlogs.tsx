@@ -19,7 +19,7 @@ class AuthorBlogs extends Component<any,Post> {
                 <CardBox className='blur-card-title '>
                     <CardContent className='author-card-content'>
                         <CardAuthor className='card-author-author-blur'>
-                            <span className='by-in'> BY </span>  TOMAS LAURINAVICIUS  <span className='by-in'> IN </span> {post.tags}
+                            <span className='by-in'> BY </span> {post.author.firstName} {post.author.lastName} <span className='by-in'> IN </span> {post.tags}
                         </CardAuthor>
                     <CardTitle className='author-title-blur'>
                         {post.title}

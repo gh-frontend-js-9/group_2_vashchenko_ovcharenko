@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import {Content} from "../../Shared/elements/content";
 import {Image} from "../../Shared/elements/images";
-import {NavLinksFooter} from "../../Shared/elements/navLinksFooter";
+import {FAIconsLinks} from "../../Shared/elements/FAIconsLinks";
 
 // Images and style
 import likes from '../../../assets/images/Shape.png';
@@ -22,7 +22,7 @@ export const PostPreview = (props) => {
   <div className={'post__preview'}>
     
     <div className={'post__preview--social'}>
-      <NavLinksFooter items={socialLink}/>
+      <FAIconsLinks items={socialLink} class={'social__link--post'}/>
     </div>
     
     <Image class={'post__preview--image'} image={item.featuredImage} altText={item.title}/>

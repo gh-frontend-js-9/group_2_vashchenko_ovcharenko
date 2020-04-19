@@ -51,7 +51,7 @@ class BlogsSectionList extends Component<any, State> {
                 </h2>
                 <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
               </div>
-
+              
               <div className="card__home-wrapper--main">
                 <MainCard items={post}/>
               </div>

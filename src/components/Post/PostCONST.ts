@@ -1,7 +1,3 @@
-import printeres from '../../assets/images/printeres.webp';
-import instagram from '../../assets/images/instagram.webp';
-import twitter from '../../assets/images/twitter.webp';
-import facebook from '../../assets/images/facebook.webp';
 import AvatarMask from '../../assets/images/AvatarMask.png';
 
 export const PostResponse = [
@@ -46,31 +42,19 @@ export const PostResponse = [
 export const socialLink = [
   {
     link: '/',
-    image: facebook,
-    name: 'Go to our facebook',
-    ariaLabel: 'Find us on facebook',
-    class: ' footer__social--img'
+    social: 'fa-facebook-f'
   },
   {
     link: '/',
-    image: twitter,
-    name: 'Go to our twitter',
-    ariaLabel: 'Find us on twitter',
-    class: ' footer__social--img'
+    social: 'fa-twitter'
   },
   {
     link: '/',
-    image: instagram,
-    name: 'Go to our instagram',
-    ariaLabel: 'Find us on instagram',
-    class: ' footer__social--img'
+    social: 'fa-instagram'
   },
   {
     link: '/',
-    image: printeres,
-    name: 'Go to our printers',
-    ariaLabel: 'Find us on printers',
-    class: ' footer__social--img'
+    social: 'fa-pinterest-p'
   }
 ];
 

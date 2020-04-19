@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './AuthorSocialMedia.scss'
+
 class AuthorSocialMedia extends Component {
     render() {
         return (
