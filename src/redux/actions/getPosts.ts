@@ -5,6 +5,7 @@ export const GET_POSTS_PENDING = 'GET_POSTS_PENDING';
 export const GET_POSTS_SUCCESS = 'GET_POSTS_SUCCESS';
 export const GET_POSTS_ERROR = 'GET_POSTS_ERROR';
 export const GET_PAGES_SUCCESS = 'GET_PAGES_SUCCESS';
+export const SET_CURRENT_POST = 'SET_CURRENT_POST';
 
 export const getPostsPending: ActionCreator<Action> = () => {
     return {
@@ -36,6 +37,16 @@ export const getPages: ActionCreator<Action> = (pages) => {
         },
     };
 };
+
+export const setCurrentPost: ActionCreator<Action> = (post) => {
+    return {
+        type: SET_CURRENT_POST,
+        payload:{
+            post: post
+        }
+    }
+};
+
 
 export const getPosts: (page,limit)
     => (dispatch: Dispatch)
