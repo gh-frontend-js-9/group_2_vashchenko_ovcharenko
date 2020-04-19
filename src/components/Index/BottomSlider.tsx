@@ -13,7 +13,7 @@ import './slider.scss'
 export default class BottomSlider extends Component<any> {
   render() {
     let items = this.props.items;
-  
+
     const settings = {
       dots: false,
       arrow: true,
@@ -62,29 +62,29 @@ export default class BottomSlider extends Component<any> {
         }
       ]
     };
-   
-   
-   
+
+
+
     let renderSlider = items.map((item, n: number) => {
       return (
-      <div key={n} className={'bottom-slider'}>
-          < Image image={item.image}
-                  altText={item.title}
-                  ariaLabel={item.ariaLabel}
-                  class={'bottom-slider__image'} />
-        <NavLink to={item.link}>
-          <h3 className={'bottom-slider__title'}>{item.title}</h3>
-        </NavLink>
-      </div>
+          <div key={n} className={'bottom-slider'}>
+            < Image image={item.image}
+                    altText={item.title}
+                    ariaLabel={item.ariaLabel}
+                    class={'bottom-slider__image'} />
+            <NavLink to={item.link}>
+              <h3 className={'bottom-slider__title'}>{item.title}</h3>
+            </NavLink>
+          </div>
       );
     });
-    
+
     return (
-    <div className={'slider__wrapper'}>
-      <Slider {...settings}>
-        {renderSlider}
-      </Slider>
-    </div>
+        <div className={'slider__wrapper'}>
+          <Slider {...settings}>
+            {renderSlider}
+          </Slider>
+        </div>
     );
   }
 }

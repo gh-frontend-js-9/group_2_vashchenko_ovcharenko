@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PopularPost from "./PopularPost/PopularPost";
 import RecentPost from "./RecentPost/RecentPost";
 import {Post} from "../../../../models/Post";
 

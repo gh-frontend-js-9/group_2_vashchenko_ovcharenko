@@ -1,11 +1,5 @@
 import React from 'react';
 
-// Components
-import {Content} from "../../Shared/elements/content";
-import {Image} from "../../Shared/elements/images";
-
-// Images and style
-
 export const PostReplyForm = (props) => {
   
   return (

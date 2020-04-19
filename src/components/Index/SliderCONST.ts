@@ -74,4 +74,3 @@ export const Bottom = [
     title: 'Go home',
   },
 ];
-

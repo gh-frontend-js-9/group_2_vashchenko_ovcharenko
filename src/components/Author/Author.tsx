@@ -1,10 +1,7 @@
-import React, {Component, PureComponent} from 'react';
+import React, {Component} from 'react';
 import {bindActionCreators} from "redux";
 import Anime from "react-anime";
 import {connect} from "react-redux";
-
-
-
 import {getPosts} from "../../redux/actions/getPosts";
 import {Post} from "../../models/Post";
 import BlogsWrapper from "../BlogsWrapper/BlogsWrapper";

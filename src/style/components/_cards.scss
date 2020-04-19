@@ -59,8 +59,9 @@
       }
 
       @media only screen and (max-width: $phoneWidth) {
-        grid-template-columns: repeat(2, rem(150, $fontSize));
-        grid-template-rows: repeat(4, rem(90, $fontSize));
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, min(rem(120, $fontSize)));
+        padding: 10px;
       }
 
       &-bottom {
@@ -88,7 +89,7 @@
           margin-top: rem(40, $fontSize);
           margin-bottom: rem(30, $fontSize);
           grid-template-columns: repeat(1, rem(310, $fontSize));
-          grid-template-rows: repeat(2, rem(330, $fontSize));
+          grid-template-rows: repeat(1, rem(330, $fontSize));
         }
       }
     }
@@ -106,8 +107,8 @@
       grid-template-rows: repeat(1, rem(358, $fontSize));
 
       @media only screen and (max-width: $desktopWidth) {
-        grid-template-columns: repeat(3, rem(276, $fontSize));
-        grid-template-rows: repeat(3, rem(170, $fontSize));
+        grid-template-columns: repeat(1, 85%);
+        grid-template-rows: auto;
       }
     }
   }
@@ -165,6 +166,10 @@
     color: $title-color;
     padding: rem(50, $fontSize);
     border-radius: 8px;
+
+    @media only screen and (max-width: $desktopWidth) {
+      background-size: cover;
+    }
 
     & p, h3 {
       max-width: 40%;

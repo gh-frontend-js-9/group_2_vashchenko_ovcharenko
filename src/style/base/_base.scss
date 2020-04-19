@@ -25,15 +25,6 @@ html, body {
   overflow-x: hidden;
 }
 
-.construction {
-  display: block;
-  width: 35%;
-  margin: 0 auto;
-}
-
-.main {
-  padding-top: rem(120, $fontSize);
-}
 
 .wrapper {
   max-width: rem(1170, $fontSize);
@@ -44,4 +35,5 @@ html, body {
   visibility: hidden;
   display: none;
 }
+
 
