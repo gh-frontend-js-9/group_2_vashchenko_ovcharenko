@@ -4,7 +4,7 @@ export const PostResponse = [
 //   {description: "User research is the reality check every project n… you should be doing it — and how to get started.", featuredImage: "https://ghblogs.herokuapp.com/images/mountains.jpg", category: Array(1), tags: Array(1), likesCount: 0, …}
 // description: "User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started."
 // featuredImage: "https://ghblogs.herokuapp.com/images/mountains.jpg"
-// category: ["Popular"]
+// category: ["Topics"]
 // tags: ["Design Process"]
 // likesCount: 0
 // viewsCount: 0
@@ -21,7 +21,7 @@ export const PostResponse = [
   "description": "User research is the reality check every project needs.",
 "featuredImage": "https://ghblogs.herokuapp.com/images/mountains.jpg",
 "category": [
-  "Popular"
+  "Topics"
 ],
 "tags": [
   "Design Process"
@@ -39,7 +39,7 @@ export const PostResponse = [
   "description": "User research is the reality check every project needs.",
 "featuredImage": "https://ghblogs.herokuapp.com/images/mountains.jpg",
 "category": [
-  "Popular"
+  "Topics"
 ],
 "tags": [
   "Design Process"

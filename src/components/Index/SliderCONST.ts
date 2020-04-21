@@ -52,8 +52,8 @@ export const Bottom = [
   {
     link: '/Post',
     image: bottomSlider,
-    ariaLabel: 'Popular article',
-    title: 'Popular',
+    ariaLabel: 'Topics article',
+    title: 'Topics',
   },
   {
     link: '/Post',

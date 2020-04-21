@@ -63,6 +63,7 @@ class BlogsSectionList extends Component<any, State> {
         <h2 className={'card__header--title'}>Reading lists</h2>
         <NavLink to={'/read'} className={'card__header--view'}>View all</NavLink>
       </div>
+      
       <BottomSlider items={SliderImg.Bottom}/>
       
       <div className='card__home-wrapper--main-bottom'>
