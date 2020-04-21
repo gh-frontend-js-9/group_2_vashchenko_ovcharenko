@@ -3,7 +3,8 @@ import {
     GET_POSTS_PENDING,
     GET_POSTS_SUCCESS,
     GET_PAGES_SUCCESS,
-    SET_CURRENT_POST
+    SET_CURRENT_POST,
+    CLEAR_STORE
 } from "../actions/getPosts";
 
 import {getPostsState} from "./types/GetPosts";
@@ -42,6 +43,12 @@ export const getPostsReducer: Reducer<getPostsState> = (state = initialState, ac
             return {
                 ...state,
                 currentPost: action.payload.post
+            };
+        case CLEAR_STORE:
+            return {
+                ...state,
+                posts: [],
+                currentPost: 0
             };
         default:
             return state;

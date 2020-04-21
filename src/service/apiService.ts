@@ -15,7 +15,7 @@ class API {
         let data = [];
         let pages = 0;
         for (let i = 0; i < categories.length; i++) {
-            let post = (await this.getPosts(categories[i],page,limit))
+            let post = (await this.getPosts(categories[i],page,limit));
             pages = post.pages;
             data.push(post.posts)
         }

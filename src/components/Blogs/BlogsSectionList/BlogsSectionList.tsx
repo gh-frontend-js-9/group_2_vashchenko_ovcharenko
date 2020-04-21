@@ -41,10 +41,7 @@ class BlogsSectionList extends Component<any, State> {
         {
           this.props.posts.map(post => {
             return (
-            // Для рендера можна використовувати обидва варіанти
-            
-            //Мій варіант рендеру компонентів, в такому випадку нам не треба створюваати ще один компонент. Зменшить кількість компонентів в коді.
-            <>
+               <>
               <div className={'card__header'}>
                 <h2 className={'card__header--title'}>
                   {post[0].category}
@@ -56,9 +53,6 @@ class BlogsSectionList extends Component<any, State> {
                 <MainCard items={post}/>
               </div>
             </>
-            
-            //Цей варіант теж можна використовувати для рендеру компонентів.
-            // <BlogsSection post={post} key={post._id}/>
             )
           })
         }
@@ -74,8 +68,7 @@ class BlogsSectionList extends Component<any, State> {
       <div className='card__home-wrapper--main-bottom'>
         {
           this.props.posts.map((post, index:number) => {
-            
-            // тут можна додати будь яку обробку даних в post, я просто скопіював твою.
+
             return index > 0 ? null :
                                <CardAdaptive items={post}
                                              blockClass={'card__box--main-bottom'}
@@ -104,4 +97,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BlogsSectionList);
+export default  connect(mapStateToProps, mapDispatchToProps)(BlogsSectionList);

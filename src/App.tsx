@@ -14,13 +14,13 @@ import PostPage from './components/Post/PostPage'
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
 import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
-
+import logger from 'redux-logger'
 
 // Hard Code Page and services Page
 import UnderConstruction from './components/Shared/UnderConstruction';
 import Author from "./components/Author/Author";
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk,logger));
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Header/>
-        
+
         <main className={'main'}>
           <Switch>
             <Route path={'/popular'}>

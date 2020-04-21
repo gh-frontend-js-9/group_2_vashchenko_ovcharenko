@@ -147,7 +147,9 @@
     border-radius: 8px;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
-
+    &:hover {
+      filter: drop-shadow(2px 4px 6px black);
+    }
     @media only screen and (max-width: $phoneWidth) {
       padding: 10px;
     }

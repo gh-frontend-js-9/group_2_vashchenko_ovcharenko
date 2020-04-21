@@ -18,6 +18,9 @@ import Author from "../Author/Author";
 import {PostResponse, Comments} from './PostCONST';
 
 class PostPage extends Component<any,any> {
+    componentDidMount(): void {
+        window.scrollTo(0,0)
+    }
     render() {
       let serverResponse = this.props.currentPost;
         

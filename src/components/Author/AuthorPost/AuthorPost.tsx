@@ -11,9 +11,7 @@ class AuthorPost extends Component<any,Post> {
                 {
                     post.map((post,index) => {
                         return(
-                            <>
-                                <PopularPost post={post} key={index}/>
-                            </>
+                               <PopularPost post={post} key={index}/>
                         )
                     })
                 }
