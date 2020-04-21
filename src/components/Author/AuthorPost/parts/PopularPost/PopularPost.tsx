@@ -4,6 +4,8 @@ import CardTitle from "../../../../Card/CardBox/parts/CardTitle/CardTitle";
 import CardDescription from "../../../../Card/CardBox/parts/CardDescription/CardDescription";
 import CardImg from "../../../../Card/CardBox/parts/CardImg/CardImg";
 import {Post} from "../../../../../models/Post";
+import {HashLoader} from "react-spinners";
+import CardBox from "../../../../Card/CardBox/CardBox";
 
 class PopularPost extends Component<any,Post> {
     render() {
@@ -27,5 +29,6 @@ class PopularPost extends Component<any,Post> {
         );
     }
 }
+
 
 export default PopularPost;
