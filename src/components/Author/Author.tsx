@@ -19,8 +19,10 @@ import AuthorBanner from "./AuthorBanner/AuthorBanner";
 import Paggination from "../Paggination/Paggination";
 import AuthorGetFree from "./AuthorGetFree/AuthorGetFree";
 import AuthorPopUp from "./AuthorPopUp/AuthorPopUp";
+import ClipLoader from "react-spinners/ClipLoader";
 
 import './Author.scss'
+import {CircleLoader, ClimbingBoxLoader, HashLoader, ScaleLoader, SyncLoader} from "react-spinners";
 
 interface State {
     posts: Post[]
@@ -50,6 +52,12 @@ class Author extends Component<any,State> {
                 <div className='author-blogs-wrapper'>
                     <div className='wrapper-left-column'>
                         <AuthorProfile/>
+                        <HashLoader
+                            size={150}
+                            color={"#ff5480"}
+                            loading={this.props.isPending}
+                            css={'display:flex;justify-content:center; left:50%; transform:translateX(-50%)'}
+                        />
                         <Anime translateX={[-320,0]} duration={1000}>
                             <div className='project-list--author-wrapper'>
                                 {
@@ -82,7 +90,8 @@ class Author extends Component<any,State> {
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.getPostsReducer.posts
+        posts: state.getPostsReducer.posts,
+        isPending: state.getPostsReducer.isPending
     };
 };
 
