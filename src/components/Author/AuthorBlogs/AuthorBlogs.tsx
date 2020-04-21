@@ -19,7 +19,7 @@ class AuthorBlogs extends Component<any,Post> {
         return (
             <div className='author-wrapper' >
                 <CardImg className='card-image-wrap' >
-                    <img src={post.featuredImage} alt={post.author.firstName} className='card-image' />
+                    <img src={post.featuredImage} alt='' className='card-image' />
                 </CardImg>
                 <CardBox className='blur-card-title '>
                     <CardContent className='author-card-content'>
@@ -28,7 +28,7 @@ class AuthorBlogs extends Component<any,Post> {
                         </CardAuthor>
                     <CardTitle className='author-title-blur'>
                         <Link to={'/post?'+post.slug} onClick={() => setCurrentPost(post)}>
-                            <div onClick={() => this.props.setCurrentPost(post)}>
+                            <div onClick={() => this.props.setCurrentPost(post)} className='author-blogs-title-redirect'>
                         {post.title}
                             </div>
                         </Link>

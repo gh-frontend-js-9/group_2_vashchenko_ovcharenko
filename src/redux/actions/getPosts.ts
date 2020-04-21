@@ -6,6 +6,7 @@ export const GET_POSTS_SUCCESS = 'GET_POSTS_SUCCESS';
 export const GET_POSTS_ERROR = 'GET_POSTS_ERROR';
 export const GET_PAGES_SUCCESS = 'GET_PAGES_SUCCESS';
 export const SET_CURRENT_POST = 'SET_CURRENT_POST';
+export const CLEAR_STORE = 'CLEAR_STORE';
 
 export const getPostsPending: ActionCreator<Action> = () => {
     return {
@@ -44,6 +45,12 @@ export const setCurrentPost: ActionCreator<Action> = (post) => {
         payload:{
             post: post
         }
+    }
+};
+
+export const clearStore: ActionCreator<Action> = () => {
+    return {
+        type: CLEAR_STORE
     }
 };
 

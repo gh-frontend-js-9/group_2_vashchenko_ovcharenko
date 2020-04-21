@@ -13,15 +13,21 @@ import PostPage from './components/Post/PostPage'
 import Author from "./components/Author/Author";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
 import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
+
+import logger from 'redux-logger'
+
+// Hard Code Page and services Page
+
 import Popular from "./components/Popular/Popular";
 import Topics from "./components/Topic/Topics";
 
 // Services Page
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
+
 import UnderConstruction from './components/Shared/UnderConstruction';
 import ErrorPage from "./components/Shared/ErrorPage";
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk,logger));
 
 function App() {
   return (
@@ -29,7 +35,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Header/>
-        
+
         <main className={'main'}>
           <Switch>
             <Route path={'/author'} component={Author}/>

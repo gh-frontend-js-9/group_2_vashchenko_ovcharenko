@@ -21,7 +21,7 @@ class Paggination extends Component<any,currentPage> {
     createButton(){
         const buttons = [];
         for(let i = 1 ; i <= this.props.pages; i++) {
-            buttons.push(<PagginationButton value={i} handler={() =>
+            buttons.push(<PagginationButton value={i} key={i} handler={() =>
             {this.setState({currentPage: i});
                 this.props.getPosts(i,1)
             }}/>)
@@ -30,9 +30,6 @@ class Paggination extends Component<any,currentPage> {
     }
 
     render() {
-
-
-
         return (
             <div className='pag-button'>
                 {this.createButton().map(button => button)}

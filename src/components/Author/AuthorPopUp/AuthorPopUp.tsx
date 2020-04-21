@@ -12,11 +12,11 @@ class AuthorPopUp extends Component<any,popUp> {
         return (
             <div className='pop-up-wrapper'>
                 {
-                    items.map(title => {
+                    items.map((title,index) => {
                     return (
                     <>
                         <div className='pop-up-tag-block'>
-                           <PopUp title={title}/>
+                           <PopUp title={title} key={index}/>
                         </div>
                     </>
                     )

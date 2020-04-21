@@ -16,7 +16,7 @@ class PopularPostSection extends Component<any,Post> {
                     post.map((post,index) => {
                         return(
                             <>
-                                <AuthorPost post={post} key={post._id}/>
+                                <AuthorPost post={post} key={index}/>
                             </>
                         )
                     })

@@ -4,7 +4,7 @@ import Anime from "react-anime";
 import {connect} from "react-redux";
 
 
-import {getPosts} from "../../redux/actions/getPosts";
+import {clearStore, getPosts} from "../../redux/actions/getPosts";
 import {Post} from "../../models/Post";
 import BlogsWrapper from "../BlogsWrapper/BlogsWrapper";
 import AuthorBlogsList from "./AuthorBlogsList/AuthorBlogsList";
@@ -40,17 +40,9 @@ class Author extends Component<any,State> {
         this.props.getPosts(`${this.state.currentPage}`,1)
     }
 
-    shouldComponentUpdate(prevProps: Readonly<any>):boolean {
-        let show = false;
-        prevProps.posts.forEach((el,index) => {
-            if (el?._id === this.props.posts[index]?._id){
-                show = true
-            }
-        });
-        return show
+    componentWillMount(): void {
+        this.props.clearStore()
     }
-
-
 
     render() {
         return (
@@ -61,9 +53,9 @@ class Author extends Component<any,State> {
                         <Anime translateX={[-320,0]} duration={1000}>
                             <div className='project-list--author-wrapper'>
                                 {
-                                    this.props.posts.map(post => {
+                                    this.props.posts.map((post,index) => {
                                         return(
-                                            <AuthorBlogsList post={post} key={post._id}/>
+                                            <AuthorBlogsList post={post} key={index}/>
                                         )
                                     })
                                 }
@@ -74,7 +66,7 @@ class Author extends Component<any,State> {
                     </div>
                     <div className='wrapper-right-column'>
                         <AuthorSearch/>
-                        <PopularPostSection post={this.props.posts}/>
+                        <PopularPostSection post={this.props.posts} />
                         <RecentPostSection post={this.props.posts}/>
                         <Subscribe/>
                         <AuthorSocialMedia/>
@@ -90,14 +82,15 @@ class Author extends Component<any,State> {
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.getPostsReducer.posts,
+        posts: state.getPostsReducer.posts
     };
 };
 
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getPosts: bindActionCreators(getPosts, dispatch)
+        getPosts: bindActionCreators(getPosts, dispatch),
+        clearStore: bindActionCreators(clearStore, dispatch)
     };
 };
 
