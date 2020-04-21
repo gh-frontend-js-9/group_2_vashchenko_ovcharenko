@@ -48,9 +48,7 @@ function App() {
   
             
             <Route path={'/read'} >
-              <BlogsWrapper className='reading-list-wrapper'>
                 <ReadingLists/>
-              </BlogsWrapper>
             </Route>
   
             <Redirect exact from={'/'} to={'/home'} />

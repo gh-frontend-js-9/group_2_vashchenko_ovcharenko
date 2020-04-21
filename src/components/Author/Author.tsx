@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {bindActionCreators} from "redux";
-import Anime from "react-anime";
 import {connect} from "react-redux";
 
 
@@ -19,17 +18,17 @@ import AuthorBanner from "./AuthorBanner/AuthorBanner";
 import Paggination from "../Paggination/Paggination";
 import AuthorGetFree from "./AuthorGetFree/AuthorGetFree";
 import AuthorPopUp from "./AuthorPopUp/AuthorPopUp";
-import ClipLoader from "react-spinners/ClipLoader";
+
 
 import './Author.scss'
-import {CircleLoader, ClimbingBoxLoader, HashLoader, ScaleLoader, SyncLoader} from "react-spinners";
+import {HashLoader} from "react-spinners";
 
 interface State {
     posts: Post[]
     currentPage: number
 }
 
-class Author extends Component<any,State> {
+class Author extends PureComponent<any,State> {
     constructor(props) {
         super(props);
         this.state = {
@@ -58,7 +57,7 @@ class Author extends Component<any,State> {
                             loading={this.props.isPending}
                             css={'display:flex;justify-content:center; left:50%; transform:translateX(-50%)'}
                         />
-                        <Anime translateX={[-320,0]} duration={1000}>
+                        <div >
                             <div className='project-list--author-wrapper'>
                                 {
                                     this.props.posts.map((post,index) => {
@@ -68,7 +67,7 @@ class Author extends Component<any,State> {
                                     })
                                 }
                             </div>
-                        </Anime>
+                        </div>
                         <Paggination/>
                         <AuthorGetFree/>
                     </div>

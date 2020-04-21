@@ -77,6 +77,7 @@ class BlogsSectionList extends Component<any, State> {
                                              titleClass={'content__title--card'}
                                              contentClass={'content__text--card'}
                                />
+
           })
         }
       </div>

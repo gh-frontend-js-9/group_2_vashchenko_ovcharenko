@@ -30,13 +30,18 @@
   width: 530px;
 }
 .reading-lists-card-description {
-  width: 211px;
-  height: 93px;
+  max-width: 211px;
   color: #111210;
   font-family: "Open Sans";
   font-size: 18px;
   letter-spacing: -0.1px;
   line-height: 32px;
+  @media screen and (max-width: 600px) {
+    & {
+      min-width: 211px;
+      max-width: none;
+    }
+  }
 }
 
 .author-post__description {
