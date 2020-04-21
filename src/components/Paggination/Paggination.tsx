@@ -23,7 +23,8 @@ class Paggination extends Component<any,currentPage> {
         for(let i = 1 ; i <= this.props.pages; i++) {
             buttons.push(<PagginationButton value={i} key={i} handler={() =>
             {this.setState({currentPage: i});
-                this.props.getPosts(i,1)
+                this.props.getPosts(i,1);
+                window.scrollTo({top:0, behavior: "smooth"});
             }}/>)
         }
         return buttons

@@ -57,8 +57,7 @@ class Author extends PureComponent<any,State> {
                             loading={this.props.isPending}
                             css={'display:flex;justify-content:center; left:50%; transform:translateX(-50%)'}
                         />
-                        <div >
-                            <div className='project-list--author-wrapper'>
+                        <div className='project-list--author-wrapper'>
                                 {
                                     this.props.posts.map((post,index) => {
                                         return(
@@ -66,7 +65,6 @@ class Author extends PureComponent<any,State> {
                                         )
                                     })
                                 }
-                            </div>
                         </div>
                         <Paggination/>
                         <AuthorGetFree/>
