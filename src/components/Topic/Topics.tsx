@@ -15,12 +15,12 @@ export default function Topics() {
     <div className={'bg__white'}>
     <PostTitle items={TopicsTitle}/>
     </div>
-    <div className="">
+    <div className="card__home-wrapper--topics">
       <CardAdaptiveFC items={TopicsCard}
-                      cardClass={''}
-                      subTitleClass={''}
-                      titleClass={''}
-                      contentClass={''}
+                      cardClass={'card__topics'}
+                      subTitleClass={'card__topics--image'}
+                      titleClass={'card__topics--title'}
+                      contentClass={'card__topics--content'}
       />
     </div>
   </>

@@ -4,6 +4,7 @@ import {applyMiddleware, createStore} from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./redux/reducers";
 import thunk from "redux-thunk";
+import logger from 'redux-logger';
 
 // Component
 import Header from './components/Shared/Header'
@@ -14,7 +15,6 @@ import Author from "./components/Author/Author";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
 import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
 
-import logger from 'redux-logger'
 
 // Hard Code Page and services Page
 

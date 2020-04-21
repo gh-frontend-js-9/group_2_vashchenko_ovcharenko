@@ -29,7 +29,7 @@ export const CardAdaptiveFC = (props) => {
         }
     
         {item.content &&
-        <Content class={(item.contentClass !== '' || item.contentClass !== null)? item.contentClass : 'hidden'}
+        <Content class={(props.contentClass !== '' || props.contentClass !== null) ? props.contentClass : 'hidden'}
                  content={item.content}/>
         }
       </div>
