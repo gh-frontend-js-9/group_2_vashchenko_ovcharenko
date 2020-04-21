@@ -22,12 +22,12 @@ export const PostAuthor = (props) => {
              content={item.author.firstName +` `+ item.author.secondName}/>
     
     <Content class={'post__author--follow'}
-             content={<p>Write me <a href={props.twLink!=='' ? props.twLink : `mailto:`+item.author.email}
+             content={<strong>Write me <a href={props.twLink!=='' ? props.twLink : `mailto:`+item.author.email}
                                      title={'Write me to my'+ props.twitter}
                                      target={'_blank'}>
                                         {props.twitter!=='' ? props.twitter : item.author.email}
                                      </a>
-             </p>}
+             </strong>}
     />
   </div>
   );

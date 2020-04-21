@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+import {BrowserRouter, Router, Route, Switch, Redirect} from "react-router-dom";
 import {applyMiddleware, createStore} from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./redux/reducers";
@@ -10,15 +10,16 @@ import Header from './components/Shared/Header'
 import Footer from './components/Shared/Footer'
 import Home from "./components/Index/Home";
 import PostPage from './components/Post/PostPage'
-
-import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
+import Author from "./components/Author/Author";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
 import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
+import Popular from "./components/Popular/Popular";
+import Topics from "./components/Topic/Topics";
 
-
-// Hard Code Page and services Page
+// Services Page
+import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 import UnderConstruction from './components/Shared/UnderConstruction';
-import Author from "./components/Author/Author";
+import ErrorPage from "./components/Shared/ErrorPage";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -31,32 +32,24 @@ function App() {
         
         <main className={'main'}>
           <Switch>
-            <Route path={'/popular'}>
-              <UnderConstruction/>
-            </Route>
-            <Route path={'/author'}>
-            <Author/>
-            </Route>
-            <Route path={'/post'}>
-              <PostPage />
-            </Route>
-            <Route path={'/read'}>
+            <Route path={'/author'} component={Author}/>
+            <Route path={'/blog'} component={BusinessBlog}/>
+            <Route path={'/popular'} component={Popular}/>
+            <Route path={'/post'} component={PostPage}/>
+            <Route path={'/topics'} component={Topics}/>
+            <Route path={'/subscribe'} component={UnderConstruction}/>
+            <Route path={'/error'} component={ErrorPage}/>
+  
+            
+            <Route path={'/read'} >
               <BlogsWrapper className='reading-list-wrapper'>
-                 <ReadingLists/>
+                <ReadingLists/>
               </BlogsWrapper>
             </Route>
-            <Route path={'/topics'}>
-              <UnderConstruction/>
-            </Route>
-            <Route path={'/subscribe'}>
-              <UnderConstruction/>
-            </Route>
-            <Route path={'/blog'}>
-              <BusinessBlog/>
-            </Route>
+  
             <Redirect exact from={'/'} to={'/home'} />
-            <Route exact path={'/home'}>
-              <Home/>
+            <Route path={'/home'} exact>
+              <Home />
             </Route>
           </Switch>
         </main>

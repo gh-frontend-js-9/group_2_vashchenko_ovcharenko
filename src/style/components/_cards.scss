@@ -111,6 +111,11 @@
         grid-template-rows: auto;
       }
     }
+
+    &--popular {
+      @extend .card__home-wrapper--random;
+      grid-template-rows: repeat(8, rem(358, $fontSize));
+    }
   }
 
   &__box {
@@ -164,8 +169,7 @@
 
   &__random {
     background: $white no-repeat center right;
-    background-size: auto;
-    background-blend-mode: hard-light;
+    background-size: 50%;
     color: $title-color;
     padding: rem(50, $fontSize);
     border-radius: 8px;

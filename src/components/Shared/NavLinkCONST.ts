@@ -20,12 +20,16 @@ export const main = [
     name: 'Topics',
   },
   {
+    link: '/popular',
+    name: 'Popular',
+  },
+  {
     link: '/subscribe',
     name: 'Subscribe',
   },
   {
-    link: '/popular',
-    name: 'Popular',
+    link: '/error',
+    name: '404',
   }
 ];
 
