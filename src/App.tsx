@@ -14,16 +14,12 @@ import PostPage from './components/Post/PostPage'
 import Author from "./components/Author/Author";
 import ReadingLists from "./components/ReadingLists/ReadingLists";
 import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
-
-
-// Hard Code Page and services Page
-
 import Popular from "./components/Popular/Popular";
 import Topics from "./components/Topic/Topics";
 
 // Services Page
+import ScrollToTop from "./components/Shared/ScrollToTop";
 import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
-
 import UnderConstruction from './components/Shared/UnderConstruction';
 import ErrorPage from "./components/Shared/ErrorPage";
 
@@ -34,6 +30,7 @@ function App() {
   <Provider store={store}>
     <div>
       <BrowserRouter>
+        <ScrollToTop />
         <Header/>
 
         <main className={'main'}>

@@ -12,8 +12,8 @@ export default function UnderConstruction() {
   };
   
   return (
-  <main className={'main'}>
+  <section className={'wrapper'}>
     <Image image={item.image} altText={item.altText} ariaLabel={item.ariaLabel} class={'construction'}/>
-  </main>
+  </section>
   );
 }
