@@ -10,13 +10,11 @@ import {PostPreview} from "./PostPreview/PostPreview";
 import {PostAuthor} from "./PostAuthor/PostAuthor";
 import {PostComment} from "./PostComment/PostComment";
 import {PostReplyForm} from "./PostReplyForm/PostReplyForm";
-import Author from "../Author/Author";
 
 // Const Temp Data
 import {PostResponse, Comments} from './PostCONST';
 import {Post} from "../../models/Post";
 import {Props} from "../../models/Props";
-import {stringify} from "querystring";
 
 
 class PostPage extends Component<Props, Post> {
@@ -25,7 +23,6 @@ class PostPage extends Component<Props, Post> {
     
     if (typeof serverResponse == "object" && serverResponse !== null && serverResponse !== 0) {
       sessionStorage.setItem('lastPostOnPage', JSON.stringify(serverResponse));
-      console.log(sessionStorage.getItem('lastPostOnPage'))
     } else {
       serverResponse = JSON.parse(sessionStorage.getItem('lastPostOnPage'));
     }
@@ -33,8 +30,6 @@ class PostPage extends Component<Props, Post> {
     return (
     
     <section>
-  
-      
       <div className={'bg__white'}>
         <PostTitle items={serverResponse}/>
       </div>
