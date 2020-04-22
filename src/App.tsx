@@ -16,6 +16,7 @@ import ReadingLists from "./components/ReadingLists/ReadingLists";
 import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
 import Popular from "./components/Popular/Popular";
 import Topics from "./components/Topic/Topics";
+import New from "./components/New/New";
 
 // Services Page
 import ScrollToTop from "./components/Shared/ScrollToTop";
@@ -38,6 +39,7 @@ function App() {
             <Route path={'/author'} component={Author}/>
             <Route path={'/blog'} component={BusinessBlog}/>
             <Route path={'/popular'} component={Popular}/>
+            <Route path={'/new'} component={New}/>
             <Route path={'/post'} component={PostPage}/>
             <Route path={'/topics'} component={Topics}/>
             <Route path={'/subscribe'} component={UnderConstruction}/>

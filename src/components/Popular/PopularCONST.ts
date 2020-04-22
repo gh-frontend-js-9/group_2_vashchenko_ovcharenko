@@ -1,7 +1,3 @@
-import {Title} from "../Shared/elements/title";
-import {Content} from "../Shared/elements/content";
-import React from "react";
-
 export const PopularCard = [
   {
     featuredImage: 'https://static.ukrinform.com/photos/2017_02/thumb_files/630_360_1487014842-9771.jpg',
@@ -67,7 +63,7 @@ export const PopularTitle= {
   description: 'Check out the most-read and most-shared posts from the 3layers blog.',
   author: {
     firstName: '',
-    secondName: ''
+    lastName: ''
   },
   tags: 'Topics '
 };

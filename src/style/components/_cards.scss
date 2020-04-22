@@ -85,6 +85,22 @@
           grid-template-rows: repeat(2, rem(300, $fontSize));
         }
       }
+
+      &-new {
+        @extend .card__home-wrapper--main-bottom;
+        grid-template-rows: repeat(6, rem(615, $fontSize));
+
+        @media only screen and (max-width: $desktopWidth) {
+          margin-top: rem(70, $fontSize);
+          margin-bottom: rem(50, $fontSize);
+          grid-template-columns: repeat(1, 80%);
+          grid-template-rows: repeat(12, rem(650, $fontSize));
+        }
+
+        @media only screen and (max-width: $tableWidth) {
+          grid-template-rows: repeat(12, rem(300, $fontSize));
+        }
+      }
     }
 
     &--post {
