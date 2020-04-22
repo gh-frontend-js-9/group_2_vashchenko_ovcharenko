@@ -19,6 +19,14 @@ export const HeaderNewBB = [
       <li><span>SEP  04  2018<span><br /> <a href="#">The beginners guide to user research</a></li>
       <li><span>SEP  04  2018<span><br /> <a href="#">Web page layout 101: website anatomy every designer needs to learn</a></li>
       <li><span>SEP  04  2018<span><br /> <a href="#">10 essential sections to a high-converting landing page</a></li>
+      <li><span>SEP  04  2018<span><br /> <a href="#">Our 15 favorite websites from August 2018</a></li>
+      <li><span>SEP  04  2018<span><br /> <a href="#">The beginners guide to user research</a></li>
+      <li><span>SEP  04  2018<span><br /> <a href="#">Web page layout 101: website anatomy every designer needs to learn</a></li>
+      <li><span>SEP  04  2018<span><br /> <a href="#">10 essential sections to a high-converting landing page</a></li>
+      <li><span>SEP  04  2018<span><br /> <a href="#">Our 15 favorite websites from August 2018</a></li>
+      <li><span>SEP  04  2018<span><br /> <a href="#">The beginners guide to user research</a></li>
+      <li><span>SEP  04  2018<span><br /> <a href="#">Web page layout 101: website anatomy every designer needs to learn</a></li>
+      <li><span>SEP  04  2018<span><br /> <a href="#">10 essential sections to a high-converting landing page</a></li>
     </ul>`
   }
 ];

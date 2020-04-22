@@ -5,10 +5,10 @@ import {NavLink} from 'react-router-dom';
 import {CardAdaptiveFC} from "../Card/CardOnGrid/CardAdaptiveFC";
 import {Content} from "../Shared/elements/content";
 import {Title} from "../Shared/elements/title";
+import AuthorGetFree from "../Author/AuthorGetFree/AuthorGetFree";
 
 // TempData
 import * as cardData from './NewCONST';
-
 
 export default function New() {
   return (
@@ -30,6 +30,18 @@ export default function New() {
                       contentClass={'content__text--card'}
       />
     </div>
+    
+    <div className={'card__header'}>
+      <h2 className={'card__header--title'}>All topics</h2>
+    </div>
+    <div className="card__home-wrapper--new">
+      <CardAdaptiveFC items={cardData.topicsNew}
+                      cardClass={'card__new'}
+                      subTitleClass={'card__new--image'}
+                      titleClass={'card__new--title'}
+      />
+    </div>
+    <AuthorGetFree/>
   </>
   );
 }
