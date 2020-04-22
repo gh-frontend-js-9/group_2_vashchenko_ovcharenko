@@ -18,7 +18,7 @@ export const CardAdaptive = (props) => {
            style={ { backgroundImage:`url(${item.featuredImage!==null ? item.featuredImage : Blank})` } }>
   
         <Content class={props.subTitleClass}
-                 content={`BY `+item.author.firstName +` `+ item.author.lastName  +` in `+item.tags}/>
+                 content={`BY `+ item.author.firstName +` `+ item.author.lastName  +` in `+item.tags}/>
   
         <Title class={props.titleClass}
                link={item.slug}
