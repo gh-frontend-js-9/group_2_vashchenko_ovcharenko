@@ -1,12 +1,3 @@
-import Inspiration from "../../assets/images/Inspiration.png";
-import Resource from "../../assets/images/Resource.png";
-import Announcements from "../../assets/images/Announcements.png";
-import Entrepreneurship from "../../assets/images/Entrepreneurship.png";
-import Tutorials from "../../assets/images/Tutorials.png";
-import Freelancing from "../../assets/images/Freelancing.png";
-import DesignProcess from "../../assets/images/DesignProcess.png";
-import WebDesign from "../../assets/images/WebDesign.png";
-
 export const readingListCardLeft = [
     {
         link: '#',

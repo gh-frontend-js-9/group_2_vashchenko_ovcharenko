@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import './PagginationButtons.scss'
-class PagginationButton extends Component<any,any> {
+import {Post} from "../../../../models/Post";
+import {Props} from "../../../../models/Props";
+
+class PagginationButton extends Component<Props,Post> {
     render() {
         let {value, handler} = this.props;
         return (

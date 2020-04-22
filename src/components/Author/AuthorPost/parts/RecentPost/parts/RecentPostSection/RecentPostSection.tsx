@@ -3,8 +3,9 @@ import CardBox from "../../../../../../Card/CardBox/CardBox";
 import CardTitle from "../../../../../../Card/CardBox/parts/CardTitle/CardTitle";
 import AuthorPost2 from "../../../AuthorPost2";
 import {Post} from "../../../../../../../models/Post";
+import {Props} from "../../../../../../../models/Props";
 
-class RecentPostSection extends Component<any,Post> {
+class RecentPostSection extends Component<Props,Post> {
     render() {
         let {post} = this.props;
         return (

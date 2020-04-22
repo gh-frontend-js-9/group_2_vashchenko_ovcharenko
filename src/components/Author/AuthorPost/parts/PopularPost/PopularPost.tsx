@@ -4,10 +4,10 @@ import CardTitle from "../../../../Card/CardBox/parts/CardTitle/CardTitle";
 import CardDescription from "../../../../Card/CardBox/parts/CardDescription/CardDescription";
 import CardImg from "../../../../Card/CardBox/parts/CardImg/CardImg";
 import {Post} from "../../../../../models/Post";
-import {HashLoader} from "react-spinners";
-import CardBox from "../../../../Card/CardBox/CardBox";
+import {Props} from "../../../../../models/Props";
 
-class PopularPost extends Component<any,Post> {
+
+class PopularPost extends Component<Props,Post> {
     render() {
         let {post} = this.props;
         return (

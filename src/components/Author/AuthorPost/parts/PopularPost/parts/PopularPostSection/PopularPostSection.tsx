@@ -5,8 +5,9 @@ import AuthorPost from "../../../../AuthorPost";
 import {Post} from "../../../../../../../models/Post";
 import {HashLoader} from "react-spinners";
 import {connect} from "react-redux";
+import {Props} from "../../../../../../../models/Props";
 
-class PopularPostSection extends Component<any,Post> {
+class PopularPostSection extends Component<Props,Post> {
     render() {
         let {post} = this.props;
         return (

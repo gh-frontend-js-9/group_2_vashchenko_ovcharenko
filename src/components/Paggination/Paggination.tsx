@@ -4,12 +4,13 @@ import {getPosts} from "../../redux/actions/getPosts";
 import {connect} from "react-redux";
 import PagginationButton from "./parts/PagginationButtons/PagginationButtons";
 import './Paggination.scss'
+import {Props} from "../../models/Props";
 
 interface currentPage {
     currentPage: number
 }
 
-class Paggination extends Component<any,currentPage> {
+class Paggination extends Component<Props,currentPage> {
     constructor(props) {
         super(props);
         this.state = {

@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import ReadingListsTitle from "./parts/ReadingListsTitle/ReadingListsTitle";
-import './ReadingLists.scss'
 import ReadingListsBlock from "./parts/ReadingListsBlock/ReadingListsBlock";
-import CardImg from "../Card/CardBox/parts/CardImg/CardImg";
-import CardTitle from "../Card/CardBox/parts/CardTitle/CardTitle";
-import CardDescription from "../Card/CardBox/parts/CardDescription/CardDescription";
 import {readingListCardLeft} from "./ReadingListsCONST";
+
+import './ReadingLists.scss'
 
 class ReadingLists extends Component {
     render() {

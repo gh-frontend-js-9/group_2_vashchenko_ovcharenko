@@ -7,8 +7,10 @@ import {Title} from "../../Shared/elements/title";
 import {Content} from "../../Shared/elements/content";
 import {setCurrentPost} from "../../../redux/actions/getPosts";
 import {Post} from "../../../models/Post";
+import {Props} from "../../../models/Props";
 
-class MainCard extends Component<any,Post> {
+
+class MainCard extends Component<Props,Post> {
     render () {
      let {items} = this.props;
     return ( items.map((item, n: number) =>

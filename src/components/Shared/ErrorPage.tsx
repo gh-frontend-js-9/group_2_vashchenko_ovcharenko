@@ -1,10 +1,11 @@
 import React from 'react';
-
+import {Link} from "react-router-dom";
 // Component
 import {Image} from './elements/images';
 
 // Images and style
 import ErrorImage from '../../assets/images/404.png';
+
 
 export default function ErrorPage() {
   
@@ -16,7 +17,9 @@ export default function ErrorPage() {
   
   return (
   <section className={'wrapper'}>
-    <Image image={item.image} altText={item.altText} ariaLabel={item.ariaLabel} class={'construction'}/>
+    <Link to={'/home'}>
+      <Image image={item.image} altText={item.altText} ariaLabel={item.ariaLabel} class={'construction'}/>
+    </Link>
   </section>
   );
 }

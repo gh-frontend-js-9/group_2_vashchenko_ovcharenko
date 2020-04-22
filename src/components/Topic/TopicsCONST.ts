@@ -8,8 +8,6 @@ import DesignProcess from '../../assets/images/DesignProcess.png';
 import WebDesign from '../../assets/images/WebDesign.png';
 
 
-console.log(`<img src="`+Inspiration+`" />`);
-
 
 export const TopicsCard = [
   {
