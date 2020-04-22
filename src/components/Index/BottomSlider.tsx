@@ -69,11 +69,11 @@ export default class BottomSlider extends Component<Props> {
     let renderSlider = items.map((item, n: number) => {
       return (
           <div key={n} className={'bottom-slider'}>
+            <NavLink to={item.link}>
             < Image image={item.image}
                     altText={item.title}
                     ariaLabel={item.ariaLabel}
                     class={'bottom-slider__image'} />
-            <NavLink to={item.link}>
               <h3 className={'bottom-slider__title'}>{item.title}</h3>
             </NavLink>
           </div>

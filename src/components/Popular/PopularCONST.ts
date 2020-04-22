@@ -56,14 +56,3 @@ export const PopularCard = [
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   }
 ];
-
-export const PopularTitle= {
-  slug: '#',
-  title: 'Reading lists',
-  description: 'Check out the most-read and most-shared posts from the 3layers blog.',
-  author: {
-    firstName: '',
-    lastName: ''
-  },
-  tags: 'Topics '
-};

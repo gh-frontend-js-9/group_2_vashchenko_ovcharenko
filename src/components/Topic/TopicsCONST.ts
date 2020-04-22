@@ -67,14 +67,3 @@ export const TopicsCard = [
     content: 'Get detailed tips and insights on common design patterns and best practices, SEO, landing page design, and so much more.'
   }
 ];
-
-export const TopicsTitle= {
-  slug: '#',
-  title: 'Topics',
-  description: 'Find everything from design inspiration to best practices, freelancing tips to tools.',
-  author: {
-    firstName: '',
-    secondName: ''
-  },
-  tags: ''
-};
