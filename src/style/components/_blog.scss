@@ -9,7 +9,7 @@
   }
 
   &__new {
-
+    overflow: scroll;
     &--view{
       color: $subtitle-color;
       letter-spacing: -0.1px;
