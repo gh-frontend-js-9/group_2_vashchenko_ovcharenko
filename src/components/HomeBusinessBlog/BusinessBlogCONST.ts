@@ -1,6 +1,6 @@
 export const HeaderBB = [
   {
-    featuredImage: 'https://fakty.com.ua/wp-content/uploads/2020/02/19/instagram.jpg',
+    featuredImage: 'https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_640.jpg',
     link: '/author',
     title: 'Website Downtime: Applicable Tips on How to Prevent It',
     subtitle: 'BY TOMAS LAURINAVICIUS IN RESOURCE',
@@ -25,7 +25,7 @@ export const HeaderNewBB = [
 
 export const PopularBB = [
   {
-    featuredImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYf5jmp2kLNFgWep8r988Xofv6B0GzuR-cIAsU9gSjnHYgKOJeSw&s',
+    featuredImage: 'https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_640.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -36,7 +36,7 @@ export const PopularBB = [
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   },
   {
-    featuredImage: 'https://stopcor.org/wp-content/uploads/2017/05/socseti.jpg',
+    featuredImage: 'https://wallup.net/wp-content/uploads/2018/09/27/816461-abstracto-textura-naranja-748x421.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -47,7 +47,7 @@ export const PopularBB = [
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   },
   {
-    featuredImage: 'https://club.volia.com/t5/image/serverpage/image-id/21210i5C260B5C00BE74D6/image-size/large?v=1.0&px=999',
+    featuredImage: 'https://wallpaperstock.net/wallpapers/thumbs1/2640wide.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -58,7 +58,7 @@ export const PopularBB = [
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   },
   {
-    featuredImage: 'https://ukr.media/static/ba/aimg/4/0/2/402313_1.jpg',
+    featuredImage: 'https://wallup.net/wp-content/uploads/2018/09/27/816461-abstracto-textura-naranja-748x421.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -69,7 +69,7 @@ export const PopularBB = [
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   },
   {
-    featuredImage: 'https://24tv.ua/resources/photos/news/201908/1190464.jpg?1567963497000',
+    featuredImage: 'https://wallpaperstock.net/wallpapers/thumbs1/2640wide.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -83,7 +83,7 @@ export const PopularBB = [
 
 export const EssentialsBB = [
   {
-    featuredImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYf5jmp2kLNFgWep8r988Xofv6B0GzuR-cIAsU9gSjnHYgKOJeSw&s',
+    featuredImage: 'https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_640.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -94,7 +94,7 @@ export const EssentialsBB = [
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   },
   {
-    featuredImage: 'https://stopcor.org/wp-content/uploads/2017/05/socseti.jpg',
+    featuredImage: 'https://wallpaperstock.net/wallpapers/thumbs1/2640wide.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -105,7 +105,7 @@ export const EssentialsBB = [
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   },
   {
-    featuredImage: 'https://club.volia.com/t5/image/serverpage/image-id/21210i5C260B5C00BE74D6/image-size/large?v=1.0&px=999',
+    featuredImage: 'https://wallup.net/wp-content/uploads/2018/09/27/816461-abstracto-textura-naranja-748x421.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -116,7 +116,7 @@ export const EssentialsBB = [
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   },
   {
-    featuredImage: 'https://ukr.media/static/ba/aimg/4/0/2/402313_1.jpg',
+    featuredImage: 'https://wallpaperstock.net/wallpapers/thumbs1/2640wide.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -127,7 +127,7 @@ export const EssentialsBB = [
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   },
   {
-    featuredImage: 'https://24tv.ua/resources/photos/news/201908/1190464.jpg?1567963497000',
+    featuredImage: 'https://wallup.net/wp-content/uploads/2018/09/27/816461-abstracto-textura-naranja-748x421.jpg',
     link: '/blog',
     tags: 'Tags Tags',
     author: {
@@ -151,14 +151,14 @@ export const RandomBB = [
 
 export const BottomBB = [
   {
-    featuredImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSeyR_ACIERka7F7CrSkJS9EHzr88h0h9t_65rAOKom2E5NwAr4&usqp=CAU',
+    featuredImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7723c75mA4rlGZ1yk2ckU6HpHwrEmzxPZkKPeBJYM3oTDPxkb&usqp=CAU',
     link: '/author',
     title: 'Website Downtime: Applicable Tips on How to Prevent It',
     subtitle: 'BY TOMAS LAURINAVICIUS IN RESOURCE',
     content: 'User research is the reality check every project needs. Here’s our guide to why you should be doing it — and how to get started.'
   },
   {
-    featuredImage: 'https://img5.socratify.net/0c51d045dcf13fab2d_600x375.jpg',
+    featuredImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7723c75mA4rlGZ1yk2ckU6HpHwrEmzxPZkKPeBJYM3oTDPxkb&usqp=CAU',
     link: '/author',
     title: 'How to Fix Error 404 Not Found on Your WordPress Site',
     subtitle: 'BY TOMAS LAURINAVICIUS IN ANNOUNCEMENTS',
