@@ -63,7 +63,7 @@ export const PopularTitle= {
   description: 'Check out the most-read and most-shared posts from the 3layers blog.',
   author: {
     firstName: '',
-    secondName: ''
+    lastName: ''
   },
   tags: 'Topics '
 };

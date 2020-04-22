@@ -12,6 +12,10 @@ export const main = [
     name: 'Read list',
   },
   {
+    link: '/new',
+    name: 'New',
+  },
+  {
     link: '/blog',
     name: 'BBlog',
   },
