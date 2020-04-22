@@ -22,13 +22,14 @@ import AuthorPopUp from "./AuthorPopUp/AuthorPopUp";
 
 import './Author.scss'
 import {HashLoader} from "react-spinners";
+import {Props} from "../../models/Props";
 
 interface State {
     posts: Post[]
     currentPage: number
 }
 
-class Author extends PureComponent<any,State> {
+class Author extends PureComponent<Props,State> {
     constructor(props) {
         super(props);
         this.state = {
@@ -72,7 +73,7 @@ class Author extends PureComponent<any,State> {
                     <div className='wrapper-right-column'>
                         <AuthorSearch/>
                         <PopularPostSection post={this.props.posts} />
-                        <RecentPostSection post={this.props.posts}/>
+                        <RecentPostSection post={this.props.posts} />
                         <Subscribe/>
                         <AuthorSocialMedia/>
                         <AuthorCalendar/>

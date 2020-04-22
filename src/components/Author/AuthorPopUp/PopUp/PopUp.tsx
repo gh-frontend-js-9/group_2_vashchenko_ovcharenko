@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import './PopUp.scss'
-class PopUp extends Component<any,any> {
+import {Props} from "../../../../models/Props";
+
+interface State {
+    isOpen: boolean
+}
+
+class PopUp extends Component<Props,State> {
     constructor(props) {
         super(props);
         this.state = {

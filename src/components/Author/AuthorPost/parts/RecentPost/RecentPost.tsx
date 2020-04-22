@@ -3,8 +3,9 @@ import './RecentPost.scss'
 import CardTitle from "../../../../Card/CardBox/parts/CardTitle/CardTitle";
 import CardDescription from "../../../../Card/CardBox/parts/CardDescription/CardDescription";
 import {Post} from "../../../../../models/Post";
+import {Props} from "../../../../../models/Props";
 
-class RecentPost extends Component<any,Post> {
+class RecentPost extends Component<Props,Post> {
     render() {
         let {post} = this.props;
         return (

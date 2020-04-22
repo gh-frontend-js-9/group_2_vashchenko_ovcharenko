@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from "react-router-dom";
 // Component
 import {Image} from './elements/images';
 
@@ -13,7 +13,9 @@ export default function UnderConstruction() {
   
   return (
   <section className={'wrapper'}>
+    <Link to={'/home'}>
     <Image image={item.image} altText={item.altText} ariaLabel={item.ariaLabel} class={'construction'}/>
+    </Link>
   </section>
   );
 }

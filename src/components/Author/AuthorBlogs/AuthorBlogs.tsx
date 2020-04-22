@@ -12,8 +12,9 @@ import {Post} from "../../../models/Post";
 import {setCurrentPost} from "../../../redux/actions/getPosts";
 
 import './AuthorBlogs.scss'
+import {Props} from "../../../models/Props";
 
-class AuthorBlogs extends Component<any,Post> {
+class AuthorBlogs extends Component<Props,Post> {
     render() {
         let {post} = this.props;
         return (

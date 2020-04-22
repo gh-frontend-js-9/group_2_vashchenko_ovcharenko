@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import {NavLink} from 'react-router-dom';
+import {HashLoader} from "react-spinners";
 
 import {getPosts} from "../../../redux/actions/getPosts";
 import {Post} from "../../../models/Post";
@@ -10,19 +11,15 @@ import BottomSlider from "../../Index/BottomSlider";
 import * as SliderImg from "../../Index/SliderCONST";
 import MainCard from "../../Card/CardOnGrid/MainCard";
 
-
 import './BlogsSectionList.scss'
+import {Props} from "../../../models/Props";
 
-import SimpleSlider from "../../SliderImg/SliderImg";
-import BlogsSection from "../BlogsSection/BlogsSection";
-import BlogsWithImage from "../BlogsWithImage/BlogsWithImage";
-import {HashLoader} from "react-spinners";
 
 interface State {
     posts: Post[]
 }
 
-class BlogsSectionList extends Component<any, State> {
+class BlogsSectionList extends Component<Props, State> {
     constructor(props) {
         super(props);
         this.state = {

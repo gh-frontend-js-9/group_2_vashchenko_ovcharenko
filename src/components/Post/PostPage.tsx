@@ -14,8 +14,11 @@ import Author from "../Author/Author";
 
 // Const Temp Data
 import {PostResponse, Comments} from './PostCONST';
+import {Post} from "../../models/Post";
+import {Props} from "../../models/Props";
 
-class PostPage extends Component<any, any> {
+
+class PostPage extends Component<Props, Post> {
   render() {
     let serverResponse = this.props.currentPost;
     

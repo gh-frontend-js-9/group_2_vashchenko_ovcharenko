@@ -1,10 +1,10 @@
 import React from 'react';
-import {BrowserRouter, Router, Route, Switch, Redirect} from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import {applyMiddleware, createStore} from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./redux/reducers";
 import thunk from "redux-thunk";
-import logger from 'redux-logger';
+
 
 // Component
 import Header from './components/Shared/Header'
@@ -19,11 +19,10 @@ import Topics from "./components/Topic/Topics";
 
 // Services Page
 import ScrollToTop from "./components/Shared/ScrollToTop";
-import BlogsWrapper from "./components/BlogsWrapper/BlogsWrapper";
 import UnderConstruction from './components/Shared/UnderConstruction';
 import ErrorPage from "./components/Shared/ErrorPage";
 
-const store = createStore(rootReducer, applyMiddleware(thunk,logger));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 function App() {
   return (
