@@ -18,11 +18,13 @@ import AuthorBanner from "./AuthorBanner/AuthorBanner";
 import Paggination from "../Paggination/Paggination";
 import AuthorGetFree from "./AuthorGetFree/AuthorGetFree";
 import AuthorPopUp from "./AuthorPopUp/AuthorPopUp";
-
-
-import './Author.scss'
+import AuthorSlider from "../Index/AuthorSlider";
 import {HashLoader} from "react-spinners";
 import {Props} from "../../models/Props";
+import * as SliderImg from "../Index/SliderCONST";
+
+import './Author.scss'
+
 
 interface State {
     posts: Post[]
@@ -75,6 +77,9 @@ class Author extends PureComponent<Props,State> {
                         <PopularPostSection post={this.props.posts} />
                         <RecentPostSection post={this.props.posts} />
                         <Subscribe/>
+                        <div className='author-slider-display'>
+                          <AuthorSlider items={SliderImg.Bottom}/>
+                        </div>
                         <AuthorSocialMedia/>
                         <AuthorCalendar/>
                         <AuthorBanner/>

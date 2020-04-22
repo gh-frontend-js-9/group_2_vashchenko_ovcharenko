@@ -7,10 +7,11 @@ import {Image} from "../Shared/elements/images";
 
 // Image and style
 import './slider.scss'
+import {Props} from "../../models/Props";
 
 
 
-export default class BottomSlider extends Component<any> {
+export default class BottomSlider extends Component<Props> {
   render() {
     let items = this.props.items;
 
