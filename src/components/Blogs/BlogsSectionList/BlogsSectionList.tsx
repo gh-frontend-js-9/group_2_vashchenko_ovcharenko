@@ -81,7 +81,6 @@ class BlogsSectionList extends Component<any, State> {
 
 
                     <CardAdaptive items={postItem}
-                                  link={'#'}
                                   blockClass={'card__box--main-bottom'}
                                   subTitleClass={'content__subtitle--card-small'}
                                   titleClass={'content__title--card'}

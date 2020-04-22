@@ -21,7 +21,7 @@ export const CardAdaptive = (props) => {
                  content={`BY `+ item.author.firstName +` `+ item.author.lastName  +` in `+item.tags}/>
   
         <Title class={props.titleClass}
-               link={props.link !== "" ? props.link : item.slug}
+               link={'/author'}
                title={item.title}/>
   
         <Content class={props.contentClass}
