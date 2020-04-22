@@ -28,6 +28,10 @@ export const main = [
     name: 'Popular',
   },
   {
+    link: '/personal',
+    name: 'Personal',
+  },
+  {
     link: '/subscribe',
     name: 'Subscribe',
   },

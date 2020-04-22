@@ -29,6 +29,31 @@
   }
 }
 
+.align {
+  &__center {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.btn {
+  &__load-more {
+    border: 2px solid $active-color;
+    border-radius: 40px;
+    background-color: transparent;
+    color: $active-color;
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+
+    &:hover {
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+}
+
 .social {
   @include flex($jc: space-between, $ai: center);
   width: 100%;

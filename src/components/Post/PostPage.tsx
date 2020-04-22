@@ -16,18 +16,25 @@ import Author from "../Author/Author";
 import {PostResponse, Comments} from './PostCONST';
 import {Post} from "../../models/Post";
 import {Props} from "../../models/Props";
+import {stringify} from "querystring";
 
 
 class PostPage extends Component<Props, Post> {
   render() {
     let serverResponse = this.props.currentPost;
     
-    if (serverResponse === null) {
-      return (<Author/>)
+    if (typeof serverResponse == "object" && serverResponse !== null && serverResponse !== 0) {
+      sessionStorage.setItem('lastPostOnPage', JSON.stringify(serverResponse));
+      console.log(sessionStorage.getItem('lastPostOnPage'))
+    } else {
+      serverResponse = JSON.parse(sessionStorage.getItem('lastPostOnPage'));
     }
-    
+  
     return (
+    
     <section>
+  
+      
       <div className={'bg__white'}>
         <PostTitle items={serverResponse}/>
       </div>

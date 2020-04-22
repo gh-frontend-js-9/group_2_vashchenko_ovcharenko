@@ -20,9 +20,8 @@
 
   &__navigation {
     @include flex($jc: space-between, $ai: center);
-    width: rem(800, $fontSize);
 
-    @media only screen and (max-width: $largeDeviceWidth) {
+    @media only screen and (max-width: $desktopWidth) {
       justify-content: center;
     }
 
@@ -51,7 +50,7 @@
         background-color: $active-color;
       }
 
-      @media only screen and (max-width: $largeDeviceWidth) {
+      @media only screen and (max-width: $desktopWidth) {
         display: none;
       }
     }
@@ -74,7 +73,7 @@
   &-hamburger-menu {
     display: none;
 
-    @media only screen and (max-width: $largeDeviceWidth) {
+    @media only screen and (max-width: $desktopWidth) {
       display: block;
     }
   }

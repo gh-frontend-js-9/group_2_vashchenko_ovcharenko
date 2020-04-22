@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 
 // Component
 import {CardAdaptiveFC} from "../Card/CardOnGrid/CardAdaptiveFC";
@@ -29,6 +28,15 @@ export default function New() {
                       titleClass={'content__title--card'}
                       contentClass={'content__text--card'}
       />
+    </div>
+    
+    <div className={'align__center'}>
+      <button type={'button'}
+              className={'btn__load-more'}
+              title={'Load More'}
+              onClick={() => console.log('Load more publication')}>
+              Load More
+      </button>
     </div>
     
     <div className={'card__header'}>

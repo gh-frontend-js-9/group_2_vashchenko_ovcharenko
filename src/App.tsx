@@ -17,6 +17,7 @@ import BusinessBlog from "./components/HomeBusinessBlog/BusinessBlog";
 import Popular from "./components/Popular/Popular";
 import Topics from "./components/Topic/Topics";
 import New from "./components/New/New";
+import Personal from "./components/Personal/Personal";
 
 // Services Page
 import ScrollToTop from "./components/Shared/ScrollToTop";
@@ -39,6 +40,7 @@ function App() {
             <Route path={'/blog'} component={BusinessBlog}/>
             <Route path={'/popular'} component={Popular}/>
             <Route path={'/new'} component={New}/>
+            <Route path={'/personal'} component={Personal}/>
             <Route path={'/post'} component={PostPage}/>
             <Route path={'/topics'} component={Topics}/>
             <Route path={'/subscribe'} component={UnderConstruction}/>

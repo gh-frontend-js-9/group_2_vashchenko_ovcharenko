@@ -100,6 +100,21 @@
         @media only screen and (max-width: $tableWidth) {
           grid-template-rows: repeat(12, rem(300, $fontSize));
         }
+
+        & div {
+          @media only screen and (max-width: $desktopWidth) {
+            background-color: $light-color;
+            background-blend-mode: hard-light;
+            padding: 40px;
+          }
+        }
+      }
+
+      &-personal {
+        @extend .card__home-wrapper--main-new;
+        grid-template-columns: repeat(1, max(rem(900, $fontSize)));
+        grid-template-rows: repeat(4, rem(615, $fontSize));
+        grid-row-gap: rem(80, $fontSize);
       }
     }
 
@@ -190,6 +205,11 @@
         padding: rem(20, $fontSize);
         grid-column: 1/2;
       }
+    }
+
+    &--personal {
+      @extend .card__box--main-bottom;
+      padding: rem(530, $fontSize) 0 0;
     }
   }
 
