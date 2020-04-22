@@ -75,6 +75,13 @@
   &__image {
     max-height: rem(225, $fontSize);
   }
+  &-author {
+
+    display: initial !important;
+    width: unset !important;
+    height: unset !important;
+
+  }
 
   &__title {
     font-size: rem(24, $fontSize);
