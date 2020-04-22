@@ -22,7 +22,7 @@
     @include flex($jc: space-between, $ai: center);
     width: rem(800, $fontSize);
 
-    @media only screen and (max-width: $tableWidth) {
+    @media only screen and (max-width: $largeDeviceWidth) {
       justify-content: center;
     }
 
@@ -50,7 +50,7 @@
         background-color: $active-color;
       }
 
-      @media only screen and (max-width: $tableWidth) {
+      @media only screen and (max-width: $largeDeviceWidth) {
         display: none;
       }
     }
@@ -73,7 +73,7 @@
   &-hamburger-menu {
     display: none;
 
-    @media only screen and (max-width: $tableWidth) {
+    @media only screen and (max-width: $largeDeviceWidth) {
       display: block;
     }
   }

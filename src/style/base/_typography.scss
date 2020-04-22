@@ -20,7 +20,7 @@
       font-size: rem(28, $fontSize);
 
       @media only screen and (max-width: $phoneWidth) {
-        font-size: rem(20, $fontSize);
+        font-size: rem(24, $fontSize);
         line-height: rem(30, $fontSize);
       }
     }
@@ -33,15 +33,15 @@
       line-height: 46px;
     }
 
-    &--card-small {
+    &--card-small h3{
       @extend .content__title;
       font-size: rem(18, $fontSize);
       letter-spacing: -0.11px;
       line-height: rem(30, $fontSize);
 
       @media only screen and (max-width: $phoneWidth) {
-        font-size: rem(15, $fontSize);
-        line-height: rem(16, $fontSize);
+        line-height: rem(20, $fontSize);
+        font-weight: 600;
       }
     }
   }
@@ -55,6 +55,7 @@
 
     @media only screen and (max-width: $phoneWidth) {
       font-size: rem(14, $fontSize);
+      letter-spacing: 1px;
     }
 
     &--card-small {

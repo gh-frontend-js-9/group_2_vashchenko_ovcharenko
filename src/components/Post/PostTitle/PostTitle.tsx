@@ -18,6 +18,6 @@ export const PostTitle = (props) => {
                content={props.items.description} />
   
       <Content class={'content__subtitle--post'}
-               content={`By `+ props.items.author.firstName+ ` `+ props.items.author.secondName +` in `+ props.items.tags +` process`} />
+               content={`By `+ props.items.author.firstName+ ` `+ props.items.author.lastName +` in `+ props.items.tags +` process`} />
     </div>);
 };

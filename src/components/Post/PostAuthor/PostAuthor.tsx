@@ -19,7 +19,7 @@ export const PostAuthor = (props) => {
            ariaLabel={item.author.firstName+' avatar image'}/>
     
     <Content class={'post__author--name'}
-             content={item.author.firstName +` `+ item.author.secondName}/>
+             content={item.author.firstName +` `+ item.author.lastName}/>
     
     <Content class={'post__author--follow'}
              content={<strong>Write me <a href={props.twLink!=='' ? props.twLink : `mailto:`+item.author.email}

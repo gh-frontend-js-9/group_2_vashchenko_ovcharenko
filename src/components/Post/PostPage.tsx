@@ -12,8 +12,6 @@ import {PostComment} from "./PostComment/PostComment";
 import {PostReplyForm} from "./PostReplyForm/PostReplyForm";
 import Author from "../Author/Author";
 
-// Images and style
-
 // Const Temp Data
 import {PostResponse, Comments} from './PostCONST';
 
