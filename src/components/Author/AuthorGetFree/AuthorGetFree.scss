@@ -10,8 +10,8 @@
 }
 
 .subscribe-input-free{
-  width: 523px;
-  height: 70px;
+  min-width: 447px;
+  min-height: 70px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   border-radius: 40px;
   background-color: #ffffff;
@@ -20,15 +20,15 @@
 }
 
 .button-free {
-  width: 170px;
-  height: 70px;
+  min-width: 170px;
+  min-height: 70px;
   border-radius: 40px;
   background-color: #ff5480;
   color: white;
   border: none;
   font-size: 25px;
   position: absolute;
-  margin: 77px 177px;
+  margin: 77px 138px;
 }
 
 .free-title{
@@ -73,11 +73,18 @@
   @media screen and (max-width: 1000px){
     & {
       width: 100vw;
+      margin-top: 250px;
+    }
+  }
+  @media screen and (max-width: 786px){
+    & {
+      margin-top:  130px;
     }
   }
   @media screen and (max-width: 720px){
     & {
       display: none;
+
     }
   }
 }

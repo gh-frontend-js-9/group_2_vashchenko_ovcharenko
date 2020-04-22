@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 
 // Component
 import {CardAdaptiveFC} from "../Card/CardOnGrid/CardAdaptiveFC";
