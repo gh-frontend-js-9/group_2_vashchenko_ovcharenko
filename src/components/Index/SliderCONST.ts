@@ -32,43 +32,43 @@ export const Main = [
 
 export const Bottom = [
   {
-    link: '/Post',
+    link: '/author',
     image: bottomSlider,
     ariaLabel: 'UI design article',
     title: 'UI design',
   },
   {
-    link: '/Post',
+    link: '/author',
     image: bottomSlider,
     ariaLabel: 'UI design category',
     title: 'UI design',
   },
   {
-    link: '/Post',
+    link: '/author',
     image: bottomSlider,
     ariaLabel: 'SEO category',
     title: 'SEO',
   },
   {
-    link: '/Post',
+    link: '/author',
     image: bottomSlider,
     ariaLabel: 'Topics article',
     title: 'Topics',
   },
   {
-    link: '/Post',
+    link: '/author',
     image: bottomSlider,
     ariaLabel: 'Essentials',
     title: 'Essentials',
   },
   {
-    link: '/Post',
+    link: '/author',
     image: bottomSlider,
     ariaLabel: 'Route on Post page',
     title: 'NEW page',
   },
   {
-    link: '/',
+    link: '/author',
     image: bottomSlider,
     ariaLabel: 'HomeGrid page',
     title: 'Go home',
