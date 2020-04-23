@@ -1,0 +1,56 @@
+.blog {
+  &__header-card {
+    background: $default-color no-repeat center center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    color: #ffffff;
+    padding: 3.125rem;
+    border-radius: 8px;
+  }
+
+  &__new {
+    overflow: scroll;
+    &--view{
+      color: $subtitle-color;
+      letter-spacing: -0.1px;
+      line-height: 46px;
+      text-align: right;
+      float: right;
+
+      &:hover {
+        color: $active-color;
+      }
+    }
+
+    &--title h3{
+      color: $title-color;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 46px;
+    }
+
+    & ul {
+      border-top: 2px solid $subtitle-color;
+    }
+
+    & li {
+      margin-top: 27px;
+
+      & span {
+        color: $subtitle-color;
+        line-height: 46px;
+        text-transform: uppercase;
+      }
+
+      & a {
+        color: $title-color;
+        font-weight: 600;
+        font-size: 20px;
+
+        &:hover {
+          color: $active-color;
+        }
+      }
+    }
+  }
+}

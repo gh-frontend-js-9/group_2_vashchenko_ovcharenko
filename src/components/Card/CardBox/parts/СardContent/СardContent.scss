@@ -1,0 +1,35 @@
+.entire-content {
+  color: white;
+}
+
+.blur-card-content {
+  padding: 0px 0px 0px 12px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.11px;
+  line-height: 30px;
+  color: #111210;
+}
+
+.author-card-content {
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #111210;
+  /*@media screen and (max-width: 1000px) {
+    & {
+      text-align: center;
+    }
+  }*/
+}
+
+.second-entire-content {
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.11px;
+  line-height: 30px;
+}

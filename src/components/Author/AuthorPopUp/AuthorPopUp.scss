@@ -1,0 +1,15 @@
+.pop-up-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @media screen and (max-width: 786px) {
+    & {
+      justify-content: center;
+    }
+  }
+}
+
+.pop-up-tag-block {
+  padding: 8px;
+}

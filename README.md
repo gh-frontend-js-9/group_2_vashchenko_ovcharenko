@@ -2,6 +2,8 @@ Team work. Blog on react + redux by Vashchenko and Ovcharenko
 
 Blog on Netlify (master branch): https://blog-vashchenko-ovcharenko.netlify.com/
 
+Blog on Netlify (develop branch): https://blog-develop.netlify.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

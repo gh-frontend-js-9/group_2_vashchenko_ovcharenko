@@ -2,20 +2,25 @@ html, body {
   font-size: $fontSize;
   font-family: $fonts;
 
-  @media (min-width: 500px) {
+  @media only screen and (max-width: $desktopWidth) {
+    font-size: $fontSize;
+  }
+
+  @media only screen and (max-width: $tableWidth) {
     font-size: $fontSizeMedium;
   }
 
-  @media (min-width: 750px) {
-    font-size: $fontSize;
+  @media only screen and (max-width: $phoneWidth) {
+    font-size: $fontSizeSmall;
   }
 }
 
 #root {
   background-color: $background-color;
   position: relative;
-  height: 100vh;
   width: 100%;
   float: left;
   overflow-x: hidden;
 }
+
+

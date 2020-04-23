@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+.blogs-section-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media screen and (max-width: 1360px){
+    & {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.second-blog-wrapper {
+  justify-content: center;
+  width: 648px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 680px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.flex-second {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.group-blogs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 25px 10px;
+}
+
+.group-blogs-title {
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.22px;
+  line-height: 46px;
+}
+
+.view-all {
+  color: #9b9b9b;
+  font-family: "Open Sans";
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  line-height: 46px;
+  &:hover {
+    color: #FF5480;
+    cursor: pointer;
+  }
+}
+
+.blog-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  margin-top: 185px;
+}

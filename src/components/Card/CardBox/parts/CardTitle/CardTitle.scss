@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+.card-title {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.17px;
+  line-height: 46px;
+  padding-top: 10px;
+}
+.second-card-title {
+  color: #838383;
+  font-family: "Open Sans";
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+.card-title-blur {
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+
+.author-title-blur {
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 100px;
+  @media screen and (max-width: 786px) {
+    text-align: center;
+  }
+}
+
+.reading-lists-card-title {
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.15px;
+  line-height: 46px;
+  margin-bottom: 30px;
+}
+
+.author-post__title {
+  margin-bottom: 35px;
+  margin-top: 32px;
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.11px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.author-post__subtitle{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 17px;
+  color: #9b9b9b;
+  font-family: "Open Sans";
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+}
+
+.author-blogs-title-redirect:hover{
+  color: #ff5480;
+  cursor: pointer;
+}

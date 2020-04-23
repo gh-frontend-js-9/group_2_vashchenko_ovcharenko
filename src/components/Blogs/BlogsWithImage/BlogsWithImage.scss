@@ -1,0 +1,33 @@
+.blogs-image-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 135px;
+  width: 573px;
+}
+
+.blogs-image-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 145px;
+  @media screen and (max-width: 1775px){
+    & {
+      flex-direction: column;
+    }
+  }
+}
+
+.display-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.blog-display-row {
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 1360px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}

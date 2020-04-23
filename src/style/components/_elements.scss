@@ -1,0 +1,89 @@
+.construction {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.main {
+  padding-top: rem(105, $fontSize);
+}
+
+.wrapper {
+  max-width: rem(1170, $fontSize);
+  margin: 0 auto;
+
+  @media only screen and (max-width: $desktopWidth) {
+    max-width: rem(1055, $fontSize);
+    padding: 0 20px;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+.bg {
+  &__white {
+    background: $white no-repeat center center;
+  }
+}
+
+.align {
+  &__center {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.btn {
+  &__load-more {
+    border: 2px solid $active-color;
+    border-radius: 40px;
+    background-color: transparent;
+    color: $active-color;
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+
+    &:hover {
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+}
+
+.social {
+  @include flex($jc: space-between, $ai: center);
+  width: 100%;
+  max-width: rem(140, $fontSize);
+
+  &__link {
+    border-radius: 100px;
+    font-size: $fontSizeSmall;
+    text-align: center;
+    color: $light-color;
+    background-color: $subtitle-color;
+    cursor: pointer;
+    &:hover{
+      color: $light-color;
+      background-color: $active-color;
+    }
+
+    &--footer {
+      @extend .social__link;
+      min-width: 20px;
+      min-height: 20px;
+      line-height: 20px;
+    }
+
+    &--post {
+      @extend .social__link;
+      min-width: 40px;
+      min-height: 40px;
+      line-height: 40px;
+      font-size: $fontSize;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+.card-author {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+
+.card-author-blog {
+  width: 377px;
+  height: 25px;
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+
+.card-author-blogs-blur{
+  width: 377px;
+  height: 25px;
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+
+.card-author-author-blur{
+  color: #111210;
+  font-family: "Open Sans";
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  @media screen and (max-width: 786px) {
+    text-align: center;
+  }
+}
+
+.by-in {
+  color: #9b9b9b;
+}
+
+
+.card-author-blur {
+  color: black;
+  font-family: "Open Sans";
+  font-size: 12px;
+  letter-spacing: -0.1px;
+  line-height: 46px;
+  text-transform: uppercase;
+}

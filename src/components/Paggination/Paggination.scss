@@ -1,0 +1,8 @@
+.pag-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  @media screen and (max-width: 720px) {
+    margin-bottom: 70px;
+  }
+}

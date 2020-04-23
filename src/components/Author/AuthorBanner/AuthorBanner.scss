@@ -1,0 +1,20 @@
+.banner-wrapper{
+  margin-top: 20px;
+  margin-bottom: 12px;
+  min-height: 305px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #111210;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ /* @media screen and (max-width: 1000px){
+    & {
+      display: none;
+    }
+  }*/
+}

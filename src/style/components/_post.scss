@@ -1,0 +1,386 @@
+.post {
+  &__header-box {
+    padding: 100px 0 63px;
+
+    @media only screen and (max-width: $desktopWidth) {
+      padding: 50px 20px 30px;
+    }
+  }
+
+  &__preview {
+    @include flex($jc: space-between);
+    margin: 90px 0 45px;
+
+    @media only screen and (max-width: $largeDeviceWidth) {
+      flex-direction: column;
+      margin: 30px 0 25px;
+    }
+
+
+    &--social{
+      @include flex(column, space-between, center);
+      max-height: 240px;
+
+      @media only screen and (max-width: $largeDeviceWidth) {
+        flex-direction: row;
+        align-self: center;
+      }
+
+      & a {
+        margin: 5px;
+      }
+    }
+
+    &--image {
+      max-width: rem(972px, $fontSize);
+      margin: 0 auto;
+      border-radius: 10px;
+
+      @media only screen and (max-width: $desktopWidth) {
+        max-width: 95%;
+      }
+    }
+
+    &--rating {
+      text-align: center;
+
+      @media only screen and (max-width: $largeDeviceWidth) {
+        @include flex($ai: center);
+        margin: 10px auto;
+
+      }
+
+      & p {
+        padding: 10px 0 36px;
+
+        @media only screen and (max-width: $largeDeviceWidth) {
+          padding: unset;
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    max-width: rem(972px, $fontSize);
+    margin: 0 auto;
+
+    & p {
+      padding-bottom: 30px;
+      font-size: 20px;
+      line-height: 40px;
+
+      @media only screen and (max-width: $largeDeviceWidth) {
+        font-size: 16px;
+        line-height: 25px;
+        padding-bottom: 15px;
+      }
+    }
+
+    & a {
+      color: $primary-color;
+
+      &:hover {
+        color: $active-color;
+      }
+    }
+
+    & h2 {
+      color: $title-color;
+      text-transform: capitalize;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.17px;
+      line-height: 46px;
+      margin: 80px 0 15px;
+
+      @media only screen and (max-width: $largeDeviceWidth) {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 20px 0 10px;
+      }
+    }
+
+    & img {
+      max-width: rem(972px, $fontSize);
+      border-radius: 10px;
+
+      @media only screen and (max-width: $largeDeviceWidth) {
+        max-width: 95%;
+      }
+    }
+
+    & ul {
+      margin: 50px 0 70px;
+
+      & li {
+        font-size: 20px;
+        line-height: 40px;
+        margin-top: 60px;
+
+        @media only screen and (max-width: $largeDeviceWidth) {
+          font-size: 16px;
+          line-height: 25px;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    & figcaption {
+      color: $secondary-color;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.15px;
+      line-height: 58px;
+      font-style: italic;
+      text-align: center;
+      margin-top: 60px;
+
+      @media only screen and (max-width: $largeDeviceWidth) {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  &__author {
+    @include flex(column, space-between, center);
+    margin: 20px auto 200px;
+    height: 152px;
+
+    @media only screen and (max-width: $largeDeviceWidth) {
+      margin-bottom: 50px;
+    }
+    &--avatar {
+      width: 79px;
+      height: 79px;
+      border-radius: 200px;
+      background-color: $dark-text;
+
+
+      @media only screen and (max-width: $tableWidth) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &--name {
+      color: $title-color;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.11px;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+
+    &--follow {
+      color: $title-color;
+      font-size: 16px;
+      letter-spacing: -0.1px;
+      line-height: 46px;
+
+      & a {
+        color: $primary-color;
+
+        &:hover {
+          color: $active-color;
+        }
+      }
+    }
+  }
+
+  &__comment {
+    max-width: 773px;
+    margin: 0 auto;
+
+    &--info {
+
+      &-title {
+        @include flex(row, space-between, center);
+        margin: 40px auto;
+
+        @media only screen and (max-width: $tableWidth) {
+          flex-direction: column;
+        }
+
+        & h3 {
+          color: $title-color;
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: -0.17px;
+          line-height: 32px;
+        }
+
+        & button {
+          border-radius: 10px;
+          background-color: transparent;
+          border: 2px solid $active-color;
+          padding: 13px 23px;
+          color: $active-color;
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: -0.37px;
+
+          &:hover {
+            border-color: $primary-color;
+            color: $primary-color;
+          }
+        }
+
+      }
+
+      &-text {
+        color: $title-color;
+        font-size: 16px;
+        letter-spacing: -0.1px;
+        line-height: 32px;
+        font-weight: 700;
+        margin-bottom: 115px;
+      }
+    }
+
+    &--message {
+      @include flex(column, space-around, center);
+
+      & ul {
+        border-bottom: 2px solid rgba($subtitle-color, 0.2);
+      }
+
+      & li {
+        margin-bottom: 60px;
+      }
+
+      & li ul li {
+        margin: 60px 0 60px 100px;
+
+        @media only screen and (max-width: $tableWidth) {
+          margin: 15px 0 15px 30px;
+        }
+      }
+
+      &-block {
+        @include flex();
+
+        & img {
+          margin-right: 20px;
+        }
+
+        & div {
+          width: 100%;
+        }
+      }
+
+      &-header {
+        @include flex(row, space-between, center);
+        margin-bottom: 20px;
+
+        @media only screen and (max-width: $tableWidth) {
+          flex-direction: column;
+          align-items: baseline;
+        }
+
+        & h5 {
+          color: $title-color;
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: -0.11px;
+          line-height: 30px;
+        }
+
+        & span {
+          color: $subtitle-color;
+          font-size: 16px;
+          letter-spacing: -0.1px;
+          line-height: 46px;
+        }
+
+        & button {
+          border-radius: 10px;
+          border: 2px solid $subtitle-color;
+          color: $subtitle-color;
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: -0.37px;
+          padding: 14px 20px;
+          background-color: transparent;
+
+          &:hover {
+            border-color: $active-color;
+            color: $active-color;
+          }
+        }
+      }
+
+      &-text {
+        color: $title-color;
+        font-size: 16px;
+        letter-spacing: -0.1px;
+        line-height: 32px;
+        white-space: pre-line;
+      }
+    }
+  }
+
+  &__form {
+    max-width: 772px;
+    margin: 67px auto 228px;
+    padding: 73px 125px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    background-color: $white;
+
+    @media only screen and (max-width: $tableWidth) {
+      margin: 70px auto;
+      padding: 50px 20px;
+    }
+
+    & form {
+      @include flex(column, space-between);
+
+      & a {
+        color: $primary-color;
+        font-size: 16px;
+        letter-spacing: -0.1px;
+        line-height: 46px;
+
+        &:hover {
+          color: $active-color;
+        }
+      }
+    }
+
+    & h3 {
+      color: $title-color;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.17px;
+      line-height: 46px;
+      margin-bottom: 30px;
+    }
+
+    & input, textarea {
+      margin-bottom: 15px;
+      padding: 17px 30px;
+      color: $subtitle-color;
+      font-size: 16px;
+      letter-spacing: -0.1px;
+      line-height: 46px;
+      border-radius: 10px;
+      border: 2px solid rgba($subtitle-color, 0.5);
+      background-color: $white;
+    }
+
+    & button {
+      border-radius: 40px;
+      background-color: $active-color;
+      color: $light-color;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      padding: 17px 30px;
+      max-width: 230px;
+    }
+  }
+
+}

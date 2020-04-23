@@ -1,0 +1,12 @@
+.reading-list-wrap {
+  margin: 0 auto;
+  padding: 0 calc((100% - 1180px)/2);
+  background-color:white;
+  margin-bottom: 80px;
+  @media screen and (max-width: 1300px) {
+    & {
+      padding: 42px 15px;
+      text-align: center;
+    }
+  }
+}

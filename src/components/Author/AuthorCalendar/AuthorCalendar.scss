@@ -1,0 +1,48 @@
+.DayPicker-wrapper {
+  width: 386px;
+  height: 355px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #ffffff;
+  @media screen and (max-width: 1000px){
+    & {
+      display: none;
+    }
+  }
+}
+.DayPicker-Month {
+  display: table;
+  margin: 0 1em;
+  margin-top: 1em;
+  border-spacing: 0;
+  border-collapse: collapse;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 363px;
+  height: 261px;
+}
+.DayPicker-Day:hover {
+  background-color: #F64E80;
+  color: white;
+  cursor: pointer;
+}
+.DayPicker-NavButton--prev {
+  margin-right: 19.5em;
+}
+.DayPicker-Caption > div {
+  text-align: center;
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.DayPicker-Caption {
+  margin-top: 1.7em;
+  display: table-caption;
+  margin-bottom: 1.5em;
+}
+.DayPicker-NavButton {
+  position: absolute;
+  top: 2.4em;
+}
