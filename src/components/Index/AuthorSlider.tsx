@@ -22,10 +22,11 @@ class AuthorSlider extends Component<Props> {
             arrow: true,
             infinite: true,
             speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-
+            slidesToShow: 1.75,
+            slidesToScroll: 2,
+            initialSlide: -0.12
         };
+        
         let renderSlider = items.map((item, n: number) => {
             return (
                     <div key={n} className={'bottom-slider'}>
