@@ -1,7 +1,6 @@
 import React from 'react';
 
-export const PostReplyForm = (props) => {
-  
+export const PostReplyForm = () => {
   return (
   <div className={'post__form'}>
     <form>
