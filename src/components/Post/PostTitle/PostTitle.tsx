@@ -4,10 +4,7 @@ import React from 'react';
 import {Title} from "../../Shared/elements/title";
 import {Content} from "../../Shared/elements/content";
 
-// Style and image
-
 export const PostTitle = (props) => {
-  
   return (
     <div className={'post__header-box wrapper'}>
       <Title link={'/post?'+ props.items.slug}
@@ -18,6 +15,6 @@ export const PostTitle = (props) => {
                content={props.items.description} />
   
       <Content class={'content__subtitle--post'}
-               content={`By `+ props.items.author.firstName+ ` `+ props.items.author.lastName +` in `+ props.items.tags +` process`} />
+               content={`By `+ props.items.author.firstName+ ` `+ props.items.author.lastName +` in `+ props.items.tags} />
     </div>);
 };
