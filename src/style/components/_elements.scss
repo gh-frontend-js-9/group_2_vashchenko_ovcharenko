@@ -87,3 +87,20 @@
     }
   }
 }
+
+.insta {
+  &__stories {
+    margin: 120px auto 75px;
+    text-align: center;
+    color: $title-color;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.17px;
+    line-height: 46px;
+  }
+
+
+  & .slider__wrapper {
+    max-width: unset;
+  }
+}

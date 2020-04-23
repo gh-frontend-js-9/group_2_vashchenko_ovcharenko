@@ -32,6 +32,10 @@ export const main = [
     name: 'Personal',
   },
   {
+    link: '/freelance',
+    name: 'Freelance',
+  },
+  {
     link: '/subscribe',
     name: 'Subscribe',
   },

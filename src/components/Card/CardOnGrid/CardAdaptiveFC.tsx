@@ -14,7 +14,7 @@ export const CardAdaptiveFC = (props) => {
   let renderCard = items.map((item, n: number) => {
     return (
       <div key={n}
-           className={props.cardClass}
+           className={(item.cardClass === undefined ? props.cardClass : item.cardClass)}
            style={{backgroundImage:`url(${item.featuredImage !== null ? item.featuredImage : BlankCard })` }}>
   
         {item.subtitle &&
